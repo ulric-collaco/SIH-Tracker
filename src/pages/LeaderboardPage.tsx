@@ -48,9 +48,9 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
   const [orgQuery, setOrgQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Frozen'>('All');
 
-  // Sort State (Default sort: submitted_count ascending per PRD)
+  // Sort State (Default sort: submitted_count descending)
   const [sortField, setSortField] = useState<SortField>('submitted_count');
-  const [sortDirection, setSortDirection] = useState<SortDirection>('asc');
+  const [sortDirection, setSortDirection] = useState<SortDirection>('desc');
 
   // Unique Themes & Orgs
   const allThemes = useMemo(() => {

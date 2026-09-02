@@ -40,15 +40,25 @@ jobs:
 
       - name: Commit and Push if Data Changed
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Use repository owner identity so Vercel treats commits as owner authored
+          git config user.name "${{ github.repository_owner }}"
+          git config user.email "${{ github.repository_owner }}@users.noreply.github.com"
           
           # Check if data or public/data has modifications or untracked files
           if [ -n "$(git status --porcelain data/ public/data/)" ]; then
             echo "Data changes detected. Committing..."
             git add data/ public/data/
-            git commit -m "chore(data): auto-update SIH 2026 problem statements [skip ci]"
+            # Do NOT use [skip ci], so Vercel auto-deploys on commit
+            git commit -m "chore(data): auto-update SIH 2026 problem statements"
             git push origin main
           else
             echo "No data changes since last scrape. Skipping commit."
           fi
+
+      - name: Trigger Vercel Deploy Hook (if configured)
+        if: env.VERCEL_DEPLOY_HOOK != ''
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          echo "Triggering Vercel Deploy Hook..."
+          curl -s -X POST "$VERCEL_DEPLOY_HOOK"
