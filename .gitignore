@@ -1,0 +1,30 @@
+# Installed Agent & AI Skills
+.agents/skills/
+.claude/skills/
+
+# Dependencies
+node_modules/
+
+# Production / Build outputs
+dist/
+build/
+.next/
+out/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
