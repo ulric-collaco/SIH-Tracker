@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "node scripts/sync-public-data.js && tsc && vite build",
     "preview": "vite preview",
     "scrape": "tsx scripts/scrape.ts",
     "seed-history": "tsx scripts/seed-mock-history.ts"

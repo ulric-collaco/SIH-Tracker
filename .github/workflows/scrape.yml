@@ -35,15 +35,18 @@ jobs:
       - name: Run Scraper
         run: npm run scrape
 
+      - name: Sync Public Data
+        run: node scripts/sync-public-data.js
+
       - name: Commit and Push if Data Changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Check if data directory has modifications or untracked files
-          if [ -n "$(git status --porcelain data/)" ]; then
+          # Check if data or public/data has modifications or untracked files
+          if [ -n "$(git status --porcelain data/ public/data/)" ]; then
             echo "Data changes detected. Committing..."
-            git add data/
+            git add data/ public/data/
             git commit -m "chore(data): auto-update SIH 2026 problem statements [skip ci]"
             git push origin main
           else
