@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useWatchlist } from '../context/WatchlistContext';
 import { DoodleUnderline, DoodleTape } from '../utils/doodleIcons';
-import { Flame, Star, LayoutGrid, Clock } from 'lucide-react';
+import { Flame, Star, LayoutGrid, Clock, PenLine } from 'lucide-react';
 
 interface HeaderProps {
   lastScrapedAt?: string;
@@ -39,8 +39,8 @@ export const Header: React.FC<HeaderProps> = ({ lastScrapedAt }) => {
         {/* Brand & Title */}
         <div>
           <NavLink to="/" className="inline-flex items-center gap-3 group">
-            <div className="w-11 h-11 bg-[#FEF08A] border-2 border-[#1E1E1E] rounded-sketch-sm shadow-sketch-sm flex items-center justify-center text-2xl group-hover:rotate-6 transition-transform">
-              ✏️
+            <div className="w-11 h-11 bg-[#FEF08A] border-2 border-[#1E1E1E] rounded-sketch-sm shadow-sketch-sm flex items-center justify-center group-hover:rotate-6 transition-transform">
+              <PenLine size={22} className="text-[#1E1E1E]" />
             </div>
             <div>
               <div className="flex items-center gap-2">

@@ -190,7 +190,7 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-8 py-8 space-y-8">
       {/* Top Overview Metric Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         <MetricCard
           title="Total Problem Statements"
           value={stats.totalPs}
@@ -218,16 +218,6 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
           badge="Prime Picks"
           icon={<TrendingDown size={22} />}
           rotation="rotate-[-0.5deg]"
-        />
-        <MetricCard
-          title="24h High Velocity"
-          value={stats.spikingCount}
-          subtitle="PS spiking fast in the last 24h"
-          bg="bg-[#FECDD3]"
-          pinColor="#F43F5E"
-          badge="Watch Out"
-          icon={<Flame size={22} className="text-[#F43F5E]" />}
-          rotation="rotate-[0.5deg]"
         />
       </div>
 
@@ -441,7 +431,7 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
                 <tr>
                   <td colSpan={10} className="py-12 text-center">
                     <div className="flex flex-col items-center justify-center space-y-2">
-                      <span className="text-4xl">🔍</span>
+                      <Search size={36} className="text-[#9CA3AF]" />
                       <p className="font-hand text-xl font-bold text-[#1E1E1E]">
                         No problem statements matched your filters!
                       </p>

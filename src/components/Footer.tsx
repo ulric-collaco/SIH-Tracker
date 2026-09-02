@@ -1,6 +1,6 @@
 import React from 'react';
 import { DoodleTape } from '../utils/doodleIcons';
-import { ExternalLink, ShieldCheck, GitBranch } from 'lucide-react';
+import { ExternalLink, ShieldCheck, GitBranch, Target } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -35,8 +35,8 @@ export const Footer: React.FC = () => {
             <span>Git-Scraped every 6h via GitHub Actions</span>
           </div>
 
-          <span className="font-hand text-base text-[#1E1E1E] font-bold">
-            Built for smart hackathon strategists 🎯
+          <span className="font-hand text-base text-[#1E1E1E] font-bold flex items-center gap-1.5">
+            Built for smart hackathon strategists <Target size={16} className="text-[#EF4444]" />
           </span>
         </div>
       </div>

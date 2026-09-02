@@ -23,7 +23,10 @@ import {
   Clock,
   CheckCircle2,
   Lock,
-  FileText
+  FileText,
+  TrendingUp,
+  BarChart3,
+  HelpCircle
 } from 'lucide-react';
 
 interface PSDetailPageProps {
@@ -290,7 +293,8 @@ export const PSDetailPage: React.FC<PSDetailPageProps> = ({ records, snapshots }
         <div className="bg-[#FFFDF9] border-3 border-[#1E1E1E] rounded-sketch p-5 sm:p-6 shadow-sketch space-y-3">
           <div className="flex items-center justify-between">
             <h3 className="font-black text-base text-[#1E1E1E] flex items-center gap-2">
-              📈 Cumulative Submissions Over Time
+              <TrendingUp size={18} className="text-[#2563EB]" />
+              Cumulative Submissions Over Time
             </h3>
             <span className="font-hand text-sm text-[#666666]">Recharts Timeline</span>
           </div>
@@ -300,7 +304,7 @@ export const PSDetailPage: React.FC<PSDetailPageProps> = ({ records, snapshots }
           </p>
 
           <div className="h-64 w-full pt-2">
-            {lineChartData.length > 0 ? (
+            {lineChartData.length > 2 ? (
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={lineChartData} margin={{ top: 10, right: 15, left: -20, bottom: 0 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#E5E0D8" />
@@ -334,8 +338,14 @@ export const PSDetailPage: React.FC<PSDetailPageProps> = ({ records, snapshots }
                 </LineChart>
               </ResponsiveContainer>
             ) : (
-              <div className="h-full flex items-center justify-center font-hand text-lg text-[#888888]">
-                Not enough snapshot history recorded yet
+              <div className="h-full flex flex-col items-center justify-center p-6 text-center space-y-2 bg-[#FAF8F5] border-2 border-dashed border-[#D1D5DB] rounded-sketch-sm">
+                <HelpCircle size={32} className="text-[#9CA3AF]" />
+                <p className="font-sketch font-bold text-base text-[#1E1E1E]">
+                  Only {lineChartData.length} snapshot{lineChartData.length === 1 ? '' : 's'} recorded so far.
+                </p>
+                <p className="font-hand text-xs text-[#666666] max-w-sm">
+                  What do you want me to draw, a single dot? Real trajectories need consecutive 6-hour scrape cycles. Check back once the cron accumulates data.
+                </p>
               </div>
             )}
           </div>
@@ -345,7 +355,8 @@ export const PSDetailPage: React.FC<PSDetailPageProps> = ({ records, snapshots }
         <div className="bg-[#FFFDF9] border-3 border-[#1E1E1E] rounded-sketch p-5 sm:p-6 shadow-sketch space-y-3">
           <div className="flex items-center justify-between">
             <h3 className="font-black text-base text-[#1E1E1E] flex items-center gap-2">
-              📊 Daily New Submissions (Spike Detection)
+              <BarChart3 size={18} className="text-[#F43F5E]" />
+              Daily New Submissions (Spike Detection)
             </h3>
             <span className="font-hand text-sm text-[#666666]">Velocity View</span>
           </div>
@@ -355,7 +366,7 @@ export const PSDetailPage: React.FC<PSDetailPageProps> = ({ records, snapshots }
           </p>
 
           <div className="h-64 w-full pt-2">
-            {barChartData.length > 0 ? (
+            {barChartData.length >= 2 ? (
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={barChartData} margin={{ top: 10, right: 15, left: -20, bottom: 0 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#E5E0D8" />
@@ -375,8 +386,14 @@ export const PSDetailPage: React.FC<PSDetailPageProps> = ({ records, snapshots }
                 </BarChart>
               </ResponsiveContainer>
             ) : (
-              <div className="h-full flex items-center justify-center font-hand text-lg text-[#888888]">
-                Not enough snapshot history recorded yet
+              <div className="h-full flex flex-col items-center justify-center p-6 text-center space-y-2 bg-[#FAF8F5] border-2 border-dashed border-[#D1D5DB] rounded-sketch-sm">
+                <BarChart3 size={32} className="text-[#9CA3AF]" />
+                <p className="font-sketch font-bold text-base text-[#1E1E1E]">
+                  No velocity spikes detected yet.
+                </p>
+                <p className="font-hand text-xs text-[#666666] max-w-sm">
+                  Daily delta requires at least 2 distinct calendar days. Right now everyone is still procrastinating their idea submission anyway.
+                </p>
               </div>
             )}
           </div>

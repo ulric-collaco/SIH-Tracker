@@ -61,8 +61,8 @@ export const TrendingPage: React.FC<TrendingPageProps> = ({ records, snapshots }
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           <div className="space-y-2">
             <div className="flex items-center gap-3">
-              <span className="p-2 bg-[#FECDD3] border-2 border-[#1E1E1E] rounded-sketch-sm text-2xl">
-                🔥
+              <span className="p-2 bg-[#FECDD3] border-2 border-[#1E1E1E] rounded-sketch-sm flex items-center justify-center">
+                <Flame size={24} className="text-[#F43F5E]" />
               </span>
               <div>
                 <h1 className="text-2xl sm:text-3xl font-black text-[#1E1E1E] tracking-tight">

@@ -4,7 +4,7 @@ import type { PSRecord, SnapshotEvent, PSMetrics } from '../types';
 import { calculatePSMetrics } from '../utils/metrics';
 import { useWatchlist } from '../context/WatchlistContext';
 import { DoodleUnderline, DoodleTape } from '../utils/doodleIcons';
-import { Trash2, Flame, ArrowRight } from 'lucide-react';
+import { Trash2, Flame, ArrowRight, Sparkles, Tag } from 'lucide-react';
 
 interface WatchlistPageProps {
   records: PSRecord[];
@@ -63,10 +63,12 @@ export const WatchlistPage: React.FC<WatchlistPageProps> = ({ records, snapshots
 
       {starredRecords.length === 0 ? (
         <div className="bg-[#FFFDF9] border-3 border-[#1E1E1E] rounded-sketch p-12 text-center shadow-sketch space-y-4">
-          <div className="text-5xl">✨</div>
+          <div className="flex justify-center">
+            <Sparkles size={48} className="text-[#EAB308]" />
+          </div>
           <h2 className="text-xl font-black text-[#1E1E1E]">Your Watchlist is Empty!</h2>
           <p className="text-sm text-[#666666] max-w-md mx-auto">
-            Click the ⭐ icon beside any problem statement on the leaderboard to pin your candidate options here for easy side-by-side comparison.
+            Click the star icon beside any problem statement on the leaderboard to pin your candidate options here for easy side-by-side comparison.
           </p>
           <Link
             to="/"
@@ -121,8 +123,9 @@ export const WatchlistPage: React.FC<WatchlistPageProps> = ({ records, snapshots
                     {r.title}
                   </h3>
                   <div className="text-xs text-[#666666] mt-1 line-clamp-1">{r.organization}</div>
-                  <div className="mt-2 text-[11px] font-medium text-[#4A4A4A] bg-[#FAF8F5] px-2 py-1 rounded border border-[#1E1E1E]/20 inline-block">
-                    🏷️ {r.theme}
+                  <div className="mt-2 text-[11px] font-medium text-[#4A4A4A] bg-[#FAF8F5] px-2 py-1 rounded border border-[#1E1E1E]/20 inline-flex items-center gap-1">
+                    <Tag size={12} className="text-[#666666]" />
+                    <span>{r.theme}</span>
                   </div>
                 </div>
 
