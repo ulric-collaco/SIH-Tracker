@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sih-2026-proxy",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-02-24",
+  "compatibility_flags": ["nodejs_compat"],
+  "account_id": "23ab12dd6b6ee433ec780d13bb4995d8",
+  "observability": {
+    "enabled": true
+  }
+}

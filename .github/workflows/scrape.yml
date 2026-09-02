@@ -33,6 +33,9 @@ jobs:
         run: npm ci
 
       - name: Run Scraper
+        env:
+          WORKER_PROXY_URL: https://sih-2026-proxy.collacou.workers.dev/api/fetch-sih
+          WORKER_AUTH_SECRET: ${{ secrets.WORKER_AUTH_SECRET }}
         run: npm run scrape
 
       - name: Sync Public Data

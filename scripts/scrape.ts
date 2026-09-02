@@ -98,39 +98,74 @@ async function checkRobotsTxt(): Promise<boolean> {
   }
 }
 
-// Fetch with curl subprocess to bypass Azure WAF TLS fingerprinting on CI runners
+// Fetch with Cloudflare Worker proxy (bypasses CI runner IP blocks) or direct curl fallback
 async function fetchPageWithRetry(url: string, retries = 4): Promise<string> {
+  const workerUrl = process.env.WORKER_PROXY_URL || 'https://sih-2026-proxy.collacou.workers.dev/api/fetch-sih';
+  const workerSecret = process.env.WORKER_AUTH_SECRET;
+
   let delay = 5000;
-  const cookiePath = path.resolve(os.tmpdir(), 'sih_cookie.txt');
-  const curlArgs = [
-    '-sS',
-    '-L',
-    '--max-time',
-    '90',
-    '-c',
-    cookiePath,
-    '-b',
-    cookiePath,
-    '-H',
-    `User-Agent: ${BROWSER_USER_AGENT}`,
-    '-H',
-    'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
-    '-H',
-    'Accept-Language: en-US,en;q=0.9',
-    '-H',
-    'Referer: https://sih.gov.in/',
-    '-H',
-    'Sec-Fetch-Dest: document',
-    '-H',
-    'Sec-Fetch-Mode: navigate',
-    '-H',
-    'Sec-Fetch-Site: same-origin',
-    url
-  ];
 
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
-      console.log(`Fetching ${url} using browser TLS curl (attempt ${attempt}/${retries})...`);
+      // 1. If Cloudflare Worker credentials are present, route through secure edge proxy
+      if (workerSecret) {
+        console.log(`Fetching via Cloudflare Worker proxy: ${workerUrl} (attempt ${attempt}/${retries})...`);
+        const res = await fetch(workerUrl, {
+          headers: {
+            'Authorization': `Bearer ${workerSecret}`,
+            'User-Agent': BROWSER_USER_AGENT
+          }
+        });
+
+        if (!res.ok) {
+          throw new Error(`Cloudflare Worker proxy returned HTTP ${res.status}: ${res.statusText}`);
+        }
+
+        const output = await res.text();
+        const preview = output.substring(0, 250).replace(/\s+/g, ' ');
+        console.log(`Received ${output.length} characters via Cloudflare Worker. Preview: "${preview}"`);
+
+        const hasTable =
+          output.toLowerCase().includes('<table') ||
+          output.includes('dataTablePS') ||
+          output.includes('colomn_border');
+
+        if (!hasTable) {
+          throw new Error(`Worker response missing problem statement table`);
+        }
+
+        return output;
+      }
+
+      // 2. Fallback: Direct curl execution (works locally on residential IPs)
+      console.log(`Fetching ${url} using direct browser TLS curl (attempt ${attempt}/${retries})...`);
+      const cookiePath = path.resolve(os.tmpdir(), 'sih_cookie.txt');
+      const curlArgs = [
+        '-sS',
+        '-L',
+        '--max-time',
+        '90',
+        '-c',
+        cookiePath,
+        '-b',
+        cookiePath,
+        '-H',
+        `User-Agent: ${BROWSER_USER_AGENT}`,
+        '-H',
+        'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+        '-H',
+        'Accept-Language: en-US,en;q=0.9',
+        '-H',
+        'Referer: https://sih.gov.in/',
+        '-H',
+        'Sec-Fetch-Dest: document',
+        '-H',
+        'Sec-Fetch-Mode: navigate',
+        '-H',
+        'Sec-Fetch-Site: same-origin',
+        url
+      ];
+
       const rawBuffer = execFileSync('curl', curlArgs, {
         maxBuffer: 30 * 1024 * 1024
       });
@@ -140,7 +175,6 @@ async function fetchPageWithRetry(url: string, retries = 4): Promise<string> {
       }
 
       let output = '';
-      // Detect gzip magic bytes (0x1f, 0x8b) and auto-decompress
       if (rawBuffer.length >= 2 && rawBuffer[0] === 0x1f && rawBuffer[1] === 0x8b) {
         output = zlib.gunzipSync(rawBuffer).toString('utf-8');
       } else {
