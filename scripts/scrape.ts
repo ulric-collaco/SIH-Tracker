@@ -98,12 +98,9 @@ async function checkRobotsTxt(): Promise<boolean> {
   }
 }
 
-// Fetch with ScraperAPI residential proxy, Cloudflare Worker proxy, or direct curl fallback
+// Fetch with ScraperAPI residential proxy (in CI) or direct browser TLS curl (local)
 async function fetchPageWithRetry(url: string, retries = 4): Promise<string> {
   const scraperApiKey = process.env.SCRAPERAPI_KEY;
-  const workerUrl = process.env.WORKER_PROXY_URL || 'https://sih-2026-proxy.collacou.workers.dev/api/fetch-sih';
-  const workerSecret = process.env.WORKER_AUTH_SECRET;
-
   let delay = 5000;
 
   for (let attempt = 1; attempt <= retries; attempt++) {
@@ -135,38 +132,7 @@ async function fetchPageWithRetry(url: string, retries = 4): Promise<string> {
         return output;
       }
 
-      // 2. If Cloudflare Worker credentials are present, route through secure edge proxy
-      if (workerSecret) {
-        console.log(`Fetching via Cloudflare Worker proxy: ${workerUrl} (attempt ${attempt}/${retries})...`);
-        const res = await fetch(workerUrl, {
-          headers: {
-            'Authorization': `Bearer ${workerSecret}`,
-            'User-Agent': BROWSER_USER_AGENT
-          }
-        });
-
-        if (!res.ok) {
-          const errBody = await res.text();
-          throw new Error(`Cloudflare Worker proxy returned HTTP ${res.status}: ${errBody}`);
-        }
-
-        const output = await res.text();
-        const preview = output.substring(0, 250).replace(/\s+/g, ' ');
-        console.log(`Received ${output.length} characters via Cloudflare Worker. Preview: "${preview}"`);
-
-        const hasTable =
-          output.toLowerCase().includes('<table') ||
-          output.includes('dataTablePS') ||
-          output.includes('colomn_border');
-
-        if (!hasTable) {
-          throw new Error(`Worker response missing problem statement table`);
-        }
-
-        return output;
-      }
-
-      // 3. Fallback: Direct curl execution (works locally on residential IPs)
+      // 2. Fallback: Direct curl execution (works locally on residential IPs)
       console.log(`Fetching ${url} using direct browser TLS curl (attempt ${attempt}/${retries})...`);
       const cookiePath = path.resolve(os.tmpdir(), 'sih_cookie.txt');
       const curlArgs = [
