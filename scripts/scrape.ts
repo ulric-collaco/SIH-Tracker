@@ -1,5 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import os from 'node:os';
+import zlib from 'node:zlib';
 import * as cheerio from 'cheerio';
 
 export interface PSRecord {
@@ -99,12 +101,16 @@ async function checkRobotsTxt(): Promise<boolean> {
 // Fetch with curl subprocess to bypass Azure WAF TLS fingerprinting on CI runners
 async function fetchPageWithRetry(url: string, retries = 4): Promise<string> {
   let delay = 5000;
+  const cookiePath = path.resolve(os.tmpdir(), 'sih_cookie.txt');
   const curlArgs = [
     '-sS',
     '-L',
     '--max-time',
     '90',
-    '--compressed',
+    '-c',
+    cookiePath,
+    '-b',
+    cookiePath,
     '-H',
     `User-Agent: ${BROWSER_USER_AGENT}`,
     '-H',
@@ -119,29 +125,41 @@ async function fetchPageWithRetry(url: string, retries = 4): Promise<string> {
     'Sec-Fetch-Mode: navigate',
     '-H',
     'Sec-Fetch-Site: same-origin',
-    '-H',
-    'Sec-Ch-Ua: "Chromium";v="126", "Google Chrome";v="126", "Not.A/Brand";v="99"',
-    '-H',
-    'Sec-Ch-Ua-Mobile: ?0',
-    '-H',
-    'Sec-Ch-Ua-Platform: "Windows"',
     url
   ];
 
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
       console.log(`Fetching ${url} using browser TLS curl (attempt ${attempt}/${retries})...`);
-      const output = execFileSync('curl', curlArgs, {
-        maxBuffer: 20 * 1024 * 1024,
-        encoding: 'utf-8'
+      const rawBuffer = execFileSync('curl', curlArgs, {
+        maxBuffer: 30 * 1024 * 1024
       });
 
-      if (!output || !output.trim()) {
-        throw new Error('Empty response body received from curl');
+      if (!rawBuffer || rawBuffer.length === 0) {
+        throw new Error('Empty response buffer received from curl');
       }
 
-      if (!output.includes('<table') && !output.includes('dataTablePS')) {
-        throw new Error('Response missing expected problem statement table');
+      let output = '';
+      // Detect gzip magic bytes (0x1f, 0x8b) and auto-decompress
+      if (rawBuffer.length >= 2 && rawBuffer[0] === 0x1f && rawBuffer[1] === 0x8b) {
+        output = zlib.gunzipSync(rawBuffer).toString('utf-8');
+      } else {
+        output = rawBuffer.toString('utf-8');
+      }
+
+      const preview = output.substring(0, 250).replace(/\s+/g, ' ');
+      console.log(`Received ${output.length} characters. Preview: "${preview}"`);
+
+      const hasTable =
+        output.toLowerCase().includes('<table') ||
+        output.includes('dataTablePS') ||
+        output.includes('colomn_border');
+
+      if (!hasTable) {
+        console.warn(`Attempt ${attempt}: response does not contain table marker. Content snippet: "${preview}"`);
+        if (attempt < retries) {
+          throw new Error(`Response missing table (snippet: "${preview.slice(0, 100)}")`);
+        }
       }
 
       return output;
