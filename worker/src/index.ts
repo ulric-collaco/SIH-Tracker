@@ -114,6 +114,7 @@ export default {
       // Upstream Fetch (Target is hardcoded - SSRF is impossible)
       try {
         const upstreamResponse = await fetch('https://sih.gov.in/sih2026PS', {
+          redirect: 'follow',
           headers: {
             'User-Agent':
               'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
@@ -123,18 +124,17 @@ export default {
             'Sec-Fetch-Dest': 'document',
             'Sec-Fetch-Mode': 'navigate',
             'Sec-Fetch-Site': 'same-origin'
-          },
-          cf: {
-            cacheTtl: 300, // Edge cache for 5 minutes to protect upstream and reduce latency
-            cacheEverything: false
           }
         });
 
         if (!upstreamResponse.ok) {
+          const bodySnippet = (await upstreamResponse.text()).slice(0, 400).replace(/\s+/g, ' ');
           return secureResponse(
             JSON.stringify({
               error: 'Upstream Error',
-              status: upstreamResponse.status
+              status: upstreamResponse.status,
+              statusText: upstreamResponse.statusText,
+              snippet: bodySnippet
             }),
             {
               status: 502,
@@ -153,10 +153,10 @@ export default {
           }
         });
       } catch (err: any) {
-        // Mask internal details; do not leak infrastructure specifics
         return secureResponse(
           JSON.stringify({
-            error: 'Failed to contact official portal'
+            error: 'Failed to contact official portal',
+            details: err.message
           }),
           {
             status: 504,

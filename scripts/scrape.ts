@@ -118,7 +118,8 @@ async function fetchPageWithRetry(url: string, retries = 4): Promise<string> {
         });
 
         if (!res.ok) {
-          throw new Error(`Cloudflare Worker proxy returned HTTP ${res.status}: ${res.statusText}`);
+          const errBody = await res.text();
+          throw new Error(`Cloudflare Worker proxy returned HTTP ${res.status}: ${errBody}`);
         }
 
         const output = await res.text();
