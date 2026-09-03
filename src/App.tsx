@@ -8,6 +8,7 @@ import { TrendingPage } from './pages/TrendingPage';
 import { PSDetailPage } from './pages/PSDetailPage';
 import { WatchlistPage } from './pages/WatchlistPage';
 import { latestPSData, loadAllSnapshots } from './utils/dataLoader';
+import { Analytics } from '@vercel/analytics/react';
 
 export const App: React.FC = () => {
   const records = useMemo(() => latestPSData, []);
@@ -50,6 +51,7 @@ export const App: React.FC = () => {
           </div>
           <Footer />
         </div>
+        <Analytics />
       </BrowserRouter>
     </WatchlistProvider>
   );

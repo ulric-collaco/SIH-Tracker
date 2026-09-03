@@ -11,6 +11,7 @@
     "seed-history": "tsx scripts/seed-mock-history.ts"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "clsx": "^2.1.1",
     "lucide-react": "^1.16.0",
     "react": "^19.0.0",
