@@ -4,7 +4,7 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!_vercel|assets|data).*)",
       "destination": "/index.html"
     }
   ],

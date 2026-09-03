@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "node scripts/sync-public-data.js && tsc && vite build",
     "preview": "vite preview",
-    "scrape": "tsx scripts/scrape.ts",
-    "seed-history": "tsx scripts/seed-mock-history.ts"
+    "scrape": "tsx scripts/scrape.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

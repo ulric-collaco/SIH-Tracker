@@ -15,7 +15,14 @@ export const Header: React.FC<HeaderProps> = ({ lastScrapedAt }) => {
     if (!lastScrapedAt) return 'Just now';
     try {
       const d = new Date(lastScrapedAt);
-      return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + ' UTC';
+      return (
+        d.toLocaleTimeString('en-US', {
+          timeZone: 'Asia/Kolkata',
+          hour: 'numeric',
+          minute: '2-digit',
+          hour12: true
+        }) + ' IST'
+      );
     } catch {
       return lastScrapedAt;
     }

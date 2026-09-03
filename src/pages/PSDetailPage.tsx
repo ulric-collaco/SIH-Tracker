@@ -50,16 +50,42 @@ export const PSDetailPage: React.FC<PSDetailPageProps> = ({ records, snapshots }
 
   const psSnapshots = useMemo(() => {
     if (!record) return [];
-    return snapshots
+    const sorted = snapshots
       .filter((s) => s.ps_id.toLowerCase() === record.ps_id.toLowerCase())
       .sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
+
+    // Deduplicate snapshots that are within 1 hour of each other to filter out rapid test runs
+    const deduped: SnapshotEvent[] = [];
+    for (const snap of sorted) {
+      if (deduped.length === 0) {
+        deduped.push(snap);
+      } else {
+        const lastMs = new Date(deduped[deduped.length - 1].timestamp).getTime();
+        const currMs = new Date(snap.timestamp).getTime();
+        if (currMs - lastMs < 60 * 60 * 1000) {
+          deduped[deduped.length - 1] = snap;
+        } else {
+          deduped.push(snap);
+        }
+      }
+    }
+    return deduped;
   }, [record, snapshots]);
 
-  // Transform snapshots for Cumulative Line Chart
+  // Transform snapshots for Cumulative Line Chart (12-hour IST format)
   const lineChartData = useMemo(() => {
     return psSnapshots.map((s) => {
       const d = new Date(s.timestamp);
-      const timeStr = `${d.getMonth() + 1}/${d.getDate()} ${String(d.getUTCHours()).padStart(2, '0')}:00`;
+      const timeStr = `${d.toLocaleDateString('en-IN', {
+        timeZone: 'Asia/Kolkata',
+        month: 'numeric',
+        day: 'numeric'
+      })} ${d.toLocaleTimeString('en-US', {
+        timeZone: 'Asia/Kolkata',
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+      })}`;
       return {
         timestamp: timeStr,
         submitted: s.submitted_count

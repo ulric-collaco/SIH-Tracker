@@ -51,7 +51,7 @@ export const App: React.FC = () => {
           </div>
           <Footer />
         </div>
-        <Analytics />
+        <Analytics debug={import.meta.env.DEV} />
       </BrowserRouter>
     </WatchlistProvider>
   );
