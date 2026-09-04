@@ -72,9 +72,9 @@ export const PSDetailPage: React.FC<PSDetailPageProps> = ({ records, snapshots }
     return deduped;
   }, [record, snapshots]);
 
-  // Transform snapshots for Cumulative Line Chart (12-hour IST format)
+  // Transform snapshots for Cumulative Line Chart (12-hour IST format with cadence tracking)
   const lineChartData = useMemo(() => {
-    return psSnapshots.map((s) => {
+    return psSnapshots.map((s, idx) => {
       const d = new Date(s.timestamp);
       const timeStr = `${d.toLocaleDateString('en-IN', {
         timeZone: 'Asia/Kolkata',
@@ -86,18 +86,52 @@ export const PSDetailPage: React.FC<PSDetailPageProps> = ({ records, snapshots }
         minute: '2-digit',
         hour12: true
       })}`;
+
+      const fullTimeStr = `${d.toLocaleDateString('en-IN', {
+        timeZone: 'Asia/Kolkata',
+        month: 'short',
+        day: 'numeric'
+      })}, ${d.toLocaleTimeString('en-US', {
+        timeZone: 'Asia/Kolkata',
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+      })} IST`;
+
+      let note = '';
+      if (idx > 0) {
+        const prevMs = new Date(psSnapshots[idx - 1].timestamp).getTime();
+        const currMs = d.getTime();
+        const diffHours = (currMs - prevMs) / (60 * 60 * 1000);
+        if (Math.abs(diffHours - 6) > 1.5) {
+          note = `Interval ~${diffHours.toFixed(1)}h (runner queue delay)`;
+        } else {
+          note = `Standard ~${diffHours.toFixed(1)}h scrape interval`;
+        }
+      } else {
+        note = 'Initial recorded scrape baseline';
+      }
+
       return {
         timestamp: timeStr,
-        submitted: s.submitted_count
+        fullTimeStr,
+        submitted: s.submitted_count,
+        note
       };
     });
   }, [psSnapshots]);
 
-  // Aggregate by day for Daily Delta Bar Chart
+  // Aggregate by Indian Standard Time (IST) calendar day for Daily Delta Bar Chart
   const barChartData = useMemo(() => {
     const dailyMap = new Map<string, number[]>();
     for (const s of psSnapshots) {
-      const dateKey = s.timestamp.split('T')[0];
+      const dateKey = new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'Asia/Kolkata',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      }).format(new Date(s.timestamp));
+
       if (!dailyMap.has(dateKey)) {
         dailyMap.set(dateKey, []);
       }
@@ -117,7 +151,7 @@ export const PSDetailPage: React.FC<PSDetailPageProps> = ({ records, snapshots }
 
       const [y, m, d] = date.split('-');
       result.push({
-        date: `${m}/${d}`,
+        date: `${Number(m)}/${Number(d)}`,
         delta,
         count: dayEndCount
       });
@@ -314,114 +348,139 @@ export const PSDetailPage: React.FC<PSDetailPageProps> = ({ records, snapshots }
       </div>
 
       {/* Analytics Charts Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Cumulative Submissions Line Chart */}
-        <div className="bg-[#FFFDF9] border-3 border-[#1E1E1E] rounded-sketch p-5 sm:p-6 shadow-sketch space-y-3">
-          <div className="flex items-center justify-between">
-            <h3 className="font-black text-base text-[#1E1E1E] flex items-center gap-2">
-              <TrendingUp size={18} className="text-[#2563EB]" />
-              Cumulative Submissions Over Time
-            </h3>
-            <span className="font-hand text-sm text-[#666666]">Recharts Timeline</span>
-          </div>
-
-          <p className="text-xs text-[#666666]">
-            Tracks how total submitted ideas grow across consecutive 6-hour scrape snapshots.
-          </p>
-
-          <div className="h-64 w-full pt-2">
-            {lineChartData.length > 2 ? (
-              <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={lineChartData} margin={{ top: 10, right: 15, left: -20, bottom: 0 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#E5E0D8" />
-                  <XAxis
-                    dataKey="timestamp"
-                    stroke="#1E1E1E"
-                    fontSize={10}
-                    tickLine={false}
-                    interval="preserveStartEnd"
-                  />
-                  <YAxis stroke="#1E1E1E" fontSize={11} allowDecimals={false} />
-                  <Tooltip
-                    contentStyle={{
-                      backgroundColor: '#FAF8F5',
-                      border: '2px solid #1E1E1E',
-                      borderRadius: '8px',
-                      boxShadow: '3px 3px 0px #1E1E1E',
-                      fontSize: '12px',
-                      fontWeight: 'bold'
-                    }}
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="submitted"
-                    name="Submissions"
-                    stroke="#2563EB"
-                    strokeWidth={3}
-                    dot={{ r: 3, fill: '#FEF08A', stroke: '#1E1E1E', strokeWidth: 1.5 }}
-                    activeDot={{ r: 6, fill: '#2563EB', stroke: '#1E1E1E' }}
-                  />
-                </LineChart>
-              </ResponsiveContainer>
-            ) : (
-              <div className="h-full flex flex-col items-center justify-center p-6 text-center space-y-2 bg-[#FAF8F5] border-2 border-dashed border-[#D1D5DB] rounded-sketch-sm">
-                <HelpCircle size={32} className="text-[#9CA3AF]" />
-                <p className="font-sketch font-bold text-base text-[#1E1E1E]">
-                  Only {lineChartData.length} snapshot{lineChartData.length === 1 ? '' : 's'} recorded so far.
-                </p>
-                <p className="font-hand text-xs text-[#666666] max-w-sm">
-                  What do you want me to draw, a single dot? Real trajectories need consecutive 6-hour scrape cycles. Check back once the cron accumulates data.
-                </p>
-              </div>
-            )}
-          </div>
+      <div className="space-y-4">
+        <div className="flex items-center gap-2 px-3.5 py-2 bg-[#FAF8F5] border-2 border-[#1E1E1E] rounded-sketch-sm text-xs text-[#555555]">
+          <Clock size={14} className="text-[#2563EB] shrink-0" />
+          <span>
+            <strong>IST Scrape Cadence:</strong> Timestamps show real fetch executions in Indian Standard Time (IST). Early runs reflect slight timing variance due to GitHub CI runner queues before settling into regular 6-hour slots.
+          </span>
         </div>
 
-        {/* Daily Delta New Submissions Bar Chart */}
-        <div className="bg-[#FFFDF9] border-3 border-[#1E1E1E] rounded-sketch p-5 sm:p-6 shadow-sketch space-y-3">
-          <div className="flex items-center justify-between">
-            <h3 className="font-black text-base text-[#1E1E1E] flex items-center gap-2">
-              <BarChart3 size={18} className="text-[#F43F5E]" />
-              Daily New Submissions (Spike Detection)
-            </h3>
-            <span className="font-hand text-sm text-[#666666]">Velocity View</span>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Cumulative Submissions Line Chart */}
+          <div className="bg-[#FFFDF9] border-3 border-[#1E1E1E] rounded-sketch p-5 sm:p-6 shadow-sketch space-y-3">
+            <div className="flex items-center justify-between">
+              <h3 className="font-black text-base text-[#1E1E1E] flex items-center gap-2">
+                <TrendingUp size={18} className="text-[#2563EB]" />
+                Cumulative Submissions Over Time
+              </h3>
+              <span className="font-hand text-sm text-[#666666]">Recharts Timeline</span>
+            </div>
+
+            <p className="text-xs text-[#666666]">
+              Tracks how total submitted ideas grow across consecutive scrape snapshots in IST.
+            </p>
+
+            <div className="h-64 w-full pt-2">
+              {lineChartData.length > 2 ? (
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart data={lineChartData} margin={{ top: 10, right: 15, left: -20, bottom: 0 }}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#E5E0D8" />
+                    <XAxis
+                      dataKey="timestamp"
+                      stroke="#1E1E1E"
+                      fontSize={10}
+                      tickLine={false}
+                      interval="preserveStartEnd"
+                    />
+                    <YAxis stroke="#1E1E1E" fontSize={11} allowDecimals={false} />
+                    <Tooltip
+                      content={({ active, payload }) => {
+                        if (!active || !payload || !payload.length) return null;
+                        const item = payload[0].payload;
+                        return (
+                          <div className="bg-[#FAF8F5] border-2 border-[#1E1E1E] rounded-sketch-sm p-3 shadow-sketch-sm text-xs space-y-1">
+                            <div className="font-bold text-[#1E1E1E]">{item.fullTimeStr}</div>
+                            <div className="font-mono font-black text-sm text-[#2563EB]">
+                              {item.submitted} total submissions
+                            </div>
+                            {item.note && (
+                              <div className="font-hand text-[11px] text-[#666666] border-t border-[#1E1E1E]/20 pt-1">
+                                {item.note}
+                              </div>
+                            )}
+                          </div>
+                        );
+                      }}
+                    />
+                    <Line
+                      type="monotone"
+                      dataKey="submitted"
+                      name="Submissions"
+                      stroke="#2563EB"
+                      strokeWidth={3}
+                      dot={{ r: 3, fill: '#FEF08A', stroke: '#1E1E1E', strokeWidth: 1.5 }}
+                      activeDot={{ r: 6, fill: '#2563EB', stroke: '#1E1E1E' }}
+                    />
+                  </LineChart>
+                </ResponsiveContainer>
+              ) : (
+                <div className="h-full flex flex-col items-center justify-center p-6 text-center space-y-2 bg-[#FAF8F5] border-2 border-dashed border-[#D1D5DB] rounded-sketch-sm">
+                  <HelpCircle size={32} className="text-[#9CA3AF]" />
+                  <p className="font-sketch font-bold text-base text-[#1E1E1E]">
+                    Only {lineChartData.length} snapshot{lineChartData.length === 1 ? '' : 's'} recorded so far.
+                  </p>
+                  <p className="font-hand text-xs text-[#666666] max-w-sm">
+                    What do you want me to draw, a single dot? Real trajectories need consecutive scrape cycles. Check back once the cron accumulates data.
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
 
-          <p className="text-xs text-[#666666]">
-            New submissions per day. Immediately reveals sudden hype surges (e.g. 0 → 20 → 10).
-          </p>
+          {/* Daily Delta New Submissions Bar Chart */}
+          <div className="bg-[#FFFDF9] border-3 border-[#1E1E1E] rounded-sketch p-5 sm:p-6 shadow-sketch space-y-3">
+            <div className="flex items-center justify-between">
+              <h3 className="font-black text-base text-[#1E1E1E] flex items-center gap-2">
+                <BarChart3 size={18} className="text-[#F43F5E]" />
+                Daily New Submissions (Spike Detection)
+              </h3>
+              <span className="font-hand text-sm text-[#666666]">Velocity View</span>
+            </div>
 
-          <div className="h-64 w-full pt-2">
-            {barChartData.length >= 2 ? (
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={barChartData} margin={{ top: 10, right: 15, left: -20, bottom: 0 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#E5E0D8" />
-                  <XAxis dataKey="date" stroke="#1E1E1E" fontSize={11} tickLine={false} />
-                  <YAxis stroke="#1E1E1E" fontSize={11} allowDecimals={false} />
-                  <Tooltip
-                    contentStyle={{
-                      backgroundColor: '#FAF8F5',
-                      border: '2px solid #1E1E1E',
-                      borderRadius: '8px',
-                      boxShadow: '3px 3px 0px #1E1E1E',
-                      fontSize: '12px',
-                      fontWeight: 'bold'
-                    }}
-                  />
-                  <Bar dataKey="delta" name="New Submissions" fill="#F43F5E" radius={[4, 4, 0, 0]} />
-                </BarChart>
-              </ResponsiveContainer>
-            ) : (
-              <div className="h-full flex flex-col items-center justify-center p-6 text-center space-y-2 bg-[#FAF8F5] border-2 border-dashed border-[#D1D5DB] rounded-sketch-sm">
-                <BarChart3 size={32} className="text-[#9CA3AF]" />
-                <p className="font-sketch font-bold text-base text-[#1E1E1E]">
-                  No velocity spikes detected yet.
-                </p>
-                <p className="font-hand text-xs text-[#666666] max-w-sm">
-                  Daily delta requires at least 2 distinct calendar days. Right now everyone is still procrastinating their idea submission anyway.
-                </p>
-              </div>
-            )}
+            <p className="text-xs text-[#666666]">
+              New submissions grouped by Indian Standard Time (IST) calendar day.
+            </p>
+
+            <div className="h-64 w-full pt-2">
+              {barChartData.length >= 2 ? (
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={barChartData} margin={{ top: 10, right: 15, left: -20, bottom: 0 }}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#E5E0D8" />
+                    <XAxis dataKey="date" stroke="#1E1E1E" fontSize={11} tickLine={false} />
+                    <YAxis stroke="#1E1E1E" fontSize={11} allowDecimals={false} />
+                    <Tooltip
+                      content={({ active, payload }) => {
+                        if (!active || !payload || !payload.length) return null;
+                        const item = payload[0].payload;
+                        return (
+                          <div className="bg-[#FAF8F5] border-2 border-[#1E1E1E] rounded-sketch-sm p-3 shadow-sketch-sm text-xs space-y-1">
+                            <div className="font-bold text-[#1E1E1E]">Date: {item.date} (IST)</div>
+                            <div className="font-mono font-black text-sm text-[#F43F5E]">
+                              +{item.delta} new ideas
+                            </div>
+                            <div className="text-[11px] text-[#666666]">
+                              Day-end total: {item.count}
+                            </div>
+                          </div>
+                        );
+                      }}
+                    />
+                    <Bar dataKey="delta" name="New Submissions" fill="#F43F5E" radius={[4, 4, 0, 0]} />
+                  </BarChart>
+                </ResponsiveContainer>
+              ) : (
+                <div className="h-full flex flex-col items-center justify-center p-6 text-center space-y-2 bg-[#FAF8F5] border-2 border-dashed border-[#D1D5DB] rounded-sketch-sm">
+                  <BarChart3 size={32} className="text-[#9CA3AF]" />
+                  <p className="font-sketch font-bold text-base text-[#1E1E1E]">
+                    No velocity spikes detected yet.
+                  </p>
+                  <p className="font-hand text-xs text-[#666666] max-w-sm">
+                    Daily delta requires at least 2 distinct calendar days. Right now everyone is still procrastinating their idea submission anyway.
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

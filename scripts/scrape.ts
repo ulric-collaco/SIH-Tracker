@@ -244,8 +244,15 @@ export async function scrapeSIH(): Promise<{
     }
   }
 
-  const nowISO = new Date().toISOString();
-  const dateKey = nowISO.split('T')[0];
+  const now = new Date();
+  const nowISO = now.toISOString();
+  // Partition daily history files using Indian Standard Time (IST) calendar day
+  const dateKey = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Asia/Kolkata',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  }).format(now);
   const historyFile = path.resolve(HISTORY_DIR, `${dateKey}.jsonl`);
 
   const records: PSRecord[] = [];

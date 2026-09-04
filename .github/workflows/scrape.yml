@@ -2,8 +2,8 @@ name: Scrape SIH 2026 Problem Statements
 
 on:
   schedule:
-    # Runs every 6 hours at 12:00 AM, 06:00 AM, 12:00 PM, 06:00 PM IST (18:30, 00:30, 06:30, 12:30 UTC)
-    - cron: '30 0,6,12,18 * * *'
+    # Targets 12:00 AM, 06:00 AM, 12:00 PM, 06:00 PM IST (offset to :15 UTC to bypass peak runner queue spikes)
+    - cron: '15 0,6,12,18 * * *'
   workflow_dispatch:
 
 concurrency:

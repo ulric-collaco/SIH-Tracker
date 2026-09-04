@@ -25,14 +25,14 @@ export function calculatePSMetrics(
   const latestSnap = psSnapshots[psSnapshots.length - 1];
   const nowMs = new Date(latestSnap.timestamp).getTime();
 
-  // Helper to find snapshot closest to a target past time
+  // Helper to find snapshot closest to a target past time, resilient to CI runner delays
   function findSnapshotAtWindow(hoursAgo: number): SnapshotEvent | null {
     const targetMs = nowMs - hoursAgo * 60 * 60 * 1000;
-    // Window tolerance is +/- 3.5 hours for 6h interval matching
     let closest: SnapshotEvent | null = null;
     let minDiff = Infinity;
 
     for (const snap of psSnapshots) {
+      if (snap === latestSnap) continue;
       const snapMs = new Date(snap.timestamp).getTime();
       const diff = Math.abs(snapMs - targetMs);
       if (diff < minDiff) {
@@ -41,15 +41,21 @@ export function calculatePSMetrics(
       }
     }
 
-    // Only accept if within 3.5 hours of target
-    const maxTolerance = Math.max(3.5 * 60 * 60 * 1000, (hoursAgo * 0.25) * 60 * 60 * 1000);
-    if (minDiff <= maxTolerance && closest && closest !== latestSnap) {
+    // Flexible tolerance for real-world CI runner timing variations (up to +/- 5h for 6h, 12h for 24h)
+    const maxTolerance = Math.max(5 * 60 * 60 * 1000, hoursAgo * 0.5 * 60 * 60 * 1000);
+    if (closest && minDiff <= maxTolerance) {
       return closest;
     }
     return null;
   }
 
-  const snap6h = findSnapshotAtWindow(6);
+  // Fallback to immediately preceding scrape if within reasonable single-cycle range (up to 12h)
+  const prevCycleSnap =
+    psSnapshots.length >= 2 && (nowMs - new Date(psSnapshots[psSnapshots.length - 2].timestamp).getTime() <= 14 * 60 * 60 * 1000)
+      ? psSnapshots[psSnapshots.length - 2]
+      : null;
+
+  const snap6h = findSnapshotAtWindow(6) ?? prevCycleSnap;
   const snap12h = findSnapshotAtWindow(12);
   const snap24h = findSnapshotAtWindow(24);
   const snap48h = findSnapshotAtWindow(48);
