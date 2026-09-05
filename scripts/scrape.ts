@@ -324,7 +324,10 @@ export async function scrapeSIH(): Promise<{
       if (th.includes('problem statement id')) {
         psId = tdVal;
       } else if (th.includes('description')) {
-        description = tdVal;
+        const $td = $(mTr).find('td');
+        $td.find('br').replaceWith('\n');
+        $td.find('p, li, div').after('\n');
+        description = $td.text().trim();
       } else if (th.includes('department')) {
         department = tdVal;
       } else if (th.includes('dataset link')) {

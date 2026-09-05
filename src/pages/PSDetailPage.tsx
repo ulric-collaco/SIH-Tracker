@@ -29,6 +29,115 @@ import {
   HelpCircle
 } from 'lucide-react';
 
+const TwoLineTick = (props: any) => {
+  const { x, y, payload } = props;
+  const value = String(payload?.value || '');
+  const parts = value.split(' ');
+  const dateStr = parts[0] || '';
+  const timeStr = parts.slice(1).join(' ') || '';
+
+  return (
+    <g transform={`translate(${x},${y})`}>
+      <text
+        x={0}
+        y={0}
+        dy={10}
+        textAnchor="middle"
+        fill="#1E1E1E"
+        fontSize={10}
+        fontWeight={700}
+      >
+        {dateStr}
+      </text>
+      <text
+        x={0}
+        y={0}
+        dy={23}
+        textAnchor="middle"
+        fill="#555555"
+        fontSize={9}
+        fontWeight={500}
+      >
+        {timeStr}
+      </text>
+    </g>
+  );
+};
+
+function renderProblemDescription(desc?: string) {
+  if (!desc) {
+    return (
+      <p className="italic text-[#777777]">
+        No detailed description provided by the official portal.
+      </p>
+    );
+  }
+
+  let text = desc.trim();
+
+  const sectionHeaders = [
+    'Background:',
+    'Description:',
+    'Problem Statement Description:',
+    'Expected Solution:',
+    'Expected Solutions:',
+    'The solution should:',
+    'Scope of Work:',
+    'Key Objectives:',
+    'Objectives:',
+    'Challenges:',
+    'Deliverables:',
+    'Target Audience:',
+    'Impact:',
+    'Requirements:'
+  ];
+
+  for (const header of sectionHeaders) {
+    text = text.split(header).join('\n\n' + header + '\n');
+  }
+
+  // Format bullet points onto their own lines
+  text = text.replace(/\s+([a-z]\.|\d+\.|•)\s+/gi, '\n• ');
+
+  const sections = text.split(/\n{2,}/).map((s) => s.trim()).filter(Boolean);
+
+  return (
+    <div className="space-y-4 text-sm leading-relaxed text-[#2D2D2D]">
+      {sections.map((section, idx) => {
+        const matchedHeader = sectionHeaders.find((h) =>
+          section.toLowerCase().startsWith(h.toLowerCase())
+        );
+
+        if (matchedHeader) {
+          const body = section.substring(matchedHeader.length).trim();
+          return (
+            <div
+              key={idx}
+              className="bg-[#FAF8F5] p-5 border-2 border-[#1E1E1E] rounded-sketch-sm shadow-sketch-sm space-y-2"
+            >
+              <h3 className="font-black text-xs uppercase tracking-wider text-[#1E1E1E] inline-block border-b-2 border-[#2563EB] pb-0.5">
+                {matchedHeader.replace(':', '')}
+              </h3>
+              <div className="whitespace-pre-line text-[#333333] leading-relaxed">
+                {body}
+              </div>
+            </div>
+          );
+        }
+
+        return (
+          <div
+            key={idx}
+            className="bg-[#FAF8F5] p-4 border border-[#1E1E1E]/30 rounded-sketch-sm whitespace-pre-line leading-relaxed text-[#333333]"
+          >
+            {section}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 interface PSDetailPageProps {
   records: PSRecord[];
   snapshots: SnapshotEvent[];
@@ -76,27 +185,25 @@ export const PSDetailPage: React.FC<PSDetailPageProps> = ({ records, snapshots }
   const lineChartData = useMemo(() => {
     return psSnapshots.map((s, idx) => {
       const d = new Date(s.timestamp);
-      const timeStr = `${d.toLocaleDateString('en-IN', {
+      // Day first: "DD/MM" e.g. "03/09"
+      const datePart = d.toLocaleDateString('en-GB', {
         timeZone: 'Asia/Kolkata',
-        month: 'numeric',
-        day: 'numeric'
-      })} ${d.toLocaleTimeString('en-US', {
+        day: '2-digit',
+        month: '2-digit'
+      });
+      // 12-hour time: e.g. "3:01 AM"
+      const timePart = d.toLocaleTimeString('en-US', {
         timeZone: 'Asia/Kolkata',
         hour: 'numeric',
         minute: '2-digit',
         hour12: true
-      })}`;
+      });
 
-      const fullTimeStr = `${d.toLocaleDateString('en-IN', {
-        timeZone: 'Asia/Kolkata',
-        month: 'short',
-        day: 'numeric'
-      })}, ${d.toLocaleTimeString('en-US', {
-        timeZone: 'Asia/Kolkata',
-        hour: 'numeric',
-        minute: '2-digit',
-        hour12: true
-      })} IST`;
+      const timeStr = `${datePart} ${timePart}`;
+
+      const dayNum = d.toLocaleDateString('en-IN', { timeZone: 'Asia/Kolkata', day: 'numeric' });
+      const monthShort = d.toLocaleDateString('en-IN', { timeZone: 'Asia/Kolkata', month: 'short' });
+      const fullTimeStr = `${dayNum} ${monthShort}, ${timePart} IST`;
 
       let note = '';
       if (idx > 0) {
@@ -151,7 +258,7 @@ export const PSDetailPage: React.FC<PSDetailPageProps> = ({ records, snapshots }
 
       const [y, m, d] = date.split('-');
       result.push({
-        date: `${Number(m)}/${Number(d)}`,
+        date: `${String(d).padStart(2, '0')}/${String(m).padStart(2, '0')}`,
         delta,
         count: dayEndCount
       });
@@ -374,14 +481,15 @@ export const PSDetailPage: React.FC<PSDetailPageProps> = ({ records, snapshots }
             <div className="h-64 w-full pt-2">
               {lineChartData.length > 2 ? (
                 <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={lineChartData} margin={{ top: 10, right: 15, left: -20, bottom: 0 }}>
+                  <LineChart data={lineChartData} margin={{ top: 10, right: 15, left: -20, bottom: 20 }}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#E5E0D8" />
                     <XAxis
                       dataKey="timestamp"
                       stroke="#1E1E1E"
-                      fontSize={10}
                       tickLine={false}
                       interval="preserveStartEnd"
+                      tick={<TwoLineTick />}
+                      height={40}
                     />
                     <YAxis stroke="#1E1E1E" fontSize={11} allowDecimals={false} />
                     <Tooltip
@@ -492,9 +600,7 @@ export const PSDetailPage: React.FC<PSDetailPageProps> = ({ records, snapshots }
           <h2>Problem Statement Description</h2>
         </div>
 
-        <div className="prose max-w-none text-sm leading-relaxed text-[#2D2D2D] bg-[#FAF8F5] p-5 border-2 border-[#1E1E1E] rounded-sketch-sm shadow-sketch-sm whitespace-pre-wrap">
-          {record.description || 'No detailed description provided by the official portal.'}
-        </div>
+        {renderProblemDescription(record.description)}
       </div>
     </div>
   );
