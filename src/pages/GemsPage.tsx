@@ -1,9 +1,9 @@
-import React, { useMemo, useEffect } from 'react';
+import React, { useMemo, useEffect, useState } from 'react';
 import type { PSRecord, SnapshotEvent } from '../types';
 import { computeGemAnalyses } from '../utils/metrics';
 import { PSGemCard } from '../components/PSGemCard';
 import { DoodleUnderline, DoodleTape } from '../utils/doodleIcons';
-import { Gem, Flame, ShieldCheck, AlertTriangle, HelpCircle, Info } from 'lucide-react';
+import { Gem, Flame, ShieldCheck, HelpCircle, Info } from 'lucide-react';
 
 interface GemsPageProps {
   records: PSRecord[];
@@ -11,6 +11,8 @@ interface GemsPageProps {
 }
 
 export const GemsPage: React.FC<GemsPageProps> = ({ records, snapshots }) => {
+  const [categoryFilter, setCategoryFilter] = useState<'All' | 'Software' | 'Hardware'>('All');
+
   // Remember and restore scroll position when navigating to detail and back
   useEffect(() => {
     const savedPos = sessionStorage.getItem('gems_scroll_pos');
@@ -27,12 +29,23 @@ export const GemsPage: React.FC<GemsPageProps> = ({ records, snapshots }) => {
   }, []);
 
   // Compute gem analyses
-  const { safePicks, surgingPicks, p25Cutoff, totalAnalyzed } = useMemo(() => {
+  const { safePicks, surgingPicks, p25Cutoff } = useMemo(() => {
     return computeGemAnalyses(records, snapshots);
   }, [records, snapshots]);
 
+  // Filter picks by Software / Hardware
+  const filteredSafePicks = useMemo(() => {
+    if (categoryFilter === 'All') return safePicks;
+    return safePicks.filter((p) => p.record.category === categoryFilter);
+  }, [safePicks, categoryFilter]);
+
+  const filteredSurgingPicks = useMemo(() => {
+    if (categoryFilter === 'All') return surgingPicks;
+    return surgingPicks.filter((p) => p.record.category === categoryFilter);
+  }, [surgingPicks, categoryFilter]);
+
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-8 py-8 space-y-10">
+    <div className="max-w-7xl mx-auto px-4 sm:px-8 py-8 space-y-8">
       {/* Title Card */}
       <div className="relative bg-[#FFFDF9] border-3 border-[#1E1E1E] rounded-sketch p-6 sm:p-8 shadow-sketch">
         <DoodleTape
@@ -64,10 +77,28 @@ export const GemsPage: React.FC<GemsPageProps> = ({ records, snapshots }) => {
               Cutoff: ≤ {p25Cutoff} Subs
             </div>
             <div className="px-3.5 py-1.5 bg-[#BBF7D0] border-2 border-[#1E1E1E] rounded-sketch-sm shadow-sketch-sm font-mono text-xs font-black">
-              {safePicks.length} Safe {safePicks.length === 1 ? 'Pick' : 'Picks'}
+              {filteredSafePicks.length} Safe {filteredSafePicks.length === 1 ? 'Pick' : 'Picks'}
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Category Filter Bar (Software / Hardware) */}
+      <div className="flex items-center gap-2 bg-[#FFFDF9] border-2 border-[#1E1E1E] rounded-sketch-sm p-2 shadow-sketch-sm w-fit">
+        <span className="font-hand text-base font-bold text-[#4A4A4A] pl-2">Track:</span>
+        {(['All', 'Software', 'Hardware'] as const).map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setCategoryFilter(cat)}
+            className={`sketch-btn px-3 py-1.5 text-xs font-bold rounded-sketch-sm transition-all cursor-pointer ${
+              categoryFilter === cat
+                ? 'bg-[#1E1E1E] text-white shadow-[2px_2px_0px_#BBF7D0]'
+                : 'bg-[#FAF8F5] text-[#1E1E1E] hover:bg-[#EFE7DA]'
+            }`}
+          >
+            {cat}
+          </button>
+        ))}
       </div>
 
       {/* Safe Picks Section */}
@@ -76,39 +107,39 @@ export const GemsPage: React.FC<GemsPageProps> = ({ records, snapshots }) => {
           <div className="flex items-center gap-2">
             <ShieldCheck size={20} className="text-[#16A34A]" />
             <h2 className="text-xl font-black text-[#1E1E1E]">
-              Safe Prime Picks ({safePicks.length})
+              Safe Prime Picks ({filteredSafePicks.length})
             </h2>
           </div>
           <span className="text-xs text-[#666666] font-mono hidden sm:inline">
-            Sorted by Safety Score (high to low)
+            Ranked by lowest competition &amp; slot buffer
           </span>
         </div>
 
-        {safePicks.length > 0 ? (
+        {filteredSafePicks.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {safePicks.map((analysis) => (
+            {filteredSafePicks.map((analysis) => (
               <PSGemCard key={analysis.record.ps_id} analysis={analysis} />
             ))}
           </div>
         ) : (
           <div className="p-8 text-center bg-[#FFFDF9] border-2 border-dashed border-[#1E1E1E] rounded-sketch space-y-2">
             <HelpCircle size={32} className="mx-auto text-[#9CA3AF]" />
-            <p className="font-bold text-[#1E1E1E]">No safe picks currently available</p>
+            <p className="font-bold text-[#1E1E1E]">No {categoryFilter !== 'All' ? categoryFilter : ''} safe picks available</p>
             <p className="text-xs text-[#666666]">
-              All problem statements in the cutoff either have rapid velocity or insufficient snapshot history.
+              All problem statements in this cutoff either have rapid velocity or insufficient snapshot history.
             </p>
           </div>
         )}
       </div>
 
       {/* Getting Caught On (Surging) Section */}
-      {surgingPicks.length > 0 && (
+      {filteredSurgingPicks.length > 0 && (
         <div className="space-y-4 pt-6 border-t-3 border-dashed border-[#E11D48]/30">
           <div className="bg-[#FFF5F5] border-2 border-[#E11D48] rounded-sketch p-4 sm:p-5 shadow-[3px_3px_0px_#E11D48] space-y-1">
             <div className="flex items-center gap-2">
               <Flame size={20} className="text-[#E11D48] fill-[#FCA5A5]" />
               <h2 className="text-xl font-black text-[#9F1239]">
-                Getting Caught On — Recent Surges ({surgingPicks.length})
+                Getting Caught On — Recent Surges ({filteredSurgingPicks.length})
               </h2>
             </div>
             <p className="text-xs text-[#7F1D1D] leading-relaxed">
@@ -119,7 +150,7 @@ export const GemsPage: React.FC<GemsPageProps> = ({ records, snapshots }) => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {surgingPicks.map((analysis) => (
+            {filteredSurgingPicks.map((analysis) => (
               <PSGemCard key={analysis.record.ps_id} analysis={analysis} />
             ))}
           </div>

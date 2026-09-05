@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import type { GemAnalysis } from '../types';
 import { useWatchlist } from '../context/WatchlistContext';
 import { DoodleStar } from '../utils/doodleIcons';
-import { Flame, ShieldCheck, ShieldAlert, Users, Layers, ExternalLink } from 'lucide-react';
+import { Flame, Users, Layers, ExternalLink } from 'lucide-react';
 
 interface PSGemCardProps {
   analysis: GemAnalysis;
@@ -12,38 +12,11 @@ interface PSGemCardProps {
 export const PSGemCard: React.FC<PSGemCardProps> = ({ analysis }) => {
   const navigate = useNavigate();
   const { watchlist, toggleWatchlist } = useWatchlist();
-  const { record, safetyScore, isSurging, surgeReason, reasonTag } = analysis;
+  const { record, isSurging, surgeReason, reasonTag } = analysis;
 
   const isStarred = watchlist.has(record.ps_id);
   const isRecentlyAdded =
     Date.now() - new Date(record.first_seen_at).getTime() < 48 * 60 * 60 * 1000;
-
-  const getScoreColor = (score: number) => {
-    if (score >= 75) {
-      return {
-        bg: 'bg-[#BBF7D0]',
-        border: 'border-[#16A34A]',
-        text: 'text-[#15803D]',
-        label: 'Prime Pick'
-      };
-    }
-    if (score >= 45) {
-      return {
-        bg: 'bg-[#FEF08A]',
-        border: 'border-[#CA8A04]',
-        text: 'text-[#854D0E]',
-        label: 'Moderate Pick'
-      };
-    }
-    return {
-      bg: 'bg-[#FECDD3]',
-      border: 'border-[#E11D48]',
-      text: 'text-[#9F1239]',
-      label: 'Watchlist'
-    };
-  };
-
-  const scoreMeta = getScoreColor(safetyScore);
 
   return (
     <div
@@ -85,19 +58,6 @@ export const PSGemCard: React.FC<PSGemCardProps> = ({ analysis }) => {
         </div>
 
         <div className="flex items-center gap-2 shrink-0">
-          {/* Safety Score Pill */}
-          <div
-            className={`flex items-center gap-1 px-2.5 py-0.5 border rounded-full text-xs font-black shadow-[1px_1px_0px_#1E1E1E] ${scoreMeta.bg} ${scoreMeta.border} ${scoreMeta.text}`}
-            title="Composite safety score (lower competition + higher slots buffer + low velocity = higher score)"
-          >
-            {safetyScore >= 75 ? (
-              <ShieldCheck size={13} className="shrink-0" />
-            ) : (
-              <ShieldAlert size={13} className="shrink-0" />
-            )}
-            <span>{safetyScore}/100</span>
-          </div>
-
           {/* Star Button */}
           <button
             onClick={(e) => {
