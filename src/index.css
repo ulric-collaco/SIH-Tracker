@@ -20,6 +20,19 @@
     background-image: radial-gradient(#d1cbc2 1px, transparent 1px);
     background-size: 24px 24px;
   }
+
+  /* Hide scrollbar globally across all browsers while maintaining scrollability */
+  html, body, * {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  *::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    height: 0px;
+    background: transparent;
+  }
 }
 
 /* Doodle & Sketch typography utilities */
