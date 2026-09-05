@@ -4,7 +4,7 @@ import type { PSRecord, SnapshotEvent, PSMetrics } from '../types';
 import { calculatePSMetrics } from '../utils/metrics';
 import { useWatchlist } from '../context/WatchlistContext';
 import { DoodleUnderline, DoodleTape } from '../utils/doodleIcons';
-import { Trash2, Flame, ArrowRight, Sparkles, Tag } from 'lucide-react';
+import { Trash2, Flame, ArrowRight, Sparkles, Tag, Star } from 'lucide-react';
 
 interface WatchlistPageProps {
   records: PSRecord[];
@@ -42,7 +42,7 @@ export const WatchlistPage: React.FC<WatchlistPageProps> = ({ records, snapshots
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
-              <span className="text-2xl">⭐</span>
+              <Star size={26} className="text-[#EAB308] fill-[#FACC15]" />
               <h1 className="text-2xl sm:text-3xl font-black text-[#1E1E1E] tracking-tight">
                 My Candidate Watchlist
               </h1>

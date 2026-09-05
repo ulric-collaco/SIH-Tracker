@@ -17,7 +17,8 @@ import {
   TrendingDown,
   Lock,
   Unlock,
-  Check
+  Check,
+  Star
 } from 'lucide-react';
 
 interface LeaderboardPageProps {
@@ -46,7 +47,7 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
   const [categoryFilter, setCategoryFilter] = useState<'All' | 'Software' | 'Hardware'>('All');
   const [selectedThemes, setSelectedThemes] = useState<string[]>([]);
   const [orgQuery, setOrgQuery] = useState('');
-  const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Frozen'>('All');
+  const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Frozen' | 'New'>('All');
 
   // Sort State (Default sort: submitted_count descending)
   const [sortField, setSortField] = useState<SortField>('submitted_count');
@@ -128,6 +129,10 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
         // Status filter
         if (statusFilter === 'Open' && r.is_frozen) return false;
         if (statusFilter === 'Frozen' && !r.is_frozen) return false;
+        if (statusFilter === 'New') {
+          const isRecentlyAdded = Date.now() - new Date(r.first_seen_at).getTime() <= 48 * 60 * 60 * 1000;
+          if (!isRecentlyAdded) return false;
+        }
 
         return true;
       })
@@ -212,12 +217,13 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
         <MetricCard
           title="Low Competition PS"
           value={stats.lowCompCount}
-          subtitle="< 10 submissions (best opportunities)"
+          subtitle="< 10 submissions · Click to open Prime Picks →"
           bg="bg-[#BBF7D0]"
           pinColor="#10B981"
           badge="Prime Picks"
           icon={<TrendingDown size={22} />}
           rotation="rotate-[-0.5deg]"
+          onClick={() => navigate('/gems')}
         />
       </div>
 
@@ -268,7 +274,7 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
           {/* Open / Frozen Status Toggle */}
           <div className="flex items-center gap-2">
             <span className="font-hand text-base font-bold text-[#4A4A4A]">Status:</span>
-            {(['All', 'Open', 'Frozen'] as const).map((st) => (
+            {(['All', 'Open', 'Frozen', 'New'] as const).map((st) => (
               <button
                 key={st}
                 onClick={() => setStatusFilter(st)}
@@ -280,7 +286,8 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
               >
                 {st === 'Open' && <Unlock size={12} />}
                 {st === 'Frozen' && <Lock size={12} />}
-                <span>{st}</span>
+                {st === 'New' && <Sparkles size={12} className="text-[#EAB308]" />}
+                <span>{st === 'New' ? 'Newly Added' : st}</span>
               </button>
             ))}
           </div>
@@ -353,7 +360,9 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="bg-[#EFE7DA] border-b-2 border-[#1E1E1E] text-xs font-bold text-[#1E1E1E] uppercase tracking-wider select-none">
-                <th className="py-3 px-3 w-12 text-center">⭐</th>
+                <th className="py-3 px-3 w-12 text-center">
+                  <Star size={14} className="mx-auto text-[#EAB308]" />
+                </th>
                 <th
                   onClick={() => handleSort('ps_id')}
                   className="py-3 px-4 cursor-pointer hover:bg-[#E2D6C3] transition-colors"
@@ -482,9 +491,16 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
 
                       {/* PS ID */}
                       <td className="py-3 px-4 font-mono font-bold text-xs text-[#1E1E1E]">
-                        <span className="bg-[#FAF8F5] px-2 py-1 border border-[#1E1E1E] rounded shadow-[1px_1px_0px_#1E1E1E]">
-                          {r.ps_id}
-                        </span>
+                        <div className="flex items-center gap-1.5 flex-wrap">
+                          <span className="bg-[#FAF8F5] px-2 py-1 border border-[#1E1E1E] rounded shadow-[1px_1px_0px_#1E1E1E]">
+                            {r.ps_id}
+                          </span>
+                          {Date.now() - new Date(r.first_seen_at).getTime() < 48 * 60 * 60 * 1000 && (
+                            <span className="px-1.5 py-0.5 bg-[#BBF7D0] border border-[#16A34A] text-[#15803D] font-extrabold text-[9px] uppercase tracking-wider rounded shadow-[1px_1px_0px_#16A34A] animate-pulse">
+                              NEW
+                            </span>
+                          )}
+                        </div>
                       </td>
 
                       {/* Title & Organization */}

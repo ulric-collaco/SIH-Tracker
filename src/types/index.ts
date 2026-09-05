@@ -45,3 +45,12 @@ export interface PSMetrics {
 }
 
 export type TimeWindow = '6h' | '12h' | '24h' | '48h';
+
+export interface GemAnalysis {
+  record: PSRecord;
+  metrics: PSMetrics;
+  safetyScore: number;
+  isSurging: boolean;
+  surgeReason: string | null;
+  reasonTag: string;
+}

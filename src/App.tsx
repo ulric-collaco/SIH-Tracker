@@ -7,6 +7,7 @@ import { LeaderboardPage } from './pages/LeaderboardPage';
 import { TrendingPage } from './pages/TrendingPage';
 import { PSDetailPage } from './pages/PSDetailPage';
 import { WatchlistPage } from './pages/WatchlistPage';
+import { GemsPage } from './pages/GemsPage';
 import { latestPSData, loadAllSnapshots } from './utils/dataLoader';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -36,6 +37,10 @@ export const App: React.FC = () => {
                 <Route
                   path="/trending"
                   element={<TrendingPage records={records} snapshots={snapshots} />}
+                />
+                <Route
+                  path="/gems"
+                  element={<GemsPage records={records} snapshots={snapshots} />}
                 />
                 <Route
                   path="/watchlist"

@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useWatchlist } from '../context/WatchlistContext';
 import { DoodleUnderline, DoodleTape } from '../utils/doodleIcons';
-import { Flame, Star, LayoutGrid, Clock, PenLine } from 'lucide-react';
+import { Flame, Star, LayoutGrid, Clock, PenLine, Gem } from 'lucide-react';
 
 interface HeaderProps {
   lastScrapedAt?: string;
@@ -101,6 +101,20 @@ export const Header: React.FC<HeaderProps> = ({ lastScrapedAt }) => {
             >
               <Flame size={16} className="text-[#F43F5E]" />
               <span>Top Movers</span>
+            </NavLink>
+
+            <NavLink
+              to="/gems"
+              className={({ isActive }) =>
+                `px-3 py-1.5 rounded-md font-bold text-sm flex items-center gap-1.5 transition-all ${
+                  isActive
+                    ? 'bg-[#1E1E1E] text-white shadow-[2px_2px_0px_#BBF7D0]'
+                    : 'text-[#1E1E1E] hover:bg-[#EFE7DA]'
+                }`
+              }
+            >
+              <Gem size={16} className="text-[#16A34A]" />
+              <span>Prime Picks</span>
             </NavLink>
 
             <NavLink

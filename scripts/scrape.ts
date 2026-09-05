@@ -213,6 +213,43 @@ export async function scrapeSIH(): Promise<{
   if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
   if (!fs.existsSync(HISTORY_DIR)) fs.mkdirSync(HISTORY_DIR, { recursive: true });
 
+  // 1. Deadline Cutoff & Extension Support Check
+  const isManualRun =
+    process.env.GITHUB_EVENT_NAME === 'workflow_dispatch' ||
+    process.env.FORCE_SCRAPE === 'true';
+
+  const configuredCutoff = process.env.SCRAPE_CUTOFF_DATE || '2026-09-20T23:59:59+05:30';
+  let cutoffDate = new Date(configuredCutoff);
+
+  // Auto-detect official deadline extensions from existing PS records if available
+  if (fs.existsSync(LATEST_PATH)) {
+    try {
+      const prevData: PSRecord[] = JSON.parse(fs.readFileSync(LATEST_PATH, 'utf-8'));
+      for (const item of prevData) {
+        if (item.deadline) {
+          const parsed = new Date(item.deadline);
+          if (!isNaN(parsed.getTime()) && parsed > cutoffDate) {
+            cutoffDate = parsed;
+          }
+        }
+      }
+    } catch {}
+  }
+
+  const now = new Date();
+  if (!isManualRun && now > cutoffDate) {
+    console.log(
+      `[INFO] SIH submission deadline has passed (cutoff: ${cutoffDate.toISOString()}). Scraping automatically suspended.`
+    );
+    console.log(
+      `[INFO] If deadline was extended, update SCRAPE_CUTOFF_DATE in GitHub Settings -> Variables, or trigger manual run via workflow_dispatch.`
+    );
+    return {
+      scrapedCount: 0,
+      changed: false
+    };
+  }
+
   const robotsOk = await checkRobotsTxt();
   if (!robotsOk) {
     throw new Error('Scraping halted: /sih2026PS disallowed in robots.txt');
@@ -244,7 +281,6 @@ export async function scrapeSIH(): Promise<{
     }
   }
 
-  const now = new Date();
   const nowISO = now.toISOString();
   // Partition daily history files using Indian Standard Time (IST) calendar day
   const dateKey = new Intl.DateTimeFormat('en-CA', {
@@ -406,11 +442,18 @@ export async function scrapeSIH(): Promise<{
     });
   });
 
-  // Resilience check: Sanity check record count
+  // Resilience check: Sanity check record count (permits new batches of PS up to 1200)
   console.log(`Scraped ${records.length} problem statements.`);
-  if (records.length < 150 || records.length > 400) {
+  if (records.length < 100 || records.length > 1200) {
     throw new Error(
-      `VALIDATION REJECTED: Unexpected PS count (${records.length}). Expected between 150 and 400. Aborting write to avoid committing corrupt data.`
+      `VALIDATION REJECTED: Unexpected PS count (${records.length}). Expected between 100 and 1200. Aborting write to avoid committing corrupt data.`
+    );
+  }
+
+  const newlyAddedCount = records.filter((r) => !existingMap.has(r.ps_id)).length;
+  if (newlyAddedCount > 0) {
+    console.log(
+      `[ALERT] ${newlyAddedCount} NEW problem statement(s) detected and integrated into latest.json!`
     );
   }
 

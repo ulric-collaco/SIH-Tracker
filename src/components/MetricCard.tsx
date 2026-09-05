@@ -10,6 +10,7 @@ interface MetricCardProps {
   badge?: string;
   icon?: React.ReactNode;
   rotation?: string;
+  onClick?: () => void;
 }
 
 export const MetricCard: React.FC<MetricCardProps> = ({
@@ -20,11 +21,17 @@ export const MetricCard: React.FC<MetricCardProps> = ({
   pinColor = '#EF4444',
   badge,
   icon,
-  rotation = 'rotate-0'
+  rotation = 'rotate-0',
+  onClick
 }) => {
   return (
     <div
-      className={`relative p-5 border-3 border-[#1E1E1E] rounded-sketch shadow-sketch ${bg} ${rotation} transition-transform hover:-translate-y-1`}
+      onClick={onClick}
+      className={`relative p-5 border-3 border-[#1E1E1E] rounded-sketch shadow-sketch ${bg} ${rotation} transition-all ${
+        onClick
+          ? 'cursor-pointer hover:-translate-y-1.5 hover:shadow-[5px_5px_0px_#1E1E1E]'
+          : 'hover:-translate-y-1'
+      }`}
     >
       {/* Thumbtack pin */}
       <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">

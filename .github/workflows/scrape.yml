@@ -2,8 +2,8 @@ name: Scrape SIH 2026 Problem Statements
 
 on:
   schedule:
-    # Targets 12:00 AM, 06:00 AM, 12:00 PM, 06:00 PM IST (offset to :15 UTC to bypass peak runner queue spikes)
-    - cron: '15 0,6,12,18 * * *'
+    # Runs every 30 minutes at :15 and :45 past the hour (avoids peak :00 and :30 runner queue congestion)
+    - cron: '15,45 * * * *'
   workflow_dispatch:
 
 concurrency:
@@ -35,6 +35,7 @@ jobs:
       - name: Run Scraper
         env:
           SCRAPERAPI_KEY: ${{ secrets.SCRAPERAPI_KEY }}
+          SCRAPE_CUTOFF_DATE: ${{ vars.SCRAPE_CUTOFF_DATE || '2026-09-20T23:59:59+05:30' }}
         run: npm run scrape
 
       - name: Sync Public Data
