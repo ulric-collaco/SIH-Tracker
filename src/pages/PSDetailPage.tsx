@@ -290,67 +290,68 @@ export const PSDetailPage: React.FC<PSDetailPageProps> = ({ records, snapshots }
     : 0;
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-8 py-8 space-y-8">
+    <div className="max-w-7xl mx-auto px-3 sm:px-8 py-4 sm:py-8 space-y-6 sm:space-y-8 w-full max-w-full overflow-hidden">
       {/* Top Breadcrumb & Actions */}
       <div className="flex items-center justify-between">
         <button
           onClick={() => navigate(-1)}
-          className="sketch-btn inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#FAF8F5] text-xs font-bold rounded-sketch-sm hover:bg-[#EFE7DA] cursor-pointer"
+          className="sketch-btn inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 bg-[#FAF8F5] text-xs font-bold rounded-sketch-sm hover:bg-[#EFE7DA] cursor-pointer"
         >
-          <ArrowLeft size={14} /> Back to List
+          <ArrowLeft size={14} /> Back
         </button>
 
         <button
           onClick={() => toggleWatchlist(record.ps_id)}
-          className={`sketch-btn inline-flex items-center gap-2 px-4 py-1.5 text-xs font-bold rounded-sketch-sm cursor-pointer ${
+          className={`sketch-btn inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 text-xs font-bold rounded-sketch-sm cursor-pointer ${
             isStarred ? 'bg-[#FACC15] text-[#1E1E1E]' : 'bg-[#FAF8F5] text-[#1E1E1E]'
           }`}
         >
-          <DoodleStar filled={isStarred} size={18} />
-          <span>{isStarred ? 'Saved in Watchlist' : 'Add to Watchlist'}</span>
+          <DoodleStar filled={isStarred} size={16} />
+          <span className="hidden sm:inline">{isStarred ? 'Saved in Watchlist' : 'Add to Watchlist'}</span>
+          <span className="inline sm:hidden">{isStarred ? 'Saved' : 'Save'}</span>
         </button>
       </div>
 
       {/* Main PS Card */}
-      <div className="relative bg-[#FFFDF9] border-3 border-[#1E1E1E] rounded-sketch p-6 sm:p-8 shadow-sketch space-y-6">
+      <div className="relative bg-[#FFFDF9] border-3 border-[#1E1E1E] rounded-sketch p-4 sm:p-8 shadow-sketch space-y-5 sm:space-y-6 w-full">
         <DoodleTape
-          className="absolute -top-3 left-12 w-32 h-6"
+          className="absolute -top-3 left-12 w-32 h-6 hidden sm:block"
           color="#FEF08A"
           rotation="rotate-[-1.5deg]"
         />
 
         {/* Header Badges */}
-        <div className="flex flex-wrap items-center gap-2.5 pt-1">
-          <span className="font-mono text-xs font-black px-2.5 py-1 bg-[#FAF8F5] border-2 border-[#1E1E1E] rounded shadow-[1px_1px_0px_#1E1E1E]">
+        <div className="flex flex-wrap items-center gap-2 pt-1">
+          <span className="font-mono text-xs font-black px-2.5 py-0.5 sm:py-1 bg-[#FAF8F5] border-2 border-[#1E1E1E] rounded shadow-[1px_1px_0px_#1E1E1E]">
             {record.ps_id}
           </span>
           <span
-            className={`text-xs font-bold px-3 py-1 border-2 border-[#1E1E1E] rounded-full shadow-[1px_1px_0px_#1E1E1E] ${
+            className={`text-xs font-bold px-2.5 py-0.5 sm:py-1 border-2 border-[#1E1E1E] rounded-full shadow-[1px_1px_0px_#1E1E1E] ${
               record.category === 'Software' ? 'bg-[#BAE6FD]' : 'bg-[#FECDD3]'
             }`}
           >
             {record.category}
           </span>
-          <span className="text-xs font-bold px-3 py-1 bg-[#E9D5FF] border-2 border-[#1E1E1E] rounded-full shadow-[1px_1px_0px_#1E1E1E]">
+          <span className="text-xs font-bold px-2.5 py-0.5 sm:py-1 bg-[#E9D5FF] border-2 border-[#1E1E1E] rounded-full shadow-[1px_1px_0px_#1E1E1E]">
             {record.theme}
           </span>
           {record.is_frozen ? (
-            <span className="text-xs font-bold px-3 py-1 bg-[#FEE2E2] text-[#991B1B] border-2 border-[#EF4444] rounded-full flex items-center gap-1">
-              <Lock size={12} /> Closed / Frozen
+            <span className="text-xs font-bold px-2.5 py-0.5 sm:py-1 bg-[#FEE2E2] text-[#991B1B] border-2 border-[#EF4444] rounded-full flex items-center gap-1">
+              <Lock size={12} /> Closed
             </span>
           ) : (
-            <span className="text-xs font-bold px-3 py-1 bg-[#DCFCE7] text-[#166534] border-2 border-[#22C55E] rounded-full flex items-center gap-1">
-              <CheckCircle2 size={12} /> Open for Submissions
+            <span className="text-xs font-bold px-2.5 py-0.5 sm:py-1 bg-[#DCFCE7] text-[#166534] border-2 border-[#22C55E] rounded-full flex items-center gap-1">
+              <CheckCircle2 size={12} /> Open
             </span>
           )}
         </div>
 
         {/* Title */}
         <div>
-          <h1 className="text-2xl sm:text-3xl font-black text-[#1E1E1E] tracking-tight leading-tight">
+          <h1 className="text-xl sm:text-3xl font-black text-[#1E1E1E] tracking-tight leading-tight">
             {record.title}
           </h1>
-          <DoodleUnderline color="#BAE6FD" className="w-48 h-3 mt-1" />
+          <DoodleUnderline color="#BAE6FD" className="w-36 sm:w-48 h-2 sm:h-3 mt-1" />
         </div>
 
         {/* Key Info Grid */}

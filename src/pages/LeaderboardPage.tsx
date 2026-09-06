@@ -193,9 +193,9 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-8 py-8 space-y-8">
+    <div className="max-w-7xl mx-auto px-3 sm:px-8 py-4 sm:py-8 space-y-6 sm:space-y-8 w-full max-w-full overflow-hidden">
       {/* Top Overview Metric Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-5 w-full">
         <MetricCard
           title="Total Problem Statements"
           value={stats.totalPs}
@@ -228,8 +228,8 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
       </div>
 
       {/* Main Filter & Search Notebook Bar */}
-      <div className="bg-[#FFFDF9] border-3 border-[#1E1E1E] rounded-sketch p-5 sm:p-6 shadow-sketch space-y-5">
-        <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
+      <div className="bg-[#FFFDF9] border-3 border-[#1E1E1E] rounded-sketch p-3.5 sm:p-6 shadow-sketch space-y-4 sm:space-y-5 w-full">
+        <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3 sm:gap-4">
           {/* Free Text Search */}
           <div className="relative flex-1">
             <Search
@@ -240,56 +240,59 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search by PS ID (e.g. SIH26001), keywords, or organization..."
-              className="w-full pl-10 pr-4 py-2.5 bg-[#FAF8F5] border-2 border-[#1E1E1E] rounded-sketch-sm shadow-sketch-sm text-sm focus:outline-none focus:ring-2 focus:ring-[#FEF08A] font-medium"
+              placeholder="Search PS ID, keywords, organization..."
+              className="w-full pl-10 pr-14 sm:pr-4 py-2 sm:py-2.5 bg-[#FAF8F5] border-2 border-[#1E1E1E] rounded-sketch-sm shadow-sketch-sm text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#FEF08A] font-medium"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-bold px-1.5 py-0.5 bg-[#EFE7DA] border border-[#1E1E1E] rounded"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-bold px-1.5 py-0.5 bg-[#EFE7DA] border border-[#1E1E1E] rounded cursor-pointer"
               >
                 Clear
               </button>
             )}
           </div>
 
-          {/* Category Filter Chips */}
-          <div className="flex items-center gap-2">
-            <span className="font-hand text-base font-bold text-[#4A4A4A]">Category:</span>
-            {(['All', 'Software', 'Hardware'] as const).map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setCategoryFilter(cat)}
-                className={`sketch-btn px-3 py-1.5 text-xs font-bold rounded-sketch-sm cursor-pointer ${
-                  categoryFilter === cat
-                    ? 'bg-[#1E1E1E] text-white'
-                    : 'bg-[#FAF8F5] text-[#1E1E1E] hover:bg-[#FEF08A]'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 flex-wrap">
+            {/* Category Filter Chips */}
+            <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+              <span className="font-hand text-sm sm:text-base font-bold text-[#4A4A4A]">Category:</span>
+              {(['All', 'Software', 'Hardware'] as const).map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setCategoryFilter(cat)}
+                  className={`sketch-btn px-2.5 sm:px-3 py-1 sm:py-1.5 text-xs font-bold rounded-sketch-sm cursor-pointer ${
+                    categoryFilter === cat
+                      ? 'bg-[#1E1E1E] text-white'
+                      : 'bg-[#FAF8F5] text-[#1E1E1E] hover:bg-[#FEF08A]'
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
 
-          {/* Open / Frozen Status Toggle */}
-          <div className="flex items-center gap-2">
-            <span className="font-hand text-base font-bold text-[#4A4A4A]">Status:</span>
-            {(['All', 'Open', 'Frozen', 'New'] as const).map((st) => (
-              <button
-                key={st}
-                onClick={() => setStatusFilter(st)}
-                className={`sketch-btn px-2.5 py-1.5 text-xs font-bold rounded-sketch-sm flex items-center gap-1 cursor-pointer ${
-                  statusFilter === st
-                    ? 'bg-[#1E1E1E] text-white'
-                    : 'bg-[#FAF8F5] text-[#1E1E1E] hover:bg-[#BBF7D0]'
-                }`}
-              >
-                {st === 'Open' && <Unlock size={12} />}
-                {st === 'Frozen' && <Lock size={12} />}
-                {st === 'New' && <Sparkles size={12} className="text-[#EAB308]" />}
-                <span>{st === 'New' ? 'Newly Added' : st}</span>
-              </button>
-            ))}
+            {/* Open / Frozen Status Toggle */}
+            <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+              <span className="font-hand text-sm sm:text-base font-bold text-[#4A4A4A]">Status:</span>
+              {(['All', 'Open', 'Frozen', 'New'] as const).map((st) => (
+                <button
+                  key={st}
+                  onClick={() => setStatusFilter(st)}
+                  className={`sketch-btn px-2 sm:px-2.5 py-1 sm:py-1.5 text-xs font-bold rounded-sketch-sm flex items-center gap-1 cursor-pointer ${
+                    statusFilter === st
+                      ? 'bg-[#1E1E1E] text-white'
+                      : 'bg-[#FAF8F5] text-[#1E1E1E] hover:bg-[#BBF7D0]'
+                  }`}
+                >
+                  {st === 'Open' && <Unlock size={11} />}
+                  {st === 'Frozen' && <Lock size={11} />}
+                  {st === 'New' && <Sparkles size={11} className="text-[#EAB308]" />}
+                  <span className="hidden sm:inline">{st === 'New' ? 'Newly Added' : st}</span>
+                  <span className="inline sm:hidden">{st === 'New' ? 'New' : st}</span>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -298,27 +301,27 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-2">
               <Filter size={14} className="text-[#1E1E1E]" />
-              <span className="font-hand text-base font-bold text-[#1E1E1E]">
+              <span className="font-hand text-sm sm:text-base font-bold text-[#1E1E1E]">
                 Filter by Theme ({selectedThemes.length ? `${selectedThemes.length} active` : 'All'}):
               </span>
             </div>
             {selectedThemes.length > 0 && (
               <button
                 onClick={() => setSelectedThemes([])}
-                className="text-xs font-bold text-[#EF4444] hover:underline"
+                className="text-xs font-bold text-[#EF4444] hover:underline cursor-pointer"
               >
                 Reset themes
               </button>
             )}
           </div>
-          <div className="flex flex-wrap gap-1.5 max-h-24 overflow-y-auto pr-1">
+          <div className="flex flex-wrap gap-1 sm:gap-1.5 max-h-24 overflow-y-auto pr-1">
             {allThemes.map((theme) => {
               const active = selectedThemes.includes(theme);
               return (
                 <button
                   key={theme}
                   onClick={() => toggleTheme(theme)}
-                  className={`text-xs px-2.5 py-1 rounded-full border transition-all cursor-pointer flex items-center gap-1 ${
+                  className={`text-[11px] sm:text-xs px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full border transition-all cursor-pointer flex items-center gap-1 ${
                     active
                       ? 'bg-[#FEF08A] border-[#1E1E1E] font-bold shadow-[2px_2px_0px_#1E1E1E]'
                       : 'bg-[#FAF8F5] border-[#1E1E1E]/40 text-[#4A4A4A] hover:border-[#1E1E1E]'
@@ -336,28 +339,33 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
       {/* Results Header with Count & Active Sort Note */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 px-1">
         <div className="flex items-baseline gap-3">
-          <h2 className="text-xl sm:text-2xl font-black tracking-tight text-[#1E1E1E]">
+          <h2 className="text-lg sm:text-2xl font-black tracking-tight text-[#1E1E1E]">
             Problem Statements
           </h2>
-          <span className="font-hand text-lg text-[#555555]">
+          <span className="font-hand text-base sm:text-lg text-[#555555]">
             Showing <strong className="text-[#1E1E1E]">{filteredRecords.length}</strong> of{' '}
             {records.length}
           </span>
         </div>
 
-        <div className="text-xs font-medium text-[#666666] flex items-center gap-1.5 bg-[#FAF8F5] px-3 py-1 rounded border border-[#1E1E1E]">
+        <div className="text-[11px] sm:text-xs font-medium text-[#666666] flex items-center gap-1.5 bg-[#FAF8F5] px-2.5 sm:px-3 py-1 rounded border border-[#1E1E1E]">
           <span>Sorted by:</span>
           <span className="font-bold text-[#1E1E1E] uppercase">
             {sortField.replace('_', ' ')} ({sortDirection})
           </span>
-          <span className="text-[10px] text-[#888888]">(Click any column header to toggle)</span>
+          <span className="text-[10px] text-[#888888] hidden sm:inline">(Click column header to toggle)</span>
         </div>
       </div>
 
       {/* Main Table */}
-      <div className="relative bg-[#FFFDF9] border-3 border-[#1E1E1E] rounded-sketch shadow-sketch overflow-hidden">
-        <div className="overflow-x-auto">
-          <table className="w-full text-left border-collapse">
+      <div className="relative bg-[#FFFDF9] border-3 border-[#1E1E1E] rounded-sketch shadow-sketch overflow-hidden w-full max-w-full">
+        {/* Mobile Swipe Hint */}
+        <div className="sm:hidden px-3 py-1.5 bg-[#FAF8F5] border-b border-[#1E1E1E]/20 flex items-center justify-between text-[11px] font-bold text-[#555555]">
+          <span>👈 Swipe table to view all stats 👉</span>
+          <span>Tap row for details</span>
+        </div>
+        <div className="overflow-x-auto w-full max-w-full -webkit-overflow-scrolling-touch">
+          <table className="w-full text-left border-collapse min-w-[720px] sm:min-w-[850px]">
             <thead>
               <tr className="bg-[#EFE7DA] border-b-2 border-[#1E1E1E] text-xs font-bold text-[#1E1E1E] uppercase tracking-wider select-none">
                 <th className="py-3 px-3 w-12 text-center">

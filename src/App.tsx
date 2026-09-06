@@ -25,10 +25,10 @@ export const App: React.FC = () => {
   return (
     <WatchlistProvider>
       <BrowserRouter>
-        <div className="min-h-screen flex flex-col justify-between bg-[#FAF8F5] selection:bg-[#FEF08A]">
-          <div>
+        <div className="min-h-screen w-full max-w-full overflow-x-hidden flex flex-col justify-between bg-[#FAF8F5] selection:bg-[#FEF08A]">
+          <div className="w-full max-w-full">
             <Header lastScrapedAt={lastScrapedAt} />
-            <main>
+            <main className="w-full max-w-full">
               <Routes>
                 <Route
                   path="/"

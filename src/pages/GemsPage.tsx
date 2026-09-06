@@ -45,38 +45,38 @@ export const GemsPage: React.FC<GemsPageProps> = ({ records, snapshots }) => {
   }, [surgingPicks, categoryFilter]);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-8 py-8 space-y-8">
+    <div className="max-w-7xl mx-auto px-3 sm:px-8 py-4 sm:py-8 space-y-6 sm:space-y-8 w-full max-w-full overflow-hidden">
       {/* Title Card */}
-      <div className="relative bg-[#FFFDF9] border-3 border-[#1E1E1E] rounded-sketch p-6 sm:p-8 shadow-sketch">
+      <div className="relative bg-[#FFFDF9] border-3 border-[#1E1E1E] rounded-sketch p-4 sm:p-8 shadow-sketch w-full">
         <DoodleTape
           className="absolute -top-3 left-10 w-28 h-6 hidden sm:block"
           color="#BBF7D0"
           rotation="rotate-[-2deg]"
         />
 
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
-              <div className="p-2 bg-[#BBF7D0] border-2 border-[#1E1E1E] rounded-sketch-sm shadow-[2px_2px_0px_#1E1E1E]">
-                <Gem size={24} className="text-[#15803D]" />
+              <div className="p-1.5 sm:p-2 bg-[#BBF7D0] border-2 border-[#1E1E1E] rounded-sketch-sm shadow-[2px_2px_0px_#1E1E1E] shrink-0">
+                <Gem size={20} className="text-[#15803D] sm:w-6 sm:h-6" />
               </div>
-              <h1 className="text-2xl sm:text-3xl font-black text-[#1E1E1E] tracking-tight">
+              <h1 className="text-xl sm:text-3xl font-black text-[#1E1E1E] tracking-tight">
                 Prime Picks — Low Competition
               </h1>
             </div>
-            <div className="relative inline-block">
-              <p className="font-hand text-lg text-[#555555]">
+            <div className="relative inline-block max-w-full">
+              <p className="font-hand text-sm sm:text-lg text-[#555555] leading-snug">
                 Curated problem statements in the bottom 25% of submissions, scored by low velocity and slot buffers.
               </p>
-              <DoodleUnderline color="#BBF7D0" className="w-full h-2.5 -mt-1" />
+              <DoodleUnderline color="#BBF7D0" className="w-full h-2 sm:h-2.5 -mt-0.5" />
             </div>
           </div>
 
           <div className="flex items-center gap-2 flex-wrap sm:flex-nowrap">
-            <div className="px-3.5 py-1.5 bg-[#FEF08A] border-2 border-[#1E1E1E] rounded-sketch-sm shadow-sketch-sm font-mono text-xs font-black">
+            <div className="px-2.5 sm:px-3.5 py-1 sm:py-1.5 bg-[#FEF08A] border-2 border-[#1E1E1E] rounded-sketch-sm shadow-sketch-sm font-mono text-[11px] sm:text-xs font-black">
               Cutoff: ≤ {p25Cutoff} Subs
             </div>
-            <div className="px-3.5 py-1.5 bg-[#BBF7D0] border-2 border-[#1E1E1E] rounded-sketch-sm shadow-sketch-sm font-mono text-xs font-black">
+            <div className="px-2.5 sm:px-3.5 py-1 sm:py-1.5 bg-[#BBF7D0] border-2 border-[#1E1E1E] rounded-sketch-sm shadow-sketch-sm font-mono text-[11px] sm:text-xs font-black">
               {filteredSafePicks.length} Safe {filteredSafePicks.length === 1 ? 'Pick' : 'Picks'}
             </div>
           </div>
