@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { PSRecord, SnapshotEvent, PSMetrics } from '../types';
-import { calculatePSMetrics } from '../utils/metrics';
+import { calculatePSMetrics, computeGemAnalyses } from '../utils/metrics';
 import { useWatchlist } from '../context/WatchlistContext';
 import { MetricCard } from '../components/MetricCard';
 import { DoodleStar } from '../utils/doodleIcons';
@@ -86,6 +86,11 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
       frozenCount
     };
   }, [records, metricsMap]);
+
+  // Gem analyses for Prime Picks count synchronization
+  const { safePicks, p25Cutoff } = useMemo(() => {
+    return computeGemAnalyses(records, snapshots);
+  }, [records, snapshots]);
 
   // Handle header sort click
   const handleSort = (field: SortField) => {
@@ -216,8 +221,8 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
         />
         <MetricCard
           title="Low Competition PS"
-          value={stats.lowCompCount}
-          subtitle="< 10 submissions · Click to open Prime Picks →"
+          value={safePicks.length}
+          subtitle={`≤ ${p25Cutoff} submissions · Click to open Prime Picks →`}
           bg="bg-[#BBF7D0]"
           pinColor="#10B981"
           badge="Prime Picks"

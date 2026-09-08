@@ -56,7 +56,11 @@ export const App: React.FC = () => {
           </div>
           <Footer />
         </div>
-        <Analytics debug={import.meta.env.DEV} />
+        <Analytics
+          scriptSrc={import.meta.env.PROD ? '/va/script.js' : undefined}
+          endpoint={import.meta.env.PROD ? '/va' : undefined}
+          debug={import.meta.env.DEV}
+        />
       </BrowserRouter>
     </WatchlistProvider>
   );

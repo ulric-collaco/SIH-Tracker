@@ -3,6 +3,10 @@
   "outputDirectory": "dist",
   "rewrites": [
     {
+      "source": "/va/:path*",
+      "destination": "/_vercel/insights/:path*"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
