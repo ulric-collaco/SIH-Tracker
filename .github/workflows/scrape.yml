@@ -2,8 +2,8 @@ name: Scrape SIH 2026 Problem Statements
 
 on:
   schedule:
-    # Runs every 30 minutes at :15 and :45 past the hour (avoids peak :00 and :30 runner queue congestion)
-    - cron: '15,45 * * * *'
+    # Trigger every 3 hours. With concurrency queueing, a fresh runner seamlessly takes over.
+    - cron: '10 */3 * * *'
   workflow_dispatch:
 
 concurrency:
@@ -16,6 +16,7 @@ permissions:
 jobs:
   scrape-and-commit:
     runs-on: ubuntu-latest
+    timeout-minutes: 300
 
     steps:
       - name: Checkout repository
@@ -32,36 +33,22 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run Scraper
+      - name: Configure Git Author
+        run: |
+          git config user.name "${{ github.repository_owner }}"
+          git config user.email "${{ github.repository_owner }}@users.noreply.github.com"
+
+      - name: Run 30-Minute Continuous Scraper Loop
         env:
           SCRAPERAPI_KEY: ${{ secrets.SCRAPERAPI_KEY }}
           SCRAPE_CUTOFF_DATE: ${{ vars.SCRAPE_CUTOFF_DATE || '2026-09-20T23:59:59+05:30' }}
-        run: npm run scrape
-
-      - name: Sync Public Data
-        run: node scripts/sync-public-data.js
-
-      - name: Commit and Push if Data Changed
-        run: |
-          # Use repository owner identity so Vercel treats commits as owner authored
-          git config user.name "${{ github.repository_owner }}"
-          git config user.email "${{ github.repository_owner }}@users.noreply.github.com"
-          
-          # Check if data or public/data has modifications or untracked files
-          if [ -n "$(git status --porcelain data/ public/data/)" ]; then
-            echo "Data changes detected. Committing..."
-            git add data/ public/data/
-            # Do NOT use [skip ci], so Vercel auto-deploys on commit
-            git commit -m "chore(data): auto-update SIH 2026 problem statements"
-            git push origin main
-          else
-            echo "No data changes since last scrape. Skipping commit."
-          fi
+        run: npm run scrape:loop
 
       - name: Trigger Vercel Deploy Hook (if configured)
-        if: env.VERCEL_DEPLOY_HOOK != ''
+        if: always() && env.VERCEL_DEPLOY_HOOK != ''
         env:
           VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
         run: |
           echo "Triggering Vercel Deploy Hook..."
           curl -s -X POST "$VERCEL_DEPLOY_HOOK"
+

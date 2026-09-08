@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useWatchlist } from '../context/WatchlistContext';
 import { DoodleUnderline, DoodleTape } from '../utils/doodleIcons';
-import { Flame, Star, LayoutGrid, Clock, PenLine, Gem, ChevronRight } from 'lucide-react';
+import { Flame, Star, LayoutGrid, Clock, PenLine, Gem } from 'lucide-react';
 
 interface HeaderProps {
   lastScrapedAt?: string;
@@ -13,34 +13,58 @@ export const Header: React.FC<HeaderProps> = ({ lastScrapedAt }) => {
 
   const location = useLocation();
   const navRef = React.useRef<HTMLElement>(null);
-  const [canScrollRight, setCanScrollRight] = React.useState(false);
-  const [canScrollLeft, setCanScrollLeft] = React.useState(false);
+  const trackRef = React.useRef<HTMLDivElement>(null);
+  const [scrollProgress, setScrollProgress] = React.useState(0);
+  const [thumbWidthPercent, setThumbWidthPercent] = React.useState(35);
+  const [canScroll, setCanScroll] = React.useState(false);
 
-  const checkScroll = React.useCallback(() => {
+  const updateScroll = React.useCallback(() => {
     if (navRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = navRef.current;
-      setCanScrollLeft(scrollLeft > 6);
-      setCanScrollRight(scrollWidth - scrollLeft - clientWidth > 8);
+      const maxScroll = scrollWidth - clientWidth;
+      if (maxScroll > 4) {
+        setCanScroll(true);
+        const ratio = clientWidth / scrollWidth;
+        const widthPct = Math.max(Math.min(ratio * 100, 70), 22);
+        setThumbWidthPercent(widthPct);
+        const progress = maxScroll > 0 ? scrollLeft / maxScroll : 0;
+        setScrollProgress(Math.max(0, Math.min(1, progress)));
+      } else {
+        setCanScroll(false);
+      }
     }
   }, []);
 
   React.useEffect(() => {
-    checkScroll();
-    const timer = setTimeout(checkScroll, 150);
-    window.addEventListener('resize', checkScroll);
+    updateScroll();
+    const timer = setTimeout(updateScroll, 150);
+    window.addEventListener('resize', updateScroll);
     return () => {
       clearTimeout(timer);
-      window.removeEventListener('resize', checkScroll);
+      window.removeEventListener('resize', updateScroll);
     };
-  }, [checkScroll]);
+  }, [updateScroll]);
 
   // If user navigated to Watchlist, scroll it into view automatically
   React.useEffect(() => {
     if (location.pathname === '/watchlist' && navRef.current) {
       navRef.current.scrollTo({ left: navRef.current.scrollWidth, behavior: 'smooth' });
     }
-    checkScroll();
-  }, [location.pathname, checkScroll]);
+    updateScroll();
+  }, [location.pathname, updateScroll]);
+
+  const handleTrackClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (trackRef.current && navRef.current) {
+      const rect = trackRef.current.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const clickRatio = Math.max(0, Math.min(1, clickX / rect.width));
+      const maxScroll = navRef.current.scrollWidth - navRef.current.clientWidth;
+      navRef.current.scrollTo({
+        left: clickRatio * maxScroll,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   const formattedTime = React.useMemo(() => {
     if (!lastScrapedAt) return 'Just now';
@@ -104,16 +128,11 @@ export const Header: React.FC<HeaderProps> = ({ lastScrapedAt }) => {
 
         {/* Navigation & Status */}
         <div className="w-full md:w-auto flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2 sm:gap-4">
-          <div className="relative w-full md:w-auto">
-            {/* Left fade if scrolled */}
-            {canScrollLeft && (
-              <div className="pointer-events-none absolute left-0.5 top-0.5 bottom-0.5 w-6 bg-gradient-to-r from-[#FAF8F5] to-transparent rounded-l-sketch-sm z-10 md:hidden" />
-            )}
-
+          <div className="w-full md:w-auto bg-[#FAF8F5] border-2 border-[#1E1E1E] rounded-sketch-sm shadow-sketch-sm flex flex-col justify-center overflow-hidden">
             <nav
               ref={navRef}
-              onScroll={checkScroll}
-              className="w-full md:w-auto flex items-center justify-start gap-1 sm:gap-2 bg-[#FAF8F5] p-1 sm:p-1.5 pr-8 sm:pr-1.5 border-2 border-[#1E1E1E] rounded-sketch-sm shadow-sketch-sm overflow-x-auto no-scrollbar scrollbar-none"
+              onScroll={updateScroll}
+              className="w-full md:w-auto flex items-center justify-start gap-1 sm:gap-2 p-1 sm:p-1.5 overflow-x-auto no-scrollbar scrollbar-none"
             >
               <NavLink
                 to="/"
@@ -178,25 +197,28 @@ export const Header: React.FC<HeaderProps> = ({ lastScrapedAt }) => {
               </NavLink>
             </nav>
 
-            {/* Right fade overlay indicating more content */}
-            {canScrollRight && (
-              <div className="pointer-events-none absolute right-0.5 top-0.5 bottom-0.5 w-16 bg-gradient-to-l from-[#FAF8F5] via-[#FAF8F5]/85 to-transparent rounded-r-sketch-sm z-10 md:hidden" />
-            )}
-
-            {/* Visual swipe / scroll prompt button */}
-            {canScrollRight && (
-              <button
-                type="button"
-                onClick={() => {
-                  navRef.current?.scrollBy({ left: 140, behavior: 'smooth' });
-                }}
-                className="md:hidden absolute right-1.5 top-1/2 -translate-y-1/2 z-20 flex items-center gap-0.5 px-2 py-0.5 bg-[#FEF08A] hover:bg-[#FDE047] text-[#1E1E1E] border border-[#1E1E1E] rounded-full text-[10px] font-black uppercase tracking-wider shadow-[2px_2px_0px_#1E1E1E] active:scale-95 transition-transform cursor-pointer"
-                title="Scroll to reveal Watchlist"
-                aria-label="Scroll navigation right"
-              >
-                <span>Swipe</span>
-                <ChevronRight size={12} className="stroke-[3]" />
-              </button>
+            {/* Themed Doodle Scrollbar (visible on mobile when content overflows) */}
+            {canScroll && (
+              <div className="md:hidden px-2.5 pb-1.5 pt-0.5 w-full">
+                <div
+                  ref={trackRef}
+                  onClick={handleTrackClick}
+                  className="w-full h-2 bg-[#EFE7DA] border-[1.5px] border-[#1E1E1E] rounded-full relative cursor-pointer shadow-inner"
+                  title="Scroll navigation"
+                  aria-label="Horizontal scroll indicator"
+                >
+                  <div
+                    className="absolute top-0 bottom-0 bg-[#FEF08A] border-[1.5px] border-[#1E1E1E] rounded-full shadow-[1px_1px_0px_#1E1E1E] flex items-center justify-center gap-0.5 transition-[left] duration-75"
+                    style={{
+                      width: `${thumbWidthPercent}%`,
+                      left: `${scrollProgress * (100 - thumbWidthPercent)}%`
+                    }}
+                  >
+                    <div className="w-[1.5px] h-1 bg-[#1E1E1E]/50 rounded-full" />
+                    <div className="w-[1.5px] h-1 bg-[#1E1E1E]/50 rounded-full" />
+                  </div>
+                </div>
+              </div>
             )}
           </div>
 

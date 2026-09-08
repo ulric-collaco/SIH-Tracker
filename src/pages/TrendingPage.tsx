@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import type { PSRecord, SnapshotEvent, PSMetrics, TimeWindow } from '../types';
 import { calculatePSMetrics, getDeltaForWindow } from '../utils/metrics';
 import { useWatchlist } from '../context/WatchlistContext';
-import { DoodleStar, DoodleUnderline, DoodleTape } from '../utils/doodleIcons';
+import { DoodleStar, DoodleTape } from '../utils/doodleIcons';
 import { Flame, Clock, AlertTriangle } from 'lucide-react';
 
 interface TrendingPageProps {
@@ -68,29 +68,23 @@ export const TrendingPage: React.FC<TrendingPageProps> = ({ records, snapshots }
                 <h1 className="text-2xl sm:text-3xl font-black text-[#1E1E1E] tracking-tight">
                   Top Movers & Sudden Spikes
                 </h1>
-                <div className="relative inline-block">
-                  <p className="font-hand text-lg text-[#555555]">
-                    "What's heating up right now — avoid picking these if you want clean uncontested ground."
-                  </p>
-                  <DoodleUnderline color="#FECDD3" className="w-full h-2.5 -mt-1" />
-                </div>
               </div>
             </div>
           </div>
 
           {/* Time-Window Selector Buttons (6h / 12h / 24h / 48h) */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 bg-[#FAF8F5] p-2 border-2 border-[#1E1E1E] rounded-sketch-sm shadow-sketch-sm">
-            <div className="flex items-center gap-1.5 text-xs font-bold text-[#1E1E1E] px-2">
+          <div className="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 bg-[#FAF8F5] p-2.5 sm:p-2 border-2 border-[#1E1E1E] rounded-sketch-sm shadow-sketch-sm">
+            <div className="flex items-center justify-center sm:justify-start gap-1.5 text-xs font-bold text-[#1E1E1E] px-1">
               <Clock size={15} />
               <span>Window:</span>
             </div>
 
-            <div className="flex items-center gap-1.5">
+            <div className="grid grid-cols-4 gap-2 w-full sm:w-auto sm:flex sm:items-center">
               {(['6h', '12h', '24h', '48h'] as const).map((w) => (
                 <button
                   key={w}
                   onClick={() => setActiveWindow(w)}
-                  className={`sketch-btn px-3.5 py-1.5 text-xs font-black rounded-sketch-sm transition-all cursor-pointer ${
+                  className={`sketch-btn flex-1 sm:flex-initial sm:w-14 py-1.5 text-xs font-black rounded-sketch-sm transition-all cursor-pointer flex items-center justify-center text-center ${
                     activeWindow === w
                       ? 'bg-[#E11D48] text-white shadow-[2px_2px_0px_#1E1E1E]'
                       : 'bg-white text-[#1E1E1E] hover:bg-[#FECDD3]'
