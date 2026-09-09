@@ -1,7 +1,13 @@
 import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { PSRecord, SnapshotEvent, PSMetrics } from '../types';
-import { calculatePSMetrics, computeGemAnalyses } from '../utils/metrics';
+import {
+  calculatePSMetrics,
+  computeGemAnalyses,
+  isNewlyAdded,
+  formatAddedDate,
+  formatFullAddedDate
+} from '../utils/metrics';
 import { useWatchlist } from '../context/WatchlistContext';
 import { MetricCard } from '../components/MetricCard';
 import { DoodleStar } from '../utils/doodleIcons';
@@ -92,6 +98,11 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
     return computeGemAnalyses(records, snapshots);
   }, [records, snapshots]);
 
+  // Newly added problem statements count (all added since app tracking started)
+  const newRecordsCount = useMemo(() => {
+    return records.filter((r) => isNewlyAdded(r)).length;
+  }, [records]);
+
   // Handle header sort click
   const handleSort = (field: SortField) => {
     if (sortField === field) {
@@ -134,10 +145,7 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
         // Status filter
         if (statusFilter === 'Open' && r.is_frozen) return false;
         if (statusFilter === 'Frozen' && !r.is_frozen) return false;
-        if (statusFilter === 'New') {
-          const isRecentlyAdded = Date.now() - new Date(r.first_seen_at).getTime() <= 48 * 60 * 60 * 1000;
-          if (!isRecentlyAdded) return false;
-        }
+        if (statusFilter === 'New' && !isNewlyAdded(r)) return false;
 
         return true;
       })
@@ -293,8 +301,16 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
                   {st === 'Open' && <Unlock size={11} />}
                   {st === 'Frozen' && <Lock size={11} />}
                   {st === 'New' && <Sparkles size={11} className="text-[#EAB308]" />}
-                  <span className="hidden sm:inline">{st === 'New' ? 'Newly Added' : st}</span>
-                  <span className="inline sm:hidden">{st === 'New' ? 'New' : st}</span>
+                  <span className="hidden sm:inline">
+                    {st === 'New'
+                      ? `Newly Added${newRecordsCount > 0 ? ` (${newRecordsCount})` : ''}`
+                      : st}
+                  </span>
+                  <span className="inline sm:hidden">
+                    {st === 'New'
+                      ? `New${newRecordsCount > 0 ? ` (${newRecordsCount})` : ''}`
+                      : st}
+                  </span>
                 </button>
               ))}
             </div>
@@ -508,9 +524,15 @@ export const LeaderboardPage: React.FC<LeaderboardPageProps> = ({ records, snaps
                           <span className="bg-[#FAF8F5] px-2 py-1 border border-[#1E1E1E] rounded shadow-[1px_1px_0px_#1E1E1E]">
                             {r.ps_id}
                           </span>
-                          {Date.now() - new Date(r.first_seen_at).getTime() < 48 * 60 * 60 * 1000 && (
-                            <span className="px-1.5 py-0.5 bg-[#BBF7D0] border border-[#16A34A] text-[#15803D] font-extrabold text-[9px] uppercase tracking-wider rounded shadow-[1px_1px_0px_#16A34A] animate-pulse">
-                              NEW
+                          {isNewlyAdded(r) && (
+                            <span
+                              className="px-1.5 py-0.5 bg-[#BBF7D0] border border-[#16A34A] text-[#15803D] font-extrabold text-[9px] uppercase tracking-wider rounded shadow-[1px_1px_0px_#16A34A] inline-flex items-center gap-1 shrink-0"
+                              title={`Added to SIH portal on ${formatFullAddedDate(r.first_seen_at)}`}
+                            >
+                              <span>NEW</span>
+                              <span className="font-bold text-[#166534] tracking-normal font-sans">
+                                · {formatAddedDate(r.first_seen_at)}
+                              </span>
                             </span>
                           )}
                         </div>

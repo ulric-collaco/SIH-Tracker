@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import type { PSRecord, SnapshotEvent } from '../types';
-import { calculatePSMetrics } from '../utils/metrics';
+import { calculatePSMetrics, isNewlyAdded, formatFullAddedDate } from '../utils/metrics';
 import { useWatchlist } from '../context/WatchlistContext';
 import { DoodleStar, DoodleUnderline, DoodleTape } from '../utils/doodleIcons';
 import {
@@ -26,7 +26,8 @@ import {
   FileText,
   TrendingUp,
   BarChart3,
-  HelpCircle
+  HelpCircle,
+  Sparkles
 } from 'lucide-react';
 
 const TwoLineTick = (props: any) => {
@@ -342,6 +343,12 @@ export const PSDetailPage: React.FC<PSDetailPageProps> = ({ records, snapshots }
           ) : (
             <span className="text-xs font-bold px-2.5 py-0.5 sm:py-1 bg-[#DCFCE7] text-[#166534] border-2 border-[#22C55E] rounded-full flex items-center gap-1">
               <CheckCircle2 size={12} /> Open
+            </span>
+          )}
+          {isNewlyAdded(record) && (
+            <span className="text-xs font-bold px-2.5 py-0.5 sm:py-1 bg-[#BBF7D0] border-2 border-[#16A34A] text-[#15803D] rounded-full shadow-[1px_1px_0px_#16A34A] flex items-center gap-1">
+              <Sparkles size={12} className="text-[#16A34A]" />
+              <span>Added {formatFullAddedDate(record.first_seen_at)}</span>
             </span>
           )}
         </div>

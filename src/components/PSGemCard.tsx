@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import type { GemAnalysis } from '../types';
 import { useWatchlist } from '../context/WatchlistContext';
 import { DoodleStar } from '../utils/doodleIcons';
+import { isNewlyAdded, formatAddedDate } from '../utils/metrics';
 import { Flame, Users, Layers, ExternalLink } from 'lucide-react';
 
 interface PSGemCardProps {
@@ -15,8 +16,7 @@ export const PSGemCard: React.FC<PSGemCardProps> = ({ analysis }) => {
   const { record, isSurging, surgeReason, reasonTag } = analysis;
 
   const isStarred = watchlist.has(record.ps_id);
-  const isRecentlyAdded =
-    Date.now() - new Date(record.first_seen_at).getTime() < 48 * 60 * 60 * 1000;
+  const isNew = isNewlyAdded(record);
 
   return (
     <div
@@ -41,9 +41,15 @@ export const PSGemCard: React.FC<PSGemCardProps> = ({ analysis }) => {
           <span className="font-mono font-bold text-xs bg-[#FAF8F5] px-2 py-0.5 border border-[#1E1E1E] rounded shadow-[1px_1px_0px_#1E1E1E]">
             {record.ps_id}
           </span>
-          {isRecentlyAdded && (
-            <span className="px-1.5 py-0.5 bg-[#BBF7D0] border border-[#16A34A] text-[#15803D] font-extrabold text-[9px] uppercase tracking-wider rounded animate-pulse">
-              NEW
+          {isNew && (
+            <span
+              className="px-1.5 py-0.5 bg-[#BBF7D0] border border-[#16A34A] text-[#15803D] font-extrabold text-[9px] uppercase tracking-wider rounded shadow-[1px_1px_0px_#16A34A] inline-flex items-center gap-1"
+              title={`Added on ${formatAddedDate(record.first_seen_at)}`}
+            >
+              <span>NEW</span>
+              <span className="font-bold text-[#166534] tracking-normal font-sans">
+                · {formatAddedDate(record.first_seen_at)}
+              </span>
             </span>
           )}
           <span

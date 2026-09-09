@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import type { PSRecord, SnapshotEvent, PSMetrics } from '../types';
-import { calculatePSMetrics } from '../utils/metrics';
+import { calculatePSMetrics, isNewlyAdded, formatAddedDate } from '../utils/metrics';
 import { useWatchlist } from '../context/WatchlistContext';
 import { DoodleUnderline, DoodleTape } from '../utils/doodleIcons';
 import { Trash2, Flame, ArrowRight, Sparkles, Tag, Star } from 'lucide-react';
@@ -92,9 +92,22 @@ export const WatchlistPage: React.FC<WatchlistPageProps> = ({ records, snapshots
                 <div>
                   {/* Card Header */}
                   <div className="flex items-center justify-between gap-2 mb-2">
-                    <span className="font-mono text-xs font-black px-2 py-0.5 bg-[#FAF8F5] border border-[#1E1E1E] rounded">
-                      {r.ps_id}
-                    </span>
+                    <div className="flex items-center gap-1.5 flex-wrap">
+                      <span className="font-mono text-xs font-black px-2 py-0.5 bg-[#FAF8F5] border border-[#1E1E1E] rounded">
+                        {r.ps_id}
+                      </span>
+                      {isNewlyAdded(r) && (
+                        <span
+                          className="px-1.5 py-0.5 bg-[#BBF7D0] border border-[#16A34A] text-[#15803D] font-extrabold text-[9px] uppercase tracking-wider rounded shadow-[1px_1px_0px_#16A34A] inline-flex items-center gap-1"
+                          title={`Added on ${formatAddedDate(r.first_seen_at)}`}
+                        >
+                          <span>NEW</span>
+                          <span className="font-bold text-[#166534] tracking-normal font-sans">
+                            · {formatAddedDate(r.first_seen_at)}
+                          </span>
+                        </span>
+                      )}
+                    </div>
                     <div className="flex items-center gap-1.5">
                       <span
                         className={`text-[10px] font-bold px-2 py-0.5 border rounded-full ${

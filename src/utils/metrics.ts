@@ -223,3 +223,46 @@ export function computeGemAnalyses(
     totalAnalyzed: activeRecords.length
   };
 }
+
+// Initial baseline timestamp when tracking started (Sep 2, 2026)
+export const TRACKING_BASELINE_MS = new Date('2026-09-02T20:39:30.347Z').getTime();
+
+/**
+ * Checks whether a problem statement was added after initial app tracking started.
+ */
+export function isNewlyAdded(record: PSRecord, baselineMs: number = TRACKING_BASELINE_MS): boolean {
+  if (!record.first_seen_at) return false;
+  return new Date(record.first_seen_at).getTime() > baselineMs + 60000;
+}
+
+/**
+ * Formats date strictly in Day-first format: "DD/MM" e.g. "03/09", "07/09"
+ */
+export function formatAddedDate(dateStr: string): string {
+  try {
+    const d = new Date(dateStr);
+    return d.toLocaleDateString('en-GB', {
+      timeZone: 'Asia/Kolkata',
+      day: '2-digit',
+      month: '2-digit'
+    });
+  } catch {
+    return '';
+  }
+}
+
+/**
+ * Formats full date in Day-first format: "D MMM YYYY" e.g. "7 Sep 2026"
+ */
+export function formatFullAddedDate(dateStr: string): string {
+  try {
+    const d = new Date(dateStr);
+    const day = d.toLocaleDateString('en-IN', { timeZone: 'Asia/Kolkata', day: 'numeric' });
+    const month = d.toLocaleDateString('en-IN', { timeZone: 'Asia/Kolkata', month: 'short' });
+    const year = d.toLocaleDateString('en-IN', { timeZone: 'Asia/Kolkata', year: 'numeric' });
+    return `${day} ${month} ${year}`;
+  } catch {
+    return '';
+  }
+}
+
