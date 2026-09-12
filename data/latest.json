@@ -6,16 +6,16 @@
     "theme": "Disaster Management",
     "organization": "Ministry of Development of North Eastern Region (MDoNER)",
     "department": "Ministry of Development of North Eastern Region (MDoNER)",
-    "submitted_count": 56,
+    "submitted_count": 57,
     "cap": 500,
-    "remaining_slots": 444,
+    "remaining_slots": 443,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Background:\n\n The North Eastern Region (NER) frequently faces landslides, flash floods, road blockages, and slope failures due to heavy rainfall, fragile terrain, and unplanned hill cutting. These incidents often disrupt connectivity, damage infrastructure, delay emergency response, and isolate remote villages for days. Currently, monitoring of vulnerable zones is mostly reactive and dependent on manual reporting. There is limited use of real-time predictive systems for identifying high-risk zones and issuing early warnings to authorities and local communities. With increasing climate vulnerability in the region, there is a need for an AI-enabled real-time monitoring and prediction system that can help authorities take preventive action before disasters occur.\n\n Description:\n\n This problem statement proposes the development of an Al-powered early warning and monitoring platform capable of predicting and tracking landslide-prone areas in real time across the North Eastern Region. The solution should:\n\n a. Collect and analyse data from: Rainfall patterns Soil moisture sensors Satellite imagery Terrain/slope data Historical landslide records b. Use AI/ML models to identify high-risk zones and predict possible landslide events.\n\n c. Provide real-time alerts to district administrations, disaster management authorities, and local communities.\n\n d. Integrate GIS mapping for visualization of vulnerable roads, villages, and infrastructure.\n\n e. Allow citizens/field officials to upload geo-tagged photos/videos of cracks, slope movement or blocked roads.\n\n f. Generate dashboards showing:\n\n • Risk severity levels\n • Road connectivity status\n • Weather-linked risk forecasts\n • Emergency response prioritisation. Support multilingual notifications and low-network/offline functionality for remote areas.\n\n Expected Solution:\n\n A scalable Al-based software platform with:\n\n • Real-time GIS dashboard and risk heatmaps\n • AI/ML-based predictive analytics engine\n • Mobile/web application for field reporting and alerts.\n • Integration with IMD weather APIs, satellite feeds, and sensor data\n • Automated SMS/app-based early warning system\n • Cloud-based architecture with offline sync support for remote regions The solution should improve disaster preparedness, reduce loss of life and infrastructure damage, and strengthen climate-resilient governance in the North Eastern Region.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26002",
@@ -33,7 +33,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26003",
@@ -51,7 +51,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26004",
@@ -69,7 +69,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26005",
@@ -78,16 +78,16 @@
     "theme": "Agriculture, FoodTech & Rural Development",
     "organization": "Ministry of Development of North Eastern Region (MDoNER)",
     "department": "Ministry of Development of North Eastern Region (MDoNER)",
-    "submitted_count": 16,
+    "submitted_count": 17,
     "cap": 500,
-    "remaining_slots": 484,
+    "remaining_slots": 483,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Background:\n\n The North Eastern Region (NER) produces a substantial quantity of fresh vegetables and horticultural crops. However, due to inadequate cold storage infrastructure, unreliable electricity supply, difficult terrain, and transportation delays, farmers often face heavy post-harvest losses. Most remote farming areas lack access to affordable small-scale cold storage facilities near production clusters and local markets. As a result, fresh vegetables deteriorate rapidly before reaching consumers, reducing farmer income and affecting supply chain efficiency. There is a need for a low-cost, energy-efficient, and decentralized cold storage solution suitable for rural and remote regions of NER.\n\n Description:\n\n This problem statement seeks the development of a Solar-Powered Smart Mini Cold Storage System for farmers and vegetable producers in the North Eastern Region (NER) to reduce postharvest losses of perishable vegetables. Due to poor cold-chain infrastructure, difficult transportation routes, frequent power cuts, and long travel durations from remote villages to markets, fresh vegetables often spoil within a short time after harvest. Farmers are forced to sell produce at low prices or suffer financial losses due to lack of nearby storage facilities. The proposed system should function as a decentralized mini cold storage unit that can be installed at village-level collection centres, local markets, farmer cooperatives, and farm-gate aggregation points.\n\n The system should:\n\n a. Preserve fresh vegetables such as tomatoes, cabbage, beans, leafy vegetables, chilli, and other horticultural produce under suitable storage conditions b. Operate using solar energy with battery backup support for off-grid and low-electricity areas c. Maintain controlled temperature and humidity levels for extending shelf life of vegetables d. Include smart monitoring features for:\n\n • Temperature fluctuation\n • Humidity variation\n • Power failure alerts\n • Storage condition status e. Be compact, modular, and suitable for deployment in remote hilly terrain and rural agricultural clusters f. Be energy-efficient, weather-resistant, and capable of operating under varying climatic conditions of NER g. Support easy operation and low maintenance for farmer groups, cooperatives, and local vendors h. Help reduce spoilage during temporary storage before transportation to larger markets The solution should strengthen local agricultural supply chains, reduce vegetable wastage, improve market accessibility, and enhance income opportunities for farmers in the North Eastern Region.\n\n Expected Solution:\n\n A functional hardware-based smart mini cold storage system suitable for rural and remote agricultural areas of the North Eastern Region. The proposed solution should include:\n\n a. Solar-powered cooling system with energy-efficient operation b. Insulated cold storage chamber for preserving fresh vegetables and horticultural produce c. Battery backup support for uninterrupted operation during power outages or low sunlight conditions d. Temperature and humidity monitoring mechanism for maintaining suitable storage conditions e. Smart alert/indicator system for:\n\n • Temperature fluctuations\n • Power failure\n • Unsafe storage conditions f. Compact and modular design suitable for village-level deployment and difficult terrain g. Weather-resistant and durable structure for varying climatic conditions in NER h. Low-maintenance and cost-effective system suitable for farmer cooperatives, local markets, and collection centres i. Basic digital monitoring/display interface for storage status and system performance The solution should help reduce post-harvest vegetable spoilage, improve shelf life of produce, strengthen local cold-chain infrastructure, and enhance income opportunities for farmers in the North Eastern Region.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26006",
@@ -105,7 +105,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26007",
@@ -114,16 +114,16 @@
     "theme": "Smart Automation",
     "organization": "Ministry of Steel",
     "department": "NMDC",
-    "submitted_count": 12,
+    "submitted_count": 13,
     "cap": 500,
-    "remaining_slots": 488,
+    "remaining_slots": 487,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Background:\n\n NMDC Limited is Indiaâ€™s largest Iron Ore producer, currently producing approximately 53 Million Tonnes Per Annum (MTPA) from its three fully mechanized mining complexes, namely BIOM-Kirandul Complex, BIOM-Bacheli Complex in Chhattisgarh, and Donimalai Complex in Karnataka. The Bailadila Region alone contributes nearly 37 MTPA of Iron Ore production. In line with the National Steel Policy, NMDC has set a target of achieving 100 MT production capacity by 2030, with approximately 80 MT expected from the Bailadila Sector.\n\n The Bailadila mining region experiences severe monsoon conditions from June to October, including heavy rainfall, strong winds, high humidity, dense clouds, and thick fog. During this period, visibility on mine haul roads, particularly in hilltop mining areas, often reduces to as low as 3â€“5 meters. These conditions significantly affect the safe and efficient movement of Heavy Earth Moving Machinery (HEMM), especially dumpers engaged in ore transportation.\n\n Problem Description:\n\n Dense fog and extremely low visibility during the monsoon season create major operational and safety challenges in the Bailadila iron ore mines. Poor visibility restricts dumper movement, forcing operators to reduce speed or temporarily halt operations to avoid accidents and unsafe conditions.This results in increased haul cycle times, reduced fleet productivity, lower ore evacuation, and production losses. The risk of vehicle collision, road accidents, and operational disruptions also increases substantially during such conditions. Existing visibility aids and operational controls have limited effectiveness in dense fog environments.There is a need for an intelligent, reliable, and technology-driven solution that can enable safe and efficient movement of mine vehicles under low-visibility conditions while ensuring continuity of operations and maintaining production levels. Expected Solution:\n\n The proposed solution should improve operator situational awareness, assist in vehicle guidance and collision avoidance, and support real-time monitoring and decision-making for safe haul road operations during adverse weather conditions.\n\n The solution may leverage technologies such as:\n\n • AI/ML-based analytics\n • Computer vision and thermal imaging\n • LiDAR and radar-based sensing\n • GPS/DGPS-based vehicle tracking\n • Vehicle-to-Vehicle (V2V) and Vehicle-to-Infrastructure (V2I) communication\n • Autonomous or driver-assistance systems\n • IoT-enabled monitoring systems\n • Centralized command and control platforms\n • Digital Twin-based operational monitoring Expected Outcomes\n • Improved safety of dumper operations during foggy conditions\n • Reduction in collision risks and operational accidents\n • Improved haulage efficiency and reduced cycle times\n • Enhanced fleet utilization and continuity of mining operations during monsoon\n • Reduction in production losses caused by low visibility\n • Real-time monitoring and decision support for operators and control rooms\n • Scalable and deployable solution for large-scale mechanized open cast mines",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26008",
@@ -141,7 +141,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26009",
@@ -159,7 +159,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26010",
@@ -177,7 +177,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26011",
@@ -195,7 +195,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26012",
@@ -213,7 +213,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26013",
@@ -222,16 +222,16 @@
     "theme": "Smart Automation",
     "organization": "Ministry of Rural Development",
     "department": "Dept of land resources (DoLR)",
-    "submitted_count": 0,
+    "submitted_count": 1,
     "cap": 500,
-    "remaining_slots": 500,
+    "remaining_slots": 499,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Background: Urban land administration and cadastral management involve integration of multiple spatial and non-spatial datasets generated from various departments,agencies,and survey mechanisms. Under modern land governance programmes such as the NAKSHA Programme, large volumes of geospatial data are being generated through drone surveys, Orthorectified lmagery (ORl), DSM/DTM datasets, Ground Truthing (GT),GNSS surveys,municipal records,utility databases, and revenue land records.\n\n At present,harmonization and integration of these datasets largely depend on manual GIS workflows,which are time-consuming and prone to errors.With increasing availability of Al, GeoAl, and automated spatial processing technologies, there is significant scope for development of an intelligent system capable of automatically integrating and synchronizing multi-source geospatial datasets with feature-extracted cadastral data. Description:\n\n The proposed solution should develop an Al-enabled geospatial integration platform capable of automatically integrating, harmonizing, validating, and synchronizing multiple land-related datasets with Al-generated feature extraction outputs.\n\n The system should support integration of:\n\n . Drone imagery . Orthorectified lmagery (ORl)\n\n . DSM/DTM datasets . Existing cadastral maps . Revenue records . Municipal GIS layers . Utility network data . Ground Truthing (GT) datasets . GNSS/CORS survey data . Building footPrint datasets The solution should incorPorate:\n\n . Al/ML-based spatial matching algorithms . Automated topology correction . lntelligent attribute mapping . Geo-referencing and coordinate transformation engine . Change detection mechanisms . Spatial conflict resolution framework . Confidence scoring for integrated outputs Expected Solution:\n\n . The expected outcome is development of an intelligent geospatial integration framework capable of automatically harmonizing multi-source land-related datasets with Al-generated feature extraction outputs. .The final solution should:\n\n . Reduce manual GIS integration efforts . lmprove accuracy and consistency of urban land records . Enable seamless inter-departmental spatial data exchange . Accelerate cadastral finalization processes . lmprove interoperability of urban land information systems . Support standardized digital land governance Suggested Technologies:\n\n . Artificial lntelligence (Al)\n\n . Machine Learning (ML)\n\n . GeoAl . GIS & Web-GlS . Spatial Databases . ETL Automation . Computer Vision . Cloud Computing . Spatial Analytics . API lntegration Frameworks",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26014",
@@ -249,7 +249,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26015",
@@ -267,7 +267,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26016",
@@ -276,16 +276,16 @@
     "theme": "Smart Automation",
     "organization": "Ministry of Rural Development",
     "department": "Dept of land resources (DoLR)",
-    "submitted_count": 5,
+    "submitted_count": 7,
     "cap": 500,
-    "remaining_slots": 495,
+    "remaining_slots": 493,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Background:\n\n Land acquisition is a critical component of infrastructure development and public welfare projects in India. It facilitates the implementation of highways, railways, industrial corridors, irrigation projects, urban development, renewable energy initiatives, and other strategic infrastructure. The process involves multiple stakeholders, including land requiring bodies, land acquiring authorities, district administrations, state governments, and central ministries.\n\n Description of the Study:\n\n Web-based National Land Acquisition & Management System that digitizes the complete land acquisition lifecycleâ€”from project proposal submission to final possession of land. The proposed platform should provide standardized workflows for different stakeholders and enable seamless coordination among Central Ministries, State Governments, District Authorities, and Project Implementing Agencies. The system should facilitate online submission and approval of proposals, digital scrutiny, document management, automated workflow routing, and status tracking at every stage.The platform should support geo-tagging of acquired land parcels using GIS technology, enabling visualization of project locations on interactive maps. It should also maintain real-time information on key land acquisition parameters such as:\n\n 7. Land proposed and acquired 8. Notifications issued 9. Awards declared 10. Compensation assessed and disbursed 11. Possession status 12. Rehabilitation and Resettlement (R&R) progress 13. Number of affected and displaced families 14. Project-wise and state-wise progress 15. Timeline monitoring and milestone tracking The platform should be scalable for nationwide implementation across all States and Union Territories while ensuring data security, interoperability, and compliance with government standards.\n\n Add 'Scope of Study' Table here Problems:\n\n At present, land acquisition activities are managed through fragmented systems, manual documentation, and state-specific processes. The absence of a unified national digital platform results in inconsistent data collection, duplication of efforts, delays in approvals, limited transparency, and inadequate monitoring. Decision-makers often lack access to real-time information on the progress of land acquisition, compensation disbursement, possession status, and rehabilitation measures.\n\n Expected Solution:\n\n The solution should incorporate role-based access control, automated alerts and notifications, API-based integration with relevant government systems, customizable dashboards, analytical reports, and predictive analytics to support policy formulation and efficient project execution.\n\n The system should provide:\n\n 7. End-to-end digital workflow for land acquisition processes;\n\n 8. Online submission, verification, approval, and tracking of proposals;\n\n 9. GIS-enabled geo-tagging and spatial visualization of land parcels;\n\n 10. Interactive national dashboard displaying: Area notified, Area acquired, Compensation assessed and paid, Number of affected and displaced families, Rehabilitation & Resettlement status, Project progress, Possession status, Timeline adherence 11. API-based integration with land records, cadastral maps, and relevant government portals.\n\n 12. Mobile-responsive interface for field-level data collection and verification.\n\n 13. Secure document repository with version control and audit history.\n\n 14. Customizable MIS reports and executive dashboards for decision-makers.\n\n The solution should significantly enhance transparency, accountability, efficiency, and data-driven governance in land acquisition while reducing processing time and improving inter-agency coordination.\n\n Add 'Suggested components-wise technology' table here",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26017",
@@ -303,7 +303,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26018",
@@ -321,7 +321,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26019",
@@ -339,7 +339,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26020",
@@ -357,7 +357,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26021",
@@ -375,7 +375,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26022",
@@ -393,7 +393,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26023",
@@ -411,7 +411,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26024",
@@ -420,16 +420,16 @@
     "theme": "Smart Automation",
     "organization": "Ministry of Coal",
     "department": "Coal India Limited",
-    "submitted_count": 3,
+    "submitted_count": 4,
     "cap": 500,
-    "remaining_slots": 497,
+    "remaining_slots": 496,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Background:\n\n The Indian coal mining sector involves large-scale operations spread across multiple subsidiaries, mine sites, contractors, regulatory bodies, and field offices. Governance-related activities such as statutory compliance monitoring, inspection tracking, safety observations, production reporting, environmental monitoring, worker attendance, contract management, grievance handling, and regulatory reporting are often managed through fragmented systems, manual documentation, spreadsheets, and delayed reporting mechanisms.\n\n This leads to challenges such as data inconsistency, delayed decision-making, limited transparency, compliance gaps, duplication of records, weak monitoring of field-level activities, and difficulty in obtaining real-time operational insights. With increasing focus on transparency, accountability, sustainability, and digital governance, there is a need for an integrated smart governance platform specifically designed for the coal mining ecosystem.\n\n Defining the Problem:\n\n Develop a centralized AI-enabled governance and compliance monitoring platform for coal mining operations that can digitally integrate mine-level activities, statutory compliance, inspections, contractor management, and operational reporting.\n\n The proposed solution should:\n\n • Digitally track statutory compliance requirements related to safety, environment, production, and labour regulations.\n • Enable real-time monitoring of inspections, observations, violations, and corrective actions.\n • Use AI/analytics to identify high-risk areas, recurring compliance failures, and operational anomalies.\n • Provide geo-tagged and time-stamped field reporting through mobile applications.\n • Integrate dashboards for mine officials, corporate management, and regulatory authorities.\n • Generate automated alerts, reminders, compliance reports, and escalation mechanisms.\n • Minimize manual paperwork and improve transparency, accountability, and decision-making.\n • Be scalable for deployment across multiple mines and subsidiaries.\n • Participants may use AI/ML, mobile applications, GIS mapping, OCR/document digitization, workflow automation, blockchain-based audit trails, or multilingual conversational interfaces as part of the solution.\n\n The proposed system is expected to:\n\n • Improve governance efficiency and transparency in coal mining operations.\n • Reduce delays and errors in compliance management and reporting.\n • Enable data-driven monitoring and faster administrative decision-making.\n • Strengthen accountability and real-time tracking of field activities.\n • Support digital transformation and paperless governance in the mining sector.\n • Create a scalable indigenous e-governance framework for Indian coal mines. Expected Solution:\n\n The proposed solution should be a centralized AI-enabled smart governance platform for coal mines that integrates compliance monitoring, inspection management, operational reporting, contractor management, and field activity tracking into a single digital ecosystem. The system should provide real-time visibility, automated workflows, and data-driven insights through web and mobile applications to improve transparency, accountability, and decision-making across multiple mining sites and subsidiaries.\n\n • Centralized dashboard for mine officials, corporate management, and regulatory authorities with real-time compliance and operational monitoring.\n • AI/analytics engine to detect compliance risks, operational anomalies, recurring violations, and generate predictive alerts.\n • Geo-tagged mobile application for field inspections, safety observations, attendance, and incident reporting with offline support.\n • Automated workflow system for alerts, reminders, escalations, digital approvals, and statutory report generation.\n • GIS mapping, OCR-based document digitization, and secure digital audit trails for transparent and paperless governance.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26025",
@@ -447,7 +447,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26026",
@@ -465,7 +465,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26027",
@@ -474,16 +474,16 @@
     "theme": "Transportation & Logistics",
     "organization": "Ministry of Railways",
     "department": "Ministry of Railways",
-    "submitted_count": 9,
+    "submitted_count": 10,
     "cap": 500,
-    "remaining_slots": 491,
+    "remaining_slots": 490,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Background: Railway maintenance for fixed infrastructure of Engineering, Traction Distribution, and Signal & Telecommunication departments is currently planned independently. Each department requests maintenance blocks/disconnections via the BDMS system. This planning process is decentralized and manual. This often leads to inefficient block utilization, poor coordination, and suboptimal scheduling,which may reduce asset availability and impact train operations. Detailed Description: Maintenance data-such as defects and overdue tasksâ€”is maintained separately in systems like Track Management System (TMS), Signalling Maintenance & Management System (SMMS), and Traction Distribution Management System (TDMS). Meanwhile, the Control Office Application (COA) manages block corridor availability. Without integration and coordinated scheduling, maintenance blocks/disconnections are not optimally planned, resulting in asset downtime and reduced availability of fixed infrastructure for train operation.Your task is to develop an Automatic Block Planning system that integrates maintenance, defects and corridor data to generate optimized block schedules. The system should prioritize maintenance activities to minimize asset downtime and maximize the availability of critical infrastructure, ensuring uninterrupted train operations. Expected Solution: Participants should build an Al system that includes:\n\n 1. Integration of maintenance data (defects, overdue maintenance) from TMS, SMMS, and TDMS with corridor block and block availability as per the Train Time Table and the goods trains forecast from the Control Office.\n\n 2. Uses AI/ML algorithms to prioritize and schedule maintenance tasks based on criticality, urgency, and impact on asset availability.\n\n 3. Optimize block scheduling to maximize asset uptime by minimizing downtime and efficiently coordinating multi-department activities.\n\n 4. Provides block plans over multiple time horizons-weekly and monthlyâ€”to support both short-term and long-term maintenance.\n\n The solution should transform current decentralized and manual block planning into a data-driven, coordinated process that maximizes asset availability, improves safety, and supports reliable train operations.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26028",
@@ -501,7 +501,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26029",
@@ -519,7 +519,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26030",
@@ -537,7 +537,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26031",
@@ -555,7 +555,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26032",
@@ -564,16 +564,16 @@
     "theme": "Smart Automation",
     "organization": "Ministry of Consumer Affairs, Food & Public Distribution",
     "department": "Department of Consumer Affairs (DoCA)",
-    "submitted_count": 33,
+    "submitted_count": 34,
     "cap": 500,
-    "remaining_slots": 467,
+    "remaining_slots": 466,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Expected Solution: Develop a platform that:\n\n • Enables farmer registration and slot booking.\n • Provides real-time queue management.\n • Sends SMS/app notifications.\n • Tracks procurement and payment status.\n • Reduces congestion and waiting time at procurement centres.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26033",
@@ -591,7 +591,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26034",
@@ -600,16 +600,16 @@
     "theme": "Miscellaneous",
     "organization": "Ministry of Consumer Affairs, Food & Public Distribution",
     "department": "Department of Consumer Affairs (DoCA)",
-    "submitted_count": 27,
+    "submitted_count": 30,
     "cap": 500,
-    "remaining_slots": 473,
+    "remaining_slots": 470,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Background:\n\n Packaged commodities are widely sold through retail stores, supermarkets and e-commerce platforms across India. Under the Legal Metrology Act, 2009 and the Legal Metrology(Packaged Commodities) Rules, 2011, every packaged commodity is required to bear mandatory declarations such as name and address of manufacturer/packer/importer, net quantity, Maximum Retail Price (MRP), month and year of manufacture/packing/import,consumer care details and other prescribed declarations in a specified format and manner.These declarations are important for ensuring transparency, fair trade practices and consumer protection. However, due to the large volume and variety of packaged products available in the market, manual inspection and compliance checking by enforcement agencies becomes time-consuming and resource intensive. Non-compliance such as missing declarations, incorrect font sizes, improper MRP declarations and other such practices are frequently observed.There is scope to develop a compliance checking system capable of scanning product labels,package images and product listings to identify violations under the Legal Metrology(Packaged Commodities) Rules, 2011. Accordingly, a software system capable of automatically detecting, extracting and validating mandatory declarations and identifying noncompliances in packaged commodities through image and label analysis can be developed.\n\n Description:\n\n Develop a software application capable of scanning packaged commodity labels, product images and product information to automatically assess compliance with the Legal Metrology(Packaged Commodities) Rules, 2011.\n\n The system should be capable of:\n\n • Scanning and analyzing images of packaged commodities.\n • Detecting mandatory declarations prescribed under Legal Metrology rules.\n • Checking correctness, completeness and placement of declarations.\n • Identifying missing or non-compliant declarations.\n • Checking readability and font size requirements.\n • Generating compliance reports and violation summaries.\n • Maintaining a repository of scanned products and compliance history.\n • Providing dashboards for enforcement officials.\n\n Expected Solution:\n\n The proposed solution should include:\n\n • User-friendly web and/or mobile-based software application.\n • Automated extraction and validation of mandatory declarations.\n • Rule-based compliance checking for Legal Metrology (Packaged Commodities)\n\n Rules, 2011.\n\n • Generation of digital compliance reports in PDF and editable formats.\n • Dashboard for monitoring inspections, violations and product compliance details.\n • Search and retrieval facility for previously scanned products and reports.\n • Technical documentation describing software architecture and deployment framework.\n\n Key Functional Requirements:\n\n • Image upload and product scanning functionality.\n • Extraction of declarations from labels and packaging and detection of mandatory declarations\n • Font size and readability analysis.\n • Detection of missing, misleading or non-standard declarations.\n • Generation of compliance/non-compliance reports.\n • Attachment of photographs and supporting evidence.\n • Repository of scanned products and inspection history.\n • Role-based user access and secure authentication.\n • Dashboard for monitoring compliance status and enforcement activities.\n • Export of reports to PDF and editable formats.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26035",
@@ -627,7 +627,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26036",
@@ -645,7 +645,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26037",
@@ -654,16 +654,16 @@
     "theme": "Smart Vehicles",
     "organization": "MathWorks",
     "department": "MathWorks",
-    "submitted_count": 11,
+    "submitted_count": 12,
     "cap": 500,
-    "remaining_slots": 489,
+    "remaining_slots": 488,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Background:\n\n Most autonomous driving systems are developed for roads with clear lane markings, standard signage, predictable traffic flow, and controlled intersections. Indian roads are often very different. Vehicles of many types share the same space, including cars, buses, trucks, auto-rickshaws, twowheelers, bicycles, pedestrians, pushcarts, and animals. Drivers and pedestrians may change direction suddenly, merge without signalling, drive against traffic, or cross at unmarked locations. In many areas, road edges are unclear, potholes are common, and formal lane discipline is limited. These conditions make it difficult for traditional path planning methods that depend on structured road geometry and predictable motion. India has a large and diverse road network that includes village roads, crowded market areas, urban intersections, and highways. To support the safe deployment of autonomous vehicles in such environments, students must build planning systems that can adapt in real time to uncertainty, mixed traffic, and changing road conditions.\n\n Description:\n\n Design and simulate an adaptive path planning system for an autonomous vehicle that operates in unstructured Indian road conditions. The system should perceive the environment using a multi-sensor setup such as camera, LiDAR, and radar, and identify diverse road users and obstacles, including auto-rickshaws, pushcarts, pedestrians, and animals. It should predict the short-term motion of surrounding agents, including non-lane-based and irregular movement patterns, and generate a safe, collision-free path that can be replanned in real time. The solution should also handle practical driving situations such as missing lane markings, informal merging, sudden pedestrian movement, and unexpected obstacles on the road. Teams should validate their solution using at least five realistic Indian road scenarios, such as an unmarked village road, a busy urban intersection without signals, a highway merge involving slow-moving vehicles, a dense market area with mixed traffic, and a sudden cattle-crossing event. Teams are encouraged to use MathWorks tools such as RoadRunner for scenario design, Automated Driving Toolbox for sensor modeling and fusion, Navigation Toolbox and Stateflow for planning and decision logic, Vehicle Dynamics Blockset or a Simulink bicycle model for vehicle behavior, and Deep Learning Toolbox for detection and trajectory prediction.\n\n Expected Solution:\n\n The expected solution should include three main parts.First, teams should build a working simulation pipeline that integrates perception, prediction, path planning, decision logic, and vehicle motion in MATLAB and Simulink. Second, teams should create realistic driving scenarios that represent Indian road conditions, including at least two detailed RoadRunner scenes such as a village road and an urban intersection, and use them to test the vehicle across all five required scenarios. Third, teams should present results that show safe and reliable navigation, including collision-free performance, smooth path generation, and timely replanning during changing road conditions. The final submission should include the simulation model, the designed scenarios, performance results with metrics such as replanning latency, path smoothness, and scenario completion rate, a short technical report that explains the approach and design choices, and a demonstration video that shows the vehicle navigating the test scenarios. The solution should demonstrate closed-loop validation of autonomous driving behavior under realistic mixed-traffic conditions.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26038",
@@ -681,7 +681,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26039",
@@ -690,16 +690,16 @@
     "theme": "Smart Automation",
     "organization": "Government of Jharkhand",
     "department": "Department of Higher & Technical Education",
-    "submitted_count": 12,
+    "submitted_count": 14,
     "cap": 500,
-    "remaining_slots": 488,
+    "remaining_slots": 486,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Background:\n\n Jharkhand's underground coal mines face significant safety challenges, including toxic gas leaks,tunnel collapses, flooding, and poor visibility. During emergencies, rescue teams often lack real-time information about underground conditions, increasing risks and delaying response efforts.An intelligent robotic system capable of monitoring mine conditions, detecting hazards, and locating trapped workers can significantly improve mine safety and rescue operations while reducing risks to human rescuers.\n\n Description:\n\n The Al-Powered Mine Safety and Rescue Rover is an inteltigent robotic system designed to operate in hazardous underground mining environments. The rover is equipped with gas sensors, thermal and night-vision cameras, environmental monitoring sensors, and wireless communication modules to provide real-time information about mine conditions.The system can detect toxic gases, monitor temperature and humidity, identify potential hazards, and assist in locating trapped workers during emergencies. Using Al-based analysis and remote monitoring capabilities, the rover enables rescue teams to assess underground conditions without exposing personnel to dangerous environments. The solution aims to enhance mine safety, improve emergency response efficiency, and reduce the risk of casualties in underground mining operations.\n\n Expected Solution:\n\n Develop an Al-powered mine rescue system consisting of a rugged ground rover or a compact aerial drone capable of operating in hazardous underground mining environments. The system should provide real-time monitoring of toxic gases, temperature, humidity, and structural conditions while transmitting live video and thermal imaging data to a surface control station.\n\n The rover and drone will assist rescue teams by exploring inaccessible areas, detecting hazards, locating trapped workers, and providing situational awareness during emergencies. The solution should improve mine safety, reduce risks to rescue personnel, and enable faster, more informed emergency response in underground mines.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26040",
@@ -717,7 +717,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26041",
@@ -726,16 +726,16 @@
     "theme": "Smart Education",
     "organization": "Government of Jharkhand",
     "department": "Department of Higher & Technical Education",
-    "submitted_count": 2,
+    "submitted_count": 3,
     "cap": 500,
-    "remaining_slots": 498,
+    "remaining_slots": 497,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Background:\n\n Jharkhand is lndia's leading mineral-producing state, with coal mines, steel plants, and mica processing units employing hundreds of thousands of workers many of them young tribal recruits with no prior industrial exposure. Classroom-based safety training using static manuals has documented retention rates below 20% after one week. Live drills are operationally disruptive, and VR headset simulators are inaccessible to small-scale mines and contract workers.. The DGMS, Dhanbad, recorded 48 fatal mine accidents in Jharkhand in 2022-23, a large share involving workers with under 30 days of orientation. The Factories Act, 1948 and Mines Act, 1952 mandate periodic safety certification, yet no standardised digital training platform exists in regional languages, and physical certificates have no mechanism to verify comprehension.\n\n Description:\n\n Design and develop a mobile AR-based vocational training and safety certification platform running on mid-range Android smartphones (Android 10+, no external headset required), accessible to workers across Jharkhand's mining, steel, and mica sectors. The platform must deliver interactive AR training modules covering five industrial safety domains: (l) Fire & Explosion Response-exit identification, extinguisher use, and evacuation sequencing overlaid on real surroundings via phone camera; (2) Gas Leak & Confined Space Protocol-hazard zone recognition, PPE selection, and buddy-system procedures simulated in AR; (3) Machinery.\n\n Expected Solution:\n\n A working Android APK demonstrating at least two complete AR training modules, an assessment engine, QR-based certificate generation and verification, Hindi and Santali localisation, offline functionality, and a web admin compliance dashboard- submitted with a demo video and public GitHub repository.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26042",
@@ -753,7 +753,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26043",
@@ -771,7 +771,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26044",
@@ -789,7 +789,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26045",
@@ -807,7 +807,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26046",
@@ -825,7 +825,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26047",
@@ -843,7 +843,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26048",
@@ -861,7 +861,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26049",
@@ -879,7 +879,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26050",
@@ -897,7 +897,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26051",
@@ -915,7 +915,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26052",
@@ -933,7 +933,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26053",
@@ -951,7 +951,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26054",
@@ -969,7 +969,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26055",
@@ -987,7 +987,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26056",
@@ -1005,7 +1005,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26057",
@@ -1023,7 +1023,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26058",
@@ -1041,7 +1041,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26059",
@@ -1059,7 +1059,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26060",
@@ -1077,7 +1077,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26061",
@@ -1095,7 +1095,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26062",
@@ -1113,7 +1113,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26063",
@@ -1131,7 +1131,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26064",
@@ -1149,7 +1149,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26065",
@@ -1167,7 +1167,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26066",
@@ -1185,7 +1185,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26067",
@@ -1203,7 +1203,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26068",
@@ -1221,7 +1221,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26069",
@@ -1239,7 +1239,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26070",
@@ -1257,7 +1257,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26071",
@@ -1275,7 +1275,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26072",
@@ -1293,7 +1293,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26073",
@@ -1311,7 +1311,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26074",
@@ -1329,7 +1329,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26075",
@@ -1347,7 +1347,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26076",
@@ -1365,7 +1365,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26077",
@@ -1383,7 +1383,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26078",
@@ -1401,7 +1401,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26079",
@@ -1419,7 +1419,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26080",
@@ -1437,7 +1437,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26081",
@@ -1455,7 +1455,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26082",
@@ -1473,7 +1473,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26083",
@@ -1491,7 +1491,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26084",
@@ -1509,7 +1509,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26085",
@@ -1527,7 +1527,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26086",
@@ -1545,7 +1545,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26087",
@@ -1563,7 +1563,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26088",
@@ -1581,7 +1581,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26089",
@@ -1590,16 +1590,16 @@
     "theme": "Agriculture, FoodTech & Rural Development",
     "organization": "Ministry of Cooperation",
     "department": "National Council for Cooperative Training (NCCT)",
-    "submitted_count": 19,
+    "submitted_count": 20,
     "cap": 500,
-    "remaining_slots": 481,
+    "remaining_slots": 480,
     "is_frozen": false,
     "dataset_link": null,
     "description": "• Background Labour Cooperative Federations and Labour Cooperative Societies possess a large pool of skilled workers such as electricians, plumbers, carpenters, painters, domestic helpers, caregivers, drivers, gardeners,cleaners, and technicians. However, they lack a structured digital platform to connect these workers with households and institutions requiring such services.Private platforms currently dominate this market, while cooperative workers often remain underutilized despite having skills and local presence.\n • Problem Statement To develop a cooperative-owned digital service marketplace platform that enables Labour Cooperative Federations and Labour Cooperative Societies to provide verified household and community services while ensuring fair wages, worker welfare, and consumer trust.\n • Expected Solution Features\n • Service provider registration and verification\n • Worker skill profiling and certification\n • Customer booking and scheduling system\n • Geo-location based service matching\n • Digital payments and invoicing\n • Rating and feedback mechanism\n • Worker welfare and insurance integration\n • Emergency and on-demand service booking\n • Cooperative federation administration dashboard\n • Multilingual mobile application\n • AI-based demand forecasting and workforce allocation\n • Technology Components\n • Mobile Applications\n • Artificial Intelligence (AI)\n • Geo-Spatial Technology\n • Digital Payment Systems\n • Cloud Computing\n • Proposed Mode Software",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26090",
@@ -1617,7 +1617,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26091",
@@ -1635,7 +1635,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26092",
@@ -1653,7 +1653,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26093",
@@ -1671,7 +1671,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26094",
@@ -1689,7 +1689,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26095",
@@ -1698,16 +1698,16 @@
     "theme": "Smart Automation",
     "organization": "Ministry of Social Justice and Empowerment (MoSJE)",
     "department": "Department of Social Justice and Empowerment",
-    "submitted_count": 12,
+    "submitted_count": 13,
     "cap": 500,
-    "remaining_slots": 488,
+    "remaining_slots": 487,
     "is_frozen": false,
     "dataset_link": null,
     "description": "• Problem Statement Develop a centralized mobile application for real-time monitoring, surprise inspections, CCTV surveillance integration, and random inspection assignment for projects/institutes/NGOs running under DoSJE schemes.\n • Key Features\n • Live CCTV feed integration from projects/institutes\n • Random Video Conferencing (VC) connectivity with Project Incharge/Staff/Beneficiaries\n • Real-time monitoring dashboard for Department officials\n • Mobile-based inspection module for PMU/Inspection Teams\n • Random assignment of inspection duties through AI/automation\n • Geo-tagged inspection reports and live evidence capture\n • AI-based anomaly and attendance analytics\n • Stakeholders\n • DoSJE Divisions\n • PMU Teams\n • NGOs/Institutes\n • Beneficiaries\n • State/District Authorities\n • Expected Outcomes:\n • Improved transparency and accountability\n • Reduction in fake reporting and proxy functioning\n • Real-time monitoring of projects\n • Better inspection governance and compliance\n • Enhanced citizen-centric service delivery",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26096",
@@ -1725,7 +1725,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26097",
@@ -1743,7 +1743,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26098",
@@ -1761,7 +1761,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26099",
@@ -1779,7 +1779,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26100",
@@ -1788,16 +1788,16 @@
     "theme": "Smart Automation",
     "organization": "Ministry of Petroleum & Natural Gas",
     "department": "Chennai Petroleum Corporation Limited(CPCL)",
-    "submitted_count": 6,
+    "submitted_count": 7,
     "cap": 500,
-    "remaining_slots": 494,
+    "remaining_slots": 493,
     "is_frozen": false,
     "dataset_link": null,
     "description": "• Background Government procurement through the Government e-Marketplace (GeM) involves verification of multiple statutory, regulatory and eligibility requirements of bidders.\n\n Procurement officers are required to examine and validate documents and information related to Udyam/MSME registration, GST registration and return filing, PAN and Income Tax compliance, Make in India/local content, EPFO/ESIC compliance, Startup India, NSIC, OEM authorization, DigiLocker, blacklisting/debarment and other applicable statutory requirements.\n\n The verification process is largely document-intensive and requires cross-checking information across multiple government portals and databases. This results in significant manual effort, longer tender evaluation time and the possibility of inconsistencies or human errors.\n\n • Description The problem statement envisages development of an AI-powered integrated bid compliance verification platform that can automatically verify the eligibility and compliance status of bidders participating in GeM procurement.\n\n The proposed platform shall integrate with relevant Government portals and databases and retrieve/verify bidder information such as Udyam Registration, GSTN, Income Tax, PAN, MCA21, Startup India, NSIC, EPFO, ESIC, DigiLocker, Make in India, BIS/DPIIT and other applicable sources.\n\n An AI Verification Engine shall analyse the submitted bidder documents and portal-derived information, identify missing or inconsistent information, validate applicable compliance requirements and generate an overall compliance assessment. The system shall provide a Compliance Dashboard displaying the compliance score, risk level, document verification status, pending requirements and AI-generated recommendations. The final decision regarding qualification/disqualification shall remain with the Procurement Officer.\n\n • Expected Solution An AI-enabled integrated platform shall be developed for automated verification of bidder compliance in GeM procurement. The solution shall:\n\n 1. Integrate with relevant Government portals/databases for automated verification.\n\n 2. Verify Udyam/MSME status and other applicable statutory registrations.\n\n 3. Verify GST registration and return filing status.\n\n 4. Verify PAN and Income Tax compliance.\n\n 5. Check Make in India/local content requirements.\n\n 6. Verify EPFO/ESIC compliance wherever applicable.\n\n 7. Verify Startup India, NSIC and OEM authorization requirements.\n\n 8. Perform DigiLocker/document verification.\n\n 9. Identify blacklisting and debarment status.\n\n 10.Check other applicable statutory and tender-specific compliance requirements.\n\n 11.Use AI to identify missing, inconsistent or non-compliant information.\n\n 12. Generate an overall Compliance Score and Risk Level.\n\n 13. Provide an AI-generated recommendation to the Procurement Officer.\n\n 14.Maintain an auditable record of verification and compliance checks.\n\n The final qualification/disqualification decision shall remain with the Procurement Officer, with the AI system functioning as a decision-support and verification tool.\n\n • Key Capabilities 1. Multi-Portal Integration â€“ Udyam, GSTN, PAN, GEM etc., 2. AI Document Verification â€“ Automated extraction,validation & cross-verification 3. Automated Compliance Engine â€“ Tender-specific eligibility & statutory compliance checks 4. Risk & Compliance Scoring â€“ Overall compliance score with bidder risk classification 5. AI Recommendation Engine â€“ Identifies gaps,discrepancies & recommends compliance status 6. Audit Trail & Dashboard â€“ Centralized verification status,evidence & decision support\n • Expected Impact\n • 60â€“80% Reduction in Verification Effort\n • Faster Tender Evaluation & Award\n • Improved Compliance & Transparency\n • Reduced Human Errors & Inconsistencies\n • Better Bidder Screening & Risk Identification\n • Standardized Verification Across CPSEs\n • Complete Auditability & Traceability",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26101",
@@ -1815,7 +1815,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26102",
@@ -1833,7 +1833,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26103",
@@ -1851,7 +1851,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26104",
@@ -1869,7 +1869,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26105",
@@ -1887,7 +1887,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26106",
@@ -1905,7 +1905,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26107",
@@ -1923,7 +1923,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26108",
@@ -1941,7 +1941,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26109",
@@ -1950,16 +1950,16 @@
     "theme": "Agriculture, FoodTech & Rural Development",
     "organization": "Ministry of Fisheries, Animal Husbandry & Dairying",
     "department": "Department of Animal Husbandry & Dairying",
-    "submitted_count": 1,
+    "submitted_count": 2,
     "cap": 500,
-    "remaining_slots": 499,
+    "remaining_slots": 498,
     "is_frozen": false,
     "dataset_link": null,
     "description": "• Background Bovine mastitis is one of the most prevalent and economically significant diseases affecting dairy cattle and buffaloes in lndia. The disease adversely impacts milk production, milk quality,animal health, and farm profitability, while also increasing treatment costs and antimicrobial usage. Despite its substantial economic and public health implications, mastitis is often detected only after clinical signs become apparent, limiting opportunities for timely intervention and prevention.The increasing adoption of digital dairy technologies, including automated milking systems,livestock monitoring devices, milk quality sensors, farm management softlvare, and environmental monitoring Systems, presents an opportunity to leverage Artificial lntelligence(Al), Machine Learning (ML), and Internet of Things (loT) technologies for early disease prediction and risk-based herd management.\n • Problem Statement Develop an integrated Al-enabled predictive forecasting system capable of identifying and predicting the risk of bovine mastitis at both individual animal and herd levels before the onset of clinical disease.The proposed solution should utilize real-time and historical farm data from multiple sources to generate early warning alerts, risk scores, and actionable recommendations for dairy farmers, veterinarians, dairy cooperatives, and animal health authorities. The system should support continuous monitoring, disease forecasting, and evidence-based decision-making to reduce disease incidence and associated economic losses.\n • Expected Solution The solution should be capable of:\n\n 1. Predicting mastitis risk at least 7-14 days before the appearance of clinical signs.\n\n 2. Generating animal-wise and herd-level risk assessments.\n\n 3. lntegrating data from sensors, farm management systems, laboratory records, and manual inputs.\n\n 4. Providing real-time alerts and notifications to farmers and veterinarians.\n\n 5. Continuously improving prediction accuracy through Al/ML-based learning models.\n\n 6. Supporting data-driven decision-making through user-friendly dashboards and visualization tools.\n\n 7. Recommending preventive and corrective interventions based on identified risk factors.\n\n 8. Supporting multilingual and mobile-enabled deployment for field-level adoption.\n\n • Data Parameters for Analysis The system should be capable of analysing and conelating multiple risk factors associated with mastitis occurrence, including:\n • Animal health and treatment records and herd strength\n • For individual level breed, age lactation number, disease history and vaccination status\n • Milk yield and milk quality parameters\n • Somatic Cell Count (SCC) and related indicators\n • Body temperature, aclivity levels, and rumination behaviour\n • Environmental, hygiene of the farm and climatic conditions\n • Feeding and nutritional practices\n • Housing conditions and farm management practices\n • Milking procedures and operational schedules\n • Previous disease history and co-morbidities\n • Worker hygiene and health-related risk factors Based on the analysis, the system may classify animals into risk categories such as:\n • No Risk\n • Low Risk\n • Moderate Risk\n • High Risk\n • Solution Components\n • Hardware Component- The hardware component may include:\n • loT-enabled sensors for monitoring milk conductivity, milk temperature, pH, milk yield,and other relevant indicators.\n • Wearable or collar-based devices for monitoring body temperature, udder surface temperature, activity, rumination, feeding behaviour, and physiological parameters.\n • Wireless communication through Bluetooth, W-Fi, GSM, NB-loT, LoRa, or equivalent technologies.\n • Battery-operated or solar-powered deployment suitable for field conditions.\n • GPS-enabled geo-tagging of animal and farm data.\n • Rugged, low-cost, and farmer-friendly designs suitable for lndian dairy production systems.\n • Software Component The software platform should include:\n • Al and machine learning models for mastitis risk prediction and forecasting.\n • Mobile applications for farmers, veterinarians, and field personnel.\n • Cloud-based data storage, integration, and analytics\n • Algorithms to predict subclinical mastitis with SCC.\n • Real-time herd health monitoring dashboards.\n • Early warning and notification systems through mobile alerts, SMS, or other communication channels.\n • Decision-support tools providing recommendations on animal health management, milking hygiene, nutrition, biosecurity, and veterinary interventions.\n • GIS-based visualization of disease trends, hotspots, and risk clusters.\n • Expected Deliverables\n • Functional prototype of the integrated mastitis forecasting system.\n • Al-based predictive analytics engine with demonstrated forecasting capability.\n • Mobile application and user interface for field deployment.\n • Cloud-based dashboard and data management platform.\n • Early warning and notification module.\n • Hardware prototype incorporating sensor-based data acquisition.\n • Demonstration and validation of predictive performance under field conditions.\n • Expected Outcomes and lmpact The successful solution is expected to:\n • Enable early detection and prevention of bovine mastitis both at individual level and herd level.\n • Reduce milk production losses and treatment costs.\n • lmprove milk quality, safety, and marketability.\n • Reduce indiscriminate antimicrobial usage and support antimicrobial resistance (AMR) mitigation efforts.\n • lmprove animal welfare, productivity, and longevity.\n • Promote precision livestock farming and digital dairy management.\n • Enhance the profitability and resilience of dairy farmers.\n • Contribute to the development of a data-driven livestock health surveillance ecosystem in lndia.\n • lnnovation Challenge The solution should be affordable, scalable, interoperable, and easy to deploy across diverse dairy production systems, including smallholder farms, dairy cooperatives, organized farms,and commercial dairy enterprises. Particular emphasis should be placed on low-cost implementation, ease of use, multilingual accessibility, data security, and predictive accuracy under lndian field conditions.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26110",
@@ -1977,7 +1977,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26111",
@@ -1995,7 +1995,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26112",
@@ -2013,7 +2013,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26113",
@@ -2022,16 +2022,16 @@
     "theme": "MedTech / BioTech / HealthTech",
     "organization": "Autodesk",
     "department": "Autodesk Education Experience",
-    "submitted_count": 12,
+    "submitted_count": 13,
     "cap": 500,
-    "remaining_slots": 488,
+    "remaining_slots": 487,
     "is_frozen": false,
     "dataset_link": null,
     "description": "• Description Students are required to conceptualize a Human Augmentation device or assembly of their choice using Autodesk Fusion. The design should reflect original thinking and real-world engineering intent. The proposed solution may address applications in healthcare, rehabilitation, industrial ergonomics,assistive living, sports, or personal mobility, and may include (but is not limited to):\n • Exoskeleton Mechanisms\n • Prosthetic Components\n • Rehabilitation Devices\n • Assistive Support Systems\n • Ergonomic Enhancement Products\n • Wearable Assistive Devices\n • Adaptive Mechanical Aids From the complete assembly, participants shall identify one critical machinable mechanical component that is strictly manufacturable using either Subtractive 3-Axis CNC Milling or Subtractive 2-Axis CNC Turning.The selected component shall be clearly identified within the complete assembly, indicating its location and function in the Human Augmentation product. Participants shall also justify why the selected component is suitable for the chosen CNC manufacturing process.Using Autodesk Fusion, participants shall develop the complete digital manufacturing workflow for the selected component, including:\n • CAD Modelling\n • Manufacturing Setup\n • Tool Selection\n • Toolpath Generation\n • Machining Simulation\n • Toolpath Optimization\n • G-code Generation The final solution should demonstrate good engineering design practices, manufacturability, machining efficiency, and effective use of Autodesk Fusion CAD/CAM capabilities.\n • Expected Outcomes The proposed solution should include:\n • CAD model of the identified critical mechanical component within the assembly.\n • Justification for selecting the component for either Subtractive 3-Axis CNC Milling or Subtractive 2-Axis CNC Turning.\n • Manufacturing setup and machining strategy.\n • Toolpath generation and machining simulation.\n • Optimized manufacturing process.\n • Product renders (assembled and exploded views).\n • Participation Guidelines For Idea Submission\n • Each student team shall submit a PowerPoint Presentation (6â€“8 Slides) describing their proposed Human Augmentation solution.\n\n The presentation should include:\n\n • Problem statement and proposed solution.\n • Concept sketches.\n • CAD model of the identified critical mechanical component within the assembly.\n • Assembly view highlighting the selected CNC-manufactured component.\n • Justification for selecting the component for either Subtractive 3-Axis CNC Milling or Subtractive 2-Axis CNC Turning.\n • CAM workflow developed in Autodesk Fusion, including:\n • Manufacturing Setup\n • Tool Selection\n • Toolpath Generation\n • Machining Simulation\n • Toolpath Optimization\n • Product renders (assembled and exploded views).\n\n NOTE: Physical machining or prototype fabrication is not required during the Idea Submission stage. Teams will be evaluated based on the proposed design,CAD model of the identified critical mechanical component, component selection, and digital manufacturing workflow demonstrated in Autodesk Fusion.\n\n • Designs should be created using ONLY Autodesk Fusion and not copied or taken from any other source.\n • AI Generated content is NOT ALLOWED.\n\n For Grand Finale*: Students must use Autodesk Fusion to design and manufacture specific components to machine size within the given time period and present the following to the jury members:\n\n • PPT explaining the final project\n • Final Manufactured components\n • Public link of the design\n • Rendered images NOTE: *Grand Finale details to be revealed on competition day.\n • The required 3-Axis CNC Milling Machine and 2-Axis CNC Turning Machine will be provided by the organizers during the Grand Finale.\n • Attach Marking Criteria Table and Reference Workflow here*\n • Faculty (SIH SPOC) Form Teams choosing to submit idea for Autodeskâ€™s problem statement are required to request their faculty (SIH SPOC) to fill this 'Mandatory Form'\n • Autodesk Fusion\n • Autodesk Fusion is a cloud-based 3D modeling, CAD, CAM, CAE, and PCB software platform for professional product design and manufacturing.\n • Students and educators can click here to get FREE access to Fusion.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26114",
@@ -2049,7 +2049,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26115",
@@ -2067,7 +2067,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26116",
@@ -2085,7 +2085,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26117",
@@ -2103,7 +2103,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26118",
@@ -2121,7 +2121,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26119",
@@ -2139,7 +2139,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26120",
@@ -2157,7 +2157,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26121",
@@ -2175,7 +2175,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26122",
@@ -2193,7 +2193,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26123",
@@ -2202,16 +2202,16 @@
     "theme": "Smart Automation",
     "organization": "Bharat Electronics Limited",
     "department": "Bharat Electronics Limited",
-    "submitted_count": 4,
+    "submitted_count": 5,
     "cap": 500,
-    "remaining_slots": 496,
+    "remaining_slots": 495,
     "is_frozen": false,
     "dataset_link": null,
     "description": "• Background Modern smart warehouses rely on fleets of Autonomous Mobile Robots (AMRs) to move goods efficiently. As fleet sizes grow, relying entirely on a centralized cloud server for path planning causes high network latency, Wi-Fi dead-zone vulnerabilities, and single-point-of-failure risks.To ensure continuous operation, modern robotics is shifting toward decentralized, edge-computing solutions where robots can talk to each other directly and make split-second decisions on the fly.\n • Description The objective is to design a decentralized coordination and collision-avoidance framework for a multi-robot fleet (at least 3 AMRs) operating in a dynamic warehouse environment. The system must run locally on edge hardware (e.g., Raspberry Pi or Jetson Nano onboard each robot) and handle:\n\n 1. Decentralized Communication: Inter-robot messaging to share position and intent without a central server.\n\n 2. Dynamic Multi-Agent Conflict Resolution: Resolving deadlocks and avoiding collisions at narrow intersections or choke points in real-time.\n\n 3. Task Allocation & Re-routing: Automatically re-assigning pickup points or changing paths if one robot encounters a blocked aisle.\n\n • Expected Solution A multi-robot simulation featuring:\n • Decentralized Network Stack: A peer-to-peer communication protocol where robots share localization data locally.\n • Multi-Agent Path Planning: Implementation of algorithms for edge hardware.\n • Fleet Dashboard: A lightweight monitoring UI that visualizes the entire fleet's real-time positions and battery status.\n • Success Criteria: Zero inter-robot collisions and a minimum 20% reduction in total task completion time compared to traditional stop-and-wait methods when handling overlapping paths.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26124",
@@ -2229,7 +2229,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26125",
@@ -2247,7 +2247,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26126",
@@ -2265,7 +2265,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26127",
@@ -2283,7 +2283,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26128",
@@ -2301,7 +2301,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26129",
@@ -2319,7 +2319,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26130",
@@ -2337,7 +2337,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26131",
@@ -2346,16 +2346,16 @@
     "theme": "Agriculture, FoodTech & Rural Development",
     "organization": "Government Of Maharashtra",
     "department": "Maharashtra State Innovation Society, Department of Skills, Employment, Entrepreneurship and Innovation",
-    "submitted_count": 31,
+    "submitted_count": 33,
     "cap": 500,
-    "remaining_slots": 469,
+    "remaining_slots": 467,
     "is_frozen": false,
     "dataset_link": null,
     "description": "• Problem Description Farmers often recognise crop diseases or pest infestations only after visible damage has spread. Extension staff may cover large areas, while laboratory diagnosis and expert advice may not be immediately available. Weather, crop stage, variety, soil condition and local pest history influence risk, but these inputs are rarely combined into actionable farm-level alerts. Incorrect diagnosis may lead to delayed treatment, excessive or inappropriate pesticide use, increased cultivation cost,residue concerns and yield loss. The challenge is to provide timely, reliable and locally relevant detection,forecasting and management support.\n • Expected Solution / Outcome A farmer- and extension-worker-friendly crop-health system that supports image based symptom identification, pest-trap or sensor inputs, weather-based risk forecasting, geospatial hotspot mapping,expert validation and multilingual advisories. The system should recommend integrated pest and disease management actions, safe input usage,referral to extension or laboratories, and follow-up monitoring. It should learn from field confirmations and provide dashboards for agriculture officials.Expected outcomes include earlier detection, reduced crop loss, more targeted pesticide use, faster extension response, improved surveillance coverage and better planning of preventive interventions.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26132",
@@ -2373,7 +2373,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26133",
@@ -2391,7 +2391,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26134",
@@ -2409,7 +2409,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26135",
@@ -2427,7 +2427,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26136",
@@ -2445,7 +2445,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26137",
@@ -2463,7 +2463,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26138",
@@ -2481,7 +2481,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26139",
@@ -2499,7 +2499,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26140",
@@ -2517,7 +2517,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26141",
@@ -2535,7 +2535,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26142",
@@ -2554,7 +2554,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26143",
@@ -2573,7 +2573,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26144",
@@ -2591,7 +2591,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26145",
@@ -2609,7 +2609,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26146",
@@ -2627,7 +2627,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26147",
@@ -2645,7 +2645,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26148",
@@ -2663,7 +2663,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26149",
@@ -2681,7 +2681,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26150",
@@ -2699,7 +2699,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26151",
@@ -2717,7 +2717,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26152",
@@ -2726,16 +2726,16 @@
     "theme": "Blockchain & Cybersecurity",
     "organization": "National Technical Research Organisation (NTRO)",
     "department": "National Technical Research Organisation (NTRO)",
-    "submitted_count": 5,
+    "submitted_count": 6,
     "cap": 500,
-    "remaining_slots": 495,
+    "remaining_slots": 494,
     "is_frozen": false,
     "dataset_link": null,
     "description": "• Background Social media platforms are complex ecosystems driven by human emotion, diverse demographics, and interconnected networks. To truly understand an online community, it is required look beneath the surface. This requires understanding how followers feel (Sentiment Analysis), who those followers are (Demographics), what topics are captivating them (Trend Tracking), and how they influence one another (Link Analysis). Combining these four vectors using AI is the key to unlocking true audience intelligence.\n\n • Description Participants will be challenged to design and build an AI-driven Social Media Analytics Framework that processes raw platform data to extract deep, actionable audience insights. The system must leverage advanced Artificial Intelligence and Machine Learning techniques to simultaneously infer follower sentiment, map audience demographics, identify top trending narratives, and perform link/network analysis to uncover how information and influence flow among followers.\n\n • Expected Solution AI solution must address the following five core components:\n\n A. Continuous Data Collection & Timeline Management: Design a multi-platform data ingestion pipeline capable of pulling live data, posts, user interactions, and comments. The architecture must support a structured, time-stamped historical database to map out the exact chronology of conversations. The pipeline platform requirements are categorized as follows:\n\n • Essentials (Must-Have): X (formerly Twitter) & Telegram.\n\n • Desirable (Good-to-Have): Instagram & Facebook.\n\n • Appreciable Additions: Reddit or YouTube (for extracting text-based context from video comments).\n\n B. Multi-Dimensional Sentiment Inference: Use Natural Language Processing (NLP) to detect nuanced emotions (e.g., sarcasm, anxiety, excitement, supportive, against etc.) within user posts and comment threads, mapping how these sentiments fluctuate along the established data timeline.\n\n C. Automated Demographic Profiling: Develop models to infer aggregate, anonymized follower demographics (such as age brackets, geographic distribution, language, and professional interests) based on public profile indicators, bio text, behavioral patterns etc.\n\n D. Real-Time Trend & Topic Detection: Automatically identify, rank, and predict rising trends, viral keywords, and shifting discussions as they emerge chronologically in the dataset.\n\n E. Link Analysis & Network Topology: Map the relationships among followers. Identify 'nodes of high influence' (key opinion leaders) and visualize how a trend or sentiment spreads from one user segment to another over time.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26153",
@@ -2744,16 +2744,16 @@
     "theme": "Blockchain & Cybersecurity",
     "organization": "National Technical Research Organisation (NTRO)",
     "department": "National Technical Research Organisation (NTRO)",
-    "submitted_count": 8,
+    "submitted_count": 9,
     "cap": 500,
-    "remaining_slots": 492,
+    "remaining_slots": 491,
     "is_frozen": false,
     "dataset_link": null,
     "description": "• Background This challenge seeks AI systems capable of learning network behaviour, anticipating attacker progression and supporting proactive cyber defence using the emerging concept of World Models. Design and develop a software prototype that learns the evolving state of a computer network from traffic telemetry and predicts the likelihood and progression of malicious activity before compromise is completed. The solution should ingest network traffic, learn temporal behaviour, forecast future attack states and provide interpretable decision support for defenders. Solutions should demonstrate applicability to enterprise environments and Critical Information Infrastructure.\n\n • Represent network state using feature vectors or graphs.\n • Learn state-transition dynamics using sequence models (LSTM, Transformer), Graph Neural Networks, latent state models or other AI techniques.\n • Forecast future network states and estimate the probability of attacker progression.\n • Map predicted behaviour to recognised attack stages (e.g. MITRE ATT&CK).\n • Provide explain ability using attention mechanisms, feature attribution or equivalent techniques • Detailed Description Participants are encouraged to build world models based AI systems that move beyond static intrusion classification towards predictive cyber defence. The solution may utilise flow records, packet captures, authentication logs or other publicly available cybersecurity telemetry. It should model temporal relationships, infer evolving network state, predict future attack progression and present meaningful explanations for its predictions.\n\n Traditional machine learning classifiers applied to network traffic treat each flow in isolation and map it to a binary benign/malicious label. This discards the temporal and causal structure of an infiltration: the sequence in which ports are probed, the pattern in which SYN flags precede ACK floods, the inter-arrival timing of reconnaissance packets before lateral movement begins. An infiltration is a process unfolding over time, not a single anomalous packet.\n\n • World Models â€” AI architectures that learn an internal causal simulation of how environment states evolve â€” offer a fundamentally different approach. Rather than classifying traffic, a world model learns the transition dynamics P(S_t+1 | S_t): given the current observed network state (active flows, flag distributions, port activity, packet timing), what is the probability distribution over future states. This enables forward simulation: roll out K steps ahead and identify whether the current trajectory converges to an infiltration state, before the attacker completes the kill chain.\n\n 1. Input Data â€” Two Levels of Traffic Feature Teams must work with both flow-level and packet-level features drawn from open-source network traffic datasets:\n\n • Flow-level features (NetFlow / IPFIX format): source and destination IP/port pairs, TCP flag bitmask (SYN, ACK, FIN, RST, PSH, URG), protocol, bytes transferred per flow, packets per flow, flow duration, inter-arrival time (IAT) statistics (mean, variance, max), and bidirectional flow ratios.\n • Packet-level features (PCAP-derived): Time-To-Live (TTL) values and their variance across a session, TCP window size, IP fragment flags, payload size distribution, port scan signatures (sequential or randomised port access patterns), and retransmission counts.\n\n The combination of both levels is required because flow-level features capture aggregate behaviour (a SYN flood) while packet-level features expose timing and sequencing patterns (a slow reconnaissance scan designed to evade flow-based thresholds).\n\n 2. World Model Architecture The core deliverable is a learned model of network state transition dynamics â€” not a static classifier. The model must:\n\n • Represent network state as a structured feature vector or graph encoding active flows at time t.\n • Learn P(S_t+1 | S_t) â€” the probability distribution over the next network state given the current state â€” using a sequence model such as an LSTM, Temporal Transformer, or Graph Neural Network (GNN) operating over time-windowed traffic observations.\n • Be trained on labelled open-source datasets using supervised dynamics learning, where ground-truth state transitions are derived from the attack timeline annotations in the dataset.\n • Generalise to unseen attack patterns â€” not merely memorize signatures from the training set.\n\n 3. Infiltration Prediction and Attack Stage Mapping The world model must support forward simulation: given current observed traffic, roll out K steps and output\n\n • A time-series probability score: likelihood of infiltration in the next K time windows.\n • Predicted attack stage: mapping to MITRE ATT&CK phases â€” Reconnaissance, Initial Access, Lateral Movement, Command & Control, or Exfiltration â€” based on the predicted future state.\n • Driving features: which specific flags, ports, or flow patterns are contributing most to the infiltration prediction (via attention weights or SHAP values).\n\n The approaches are provided only as examples and are not mandatory. Teams are free to propose alternative architectures that satisfy the objectives.\n\n • Expected Solution(Indicative)\n\n A software-based, fully open-source solution is expected. The solution may include:\n\n • A feature extraction pipeline that ingests CIC-IDS-2018 or CTU-13 CSV flow records and/or raw PCAP files (parsed using Scapy or PyShark) and outputs a timestamped, normalised feature matrix covering both flow-level and packet-level attributes described above.\n • A trained world model (LSTM, Transformer, or GNN architecture) that demonstrably learns traffic state transition dynamics â€” not a static input-output classifier. Training scripts, model weights, and a reproducible training configuration must be included.\n • An infiltration prediction engine that performs K-step forward simulation from a current traffic snapshot and outputs: infiltration probability score, predicted MITRE ATT&CK stage, and top contributing traffic features.\n • An explainability output for each prediction â€” using SHAP values or model attention weights â€” identifying which flags, ports, or flow statistics are driving the prediction. Black-box outputs without interpretability are not acceptable.\n • A working demonstration interface (Streamlit, Flask web app, or CLI) that accepts a PCAP or CSV file as input, runs the world model inference, and displays the infiltration probability timeline, flagged flows, and attack stage annotations. The interface must run fully offline without cloud API dependencies.\n • Benchmark results comparing model performance (F1 score, precision, recall, false positive rate) against a logistic regression baseline trained on the same features, demonstrating that the world model's temporal dynamics learning provides measurable improvement.\n\n • Expected Solution/Deliverables for Evaluation\n\n • Source Code Link (GitHub/Drive Link)\n • Readme with Setup Instructions\n • Architecture Document (Max 2 Pages)\n • Demo Video (Max 2 Minutes)\n • Technical Presentation (Max 5 Slides) .",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26154",
@@ -2771,7 +2771,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26155",
@@ -2780,16 +2780,16 @@
     "theme": "Blockchain & Cybersecurity",
     "organization": "National Technical Research Organisation (NTRO)",
     "department": "National Technical Research Organisation (NTRO)",
-    "submitted_count": 4,
+    "submitted_count": 5,
     "cap": 500,
-    "remaining_slots": 496,
+    "remaining_slots": 495,
     "is_frozen": false,
     "dataset_link": null,
     "description": "• Background Modern enterprise networks are inherently heterogeneous, consisting of a vast array of hardware from diverse vendors. Organizations are mandated to align these devices with rigorous security frameworks, including CIS Benchmarks, NIST SP 800-53, DISA STIGs, and ISO/IEC 27001.\n\n The network environment includes, but is not limited to:\n\n • Firewalls & SASE: Palo Alto, Fortinet, Cisco (Firepower/Secure/Meraki), Check Point, Juniper (SRX), Sophos, SonicWall, WatchGuard, Barracuda, Zscaler, Cloud-native firewalls (AWS, Azure, GCP), Sangfor, Hillstone, A10, Forcepoint, Stormshield, Netgate (pf/TNSR), Cato Networks, and others.\n • Routers & Switches: Cisco (Catalyst/Nexus), HPE Aruba, Juniper (EX/MX/PTX), Arista, Extreme, NVIDIA (Mellanox), Allied Telesis, Huawei, D-Link, MikroTik, Ubiquiti, Alcatel-Lucent, Ruijie, Adtran, and others.\n • Specialized Networking: Open/Disaggregated (Dell, Nokia, 'White Box' hardware running SONiC, Cumulus), Hyperscale/AI (NVIDIA, Arista, Juniper), and Physical Infrastructure (Corning).\n\n Note: The aforementioned list is illustrative; the application must be ideally designed to support any network device configuration, regardless of vendor or market segment.\n\n • Description\n • The Core Challenge:\n\n In modern digital infrastructures, network devices act as the primary gatekeepers of data. However, they are also the most common point of misconfiguration, which accounts for a significant percentage of security breaches. Security frameworks like CIS, NIST, and STIGs offer specific 'hardening' protocolsâ€”such as disabling insecure protocols (Telnet/HTTP), enforcing strong cryptographic suites, configuring granular ACLs, and logging all administrative access. Currently, the industry relies on a bifurcated approach: either highly manual, checklist-based human auditing or expensive, vendor-locked enterprise management suites that lack flexibility for heterogeneous, multi-vendor environments.\n\n • Operational Gap:\n\n Administrators managing hybrid networks (composed of firewalls, switches, and routers from various vendors like Palo Alto, Cisco, Arista, etc.) lack a centralized 'Source of Truth' for compliance. The challenge is twofold:\n\n 1.Syntactic Diversity: Each vendor uses proprietary Command Line Interface (CLI) syntax, varied hierarchical structures, and distinct firmware/OS versioning. A 'secure password' setting in a Cisco IOS switch is syntactically distinct from the same setting in a Juniper SRX firewall.\n\n 2.Scalability & Adaptation: The network landscape is not static. As organizations adopt 'White Box' networking (SONiC), Cloud-native security groups (AWS/Azure), or specialized AI-driven infrastructure, traditional parsers fail because they cannot predict or interpret the configuration structures of newly acquired or proprietary hardware.\n\n The requested solution is an AI-augmented, vendor-agnostic Compliance Engine. Rather than relying on a hard-coded library of commandsâ€”which becomes obsolete as vendors release firmware updatesâ€”the system will employ Ai based approaches ( for example (Pattern Recognition and Natural Language Processing (NLP)) to interpret configuration files.\n\n When a configuration file is ingested, the AI-based engine will:\n\n • Normalization: Extract the configuration and map it into a standardized, vendor-neutral schema (e.g., a 'Security Baseline Model').\n • Deviation Analysis: Compare this normalized model against the chosen framework (e.g., checking if the parsed 'ssh_version' is '2' as required by CIS).\n • Dynamic Adaptation (The 'Training' Loop): When the system encounters an unrecognized configuration structure, it will trigger an Interactive Training Interface. In this GUI, the administrator will be presented with the 'raw' unrecognized command lines. Using a user-friendly, low-code interface, the administrator will map these commands to specific security categories (e.g., 'This command sets the timeout limit'). The AI engine will then update its internal heuristics, effectively 'learning' to parse this new vendorâ€™s logic without requiring backend code redeployment.\n\n The proposed solution should be a user-friendly, robust software platform featuring:\n\n 1. Unified Ingestion Engine: A dashboard for uploading single or bulk configuration files from any network device.\n\n 2. AI-Powered Training Module: A dedicated, intuitive GUI where administrators can 'train' the system to parse unseen vendor formats by mapping specific command outputs to compliance parameters.\n\n 3. Multi-Framework Compliance Engine: A logic engine that evaluates configurations against user-selected benchmarks (CIS, NIST, STIGs, ISO).\n\n 4. Actionable Intelligence & PDF Reporting: A comprehensive, single PDF report for each device, covering:\n\n o Device Identification: Including serial numbers and hardware details.\n\n o Compliance Findings: Clear 'Pass/Fail' results with risk severity assessments.\n\n o Remediation Paths: Device-specific, step-by-step CLI command sequences to resolve non-compliance and harden the device.\n\n 5.Vendor-Agnostic Scalability: A modular architecture designed to support new vendors, standards, and OS versions without requiring manual code modifications for every update.\n\n • Suggested Development Workflow The development can be visualized in the following stages:\n\n 1. Normalization: Converting proprietary CLI outputs into a structured JSON/Schema model.\n\n 2. Compliance Engine: Using Python libraries (e.g., Netmiko or NAPALM) for data collection and custom logic for mapping.\n\n 3. AI/ML Integration: Using Natural Language Processing (NLP) or pattern matching to identify keywords in configurations that the system has not been pre-trained on.\n\n 4. Reporting: Generating dynamic PDFs (e.g., using ReportLab or FPDF in Python) that are customized based on the device's specific model and software version.\n\n • Expected Solution/Deliverables for Evaluation\n • Source Code Link (GitHub/Drive Link)\n • Readme with Setup Instructions\n • Architecture Document (Max 2 Pages)\n • Demo Video (Max 2 Minutes)\n • Technical Presentation (Max 5 Slides)",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26156",
@@ -2807,7 +2807,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26157",
@@ -2825,7 +2825,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26158",
@@ -2843,7 +2843,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26159",
@@ -2861,7 +2861,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26160",
@@ -2879,7 +2879,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26161",
@@ -2897,7 +2897,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26162",
@@ -2915,7 +2915,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26163",
@@ -2934,7 +2934,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26164",
@@ -2952,7 +2952,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26165",
@@ -2970,7 +2970,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26166",
@@ -2988,7 +2988,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26167",
@@ -3006,7 +3006,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26168",
@@ -3015,16 +3015,16 @@
     "theme": "Smart Vehicles",
     "organization": "Indian Space Research Organisation(ISRO)",
     "department": "Department of Space / Indian Space Research Organisation",
-    "submitted_count": 5,
+    "submitted_count": 6,
     "cap": 500,
-    "remaining_slots": 495,
+    "remaining_slots": 494,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Background Vehicle logistics, ride-hailing services, quick commerce and emergency responders heavily rely on smartphone-based navigation apps (like Google Maps or MapmyIndia) powered by GNSS (GPS/Galileo/NavIC etc). However, when a vehicle enters a long underground tunnel/ underpass, a multi-level parking lot, a dense forested highway, or a deep urban canyon surrounded by skyscrapers, GNSS connectivity drops entirely. GNSS signals are inherently weak and vulnerable to structural blockage (urban canyons, dense foliage, tunnels, deep valleys) and unintentional electromagnetic interferences from variety of sources such as jamming. This causes navigation apps to freeze, jump erratically, or miscalculate upcoming turns, leading to missed exits, delivery delays, and safety hazards.\n\n In these environments, systems must rely on self-contained Inertial Navigation Systems (INS) built from Inertial Measurement Units (IMUs) (accelerometers and gyroscopes) to calculate position via dead reckoning during GNSS outage and switch back to GNSS aided INS after blackout. While INS is immune to external jamming, low-cost tactical or MEMS-grade IMUs suffer from inherent sensor biases, deterministic errors, and thermo-mechanical noise. While modern high-end cars possess factory-fitted, wheel-connected Inertial Navigation Systems (INS), the vast majority of vehicles on Indian roadsâ€”including commercial trucks, older cars, and millions of two-wheelers (motorcycles/scooters)â€”rely solely on the driverâ€™s smartphone mounted on the dashboard or placed in mobile holder.\n\n Using a smartphone's internal MEMS IMU (accelerometer and gyroscope) to track vehicle position via dead reckoning during a GNSS blackout is highly challenging. The smartphone is subjected to severe chassis vibrations, engine harmonics, sudden braking, and road potholes. Without an external speedometer feed from the vehicle's OBD-II port, calculating distance and velocity exclusively from consumer-grade smartphone sensors results in exponential error accumulation, causing the estimated location to drift away within seconds. To overcome these challenges, there is a need for AI-ML enhanced dead reckoning and sensor fusion(GNSS+INS) techniques that integrate AI and machine learning models with real-time correction strategies.\n\n Description The goal is to develop a lightweight, edge-deployable software engine and mobile application that transforms a standalone smartphone into an Intelligent Dead Reckoning (IDR) system with GNSS Fusion. When a GNSS outage occurs, the application must instantly transition to inertial tracking(INS), maintaining lane-level accuracy without requiring any physical connection to the vehicleâ€™s internal computer and seamlessly switch back to GNSS aided INS solution.\n\n To bypass the need for an external speedometer, the solution must employ AI/ML models trained on vehicle kinematics to accurately predict vehicle speed and acceleration profiles solely from the smartphoneâ€™s noisy accelerometer/gyro inputs. It must dynamically detect and filter out non-navigation motions such as engine idling vibrations, pothole shocks, bumps, and accidental phone misalignments on the mount.\n\n Furthermore, the navigation engine should implement a smart Map-Matching Filter. By overlaying the inertial trajectory onto an offline map database (e.g., Open Street Map), the system should use the road layout as a constraint. For instance, it can apply Non-Holonomic Constraints (NHC), assuming a car cannot slide sideways or fly upwards, to dramatically snap the drifting IMU path back onto the actual road grid.\n\n Also, the GNSS+INS fusion Algorithm should employ AI/ML techniques to develop an AI based fusion model to mitigate drift errors and provide accurate position.\n\n The Final solution and AI/ML models developed should not be constricted to smart phone IMU sensors data alone (Mobile application). These algorithms/models should also work with any other external IMU sensors data (Edge deployable software engine).\n\n Dataset Details: IO-VNBD: Inertial and Odometry benchmark dataset for ground vehicle positioning.\n\n This dataset should be used to train & test the models and submit for screening of proposals. Teams are required to include the preliminary AI models and the results of the position plot inferenced from the subset of IO-VNBD dataset as part of their proposals submitted for evaluation. During the screening process more datasets will be provided for further evaluation of the AI models.\n\n The On-Device Workflow Dead reckoning and GNSS fusion algorithms are hybrid. Complex training happens in the cloud/desktop apriori, while inference happens on the smartphone.\n\n 1. Model Training (Cloud/Desktop): Teams should train AI-ML models using IMU sensors datasets collected using a smartphone mounted on their vehicles or datasets available in open-source domain (for eg. â€˜IO-VNBD datasetâ€™) and bring trained models with them for SIH finale. Teams can bring the downloaded map database (e.g., Open Street Map).\n\n 2. On-Device Execution (Smartphone): During SIH Finale, the trained, lightweight model will need to be exported to the smartphone. It should receive live inputs from the phone's built-in Inertial Measurement Unit (IMU)â€”the accelerometer, gyroscope, and magnetometer/compass and GNSS data if available. The AI-ML based algorithms should remove IMU sensors noise & bias, predict corrections, perform map matching and determine continuous position using AI-ML based algorithms for both dead reckoning and GNSS+INS Fusion. For complete details regarding final solution, refer to the expected solution section.\n\n Expected Solution The final deliverable must be a working mobile application and an Edge deployable software engine exhibiting the following technical capabilities:\n\n • In-Vehicle Alignment & Calibration Engine: An algorithmic module that automatically determines the phoneâ€™s pitch, roll, and yaw relative to the vehicle's driving direction, whether the phone is strictly dashboard-mounted or placed in mobile holder.\n • AI Speed & Vibration Filter: A deep-learning or statistical signal-processing model running locally on the phone that filters out high-frequency road noise/potholes and directly estimates vehicle forward velocity from IMU signals.\n • Advanced Map-Matching & Kinematic Constraints: A framework (e.g., AI-ML framework or Unscented Kalman Filter + Hidden Markov Map Matching) that binds the calculated position to known road networks and geometric paths during a dropout.\n • GNSS+INS Fusion Engine: An innovative AI based Sensor Fusion Algorithm that combines GNSS & IMU measurements and provides significant improvement in overall output by eliminating drift errors and providing accurate position and velocity.\n • Seamless GNSS Deficit Handler: An instant seamless transition mechanism between GNSS aided INS and Dead reckoning modes within milliseconds of GNSS signal blackout and vice-versa.\n • Real-time Navigation Interface: A functional mobile application with UI displaying a smooth, uninterrupted vehicle icon showing seamless navigation.\n\n Performance Benchmark:\n\n Dead Reckoning: The solution must restrict positional drift to less than 10% of the total distance travelled using smartphone IMUs sensors during GNSS signals blackout (for e.g., in case of smartphones IMU, a drift of less than 5 meters is desired over 50m GNSS denied environment in <1 minutes OR less than 100m of drift over a 1km GNSS denied environment at a speed of 60kmph in tunnels/underground metro OR similar simulated environments where GNSS signals are unavailable).\n\n GNSS+INS Fusion: Position update rate of 10Hz with processing on smartphones (Mobile application) and higher update rates on Edge deployable software engine using FOG based IMU sensors data (around 200Hz).",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26169",
@@ -3042,7 +3042,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26170",
@@ -3060,7 +3060,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26171",
@@ -3078,7 +3078,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26172",
@@ -3096,7 +3096,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26173",
@@ -3114,7 +3114,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26174",
@@ -3132,7 +3132,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26175",
@@ -3150,7 +3150,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26176",
@@ -3168,7 +3168,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26177",
@@ -3186,7 +3186,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26178",
@@ -3195,16 +3195,16 @@
     "theme": "Disaster Management",
     "organization": "Qualcomm Inc",
     "department": "Qualcomm Inc",
-    "submitted_count": 13,
+    "submitted_count": 14,
     "cap": 500,
-    "remaining_slots": 487,
+    "remaining_slots": 486,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Background India faces a growing range of environmental and climate-related risks including urban flooding, river floods, cyclones, forest fires, air pollution, droughts, landslides, and extreme weather events. Floods remain among the most frequent disasters across states such as Assam, Bihar, Kerala, and Maharashtra, while forest fires increasingly affect Uttarakhand, Himachal Pradesh, and central Indian forests. Air pollution continues to impact major urban centers, and climate change is increasing the frequency and intensity of these hazards. Government agencies such as NDMA, IMD, and ISRO already rely on environmental monitoring and early warning systems to support disaster management.\n\n Traditional monitoring systems often depend on centralized infrastructure and may not provide sufficiently localized, real-time intelligence. A distributed network of smart sensors powered by edge AI can improve early detection, reduce response times, and enable communities to act before environmental risks escalate into disasters.\n\n Description Design an Environmental Intelligence Network, a distributed system of interconnected AI-powered sensor nodes deployable across cities, rivers, forests, industrial zones, and vulnerable communities. Each node should use local (on device) AI inference to continuously monitor environmental conditions and identify emerging risks such as:\n\n • Rising water levels and flash flooding\n • Forest fires and smoke events\n • Hazardous air pollution\n • Extreme heat conditions\n • Landslide precursors\n • Industrial emissions or chemical leaks\n • Water quality degradation The sensor network should process data locally to reduce latency, minimize bandwidth requirements, and continue operating even during network outages.\n\n Only critical alerts, summarized insights, and risk assessments should be transmitted to regional control centers or disaster management authorities. Edge AI approaches enable devices to operate effectively in low-connectivity environments while providing rapid detection and decision support.\n\n Expected Solution The proposed solution should include:\n\n 1. Distributed Smart Sensor Nodes\n\n • Environmental sensors for water level, rainfall, temperature, humidity,smoke, air quality (PM2.5/PM10), gas leakage, soil moisture, and vibration.\n • Solar-powered, low-maintenance deployments suitable for remote locations.\n\n 2. On-Device AI Analytics\n\n • Real-time anomaly detection at the edge.\n • AI models capable of identifying flood risk, wildfire indicators, air-quality deterioration, and landslide warning signs.\n • Operation without continuous cloud connectivity.\n\n 3. Multi-Hazard Early Warning System\n\n • Automated alerts for:\n\n o Flooding and flash floods o Forest fires o Hazardous pollution episodes o Extreme weather conditions o Industrial safety incidents 4. Regional Environmental Risk Mapping\n\n • Geospatial visualization of sensor data.\n • Dynamic risk maps showing hotspots, risk trends, and affected zones.\n • Integration with emergency management dashboards.\n\n 5. Community and Authority Notification\n\n • Mobile and web alerts for local authorities and citizens.\n • Prioritized warning levels based on severity and confidence scores.\n\n 6. Cloud and Edge Hybrid Architecture\n\n • Edge processing for immediate decisions.\n • Centralized analytics for long-term trend analysis, forecasting, and policy support.\n\n 7. Scalable and Cost-Effective Deployment\n\n • Modular architecture that can scale from a single village to a smart city or state-wide deployment.\n • Support for IoT protocols such as LoRaWAN, NB-IoT, Wi-Fi, or 5G.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26179",
@@ -3222,7 +3222,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26180",
@@ -3240,7 +3240,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26181",
@@ -3258,7 +3258,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26182",
@@ -3276,7 +3276,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26183",
@@ -3294,7 +3294,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26184",
@@ -3303,16 +3303,16 @@
     "theme": "Blockchain & Cybersecurity",
     "organization": "Ministry of Home Affairs",
     "department": "Indian Cyber Crime Coordination Centre (I4C),CIS Division",
-    "submitted_count": 9,
+    "submitted_count": 10,
     "cap": 500,
-    "remaining_slots": 491,
+    "remaining_slots": 490,
     "is_frozen": false,
     "dataset_link": null,
     "description": "• Background The National Cybercrime Reporting Portal is the centralized Portal, which is serving the whole country. Currently, the Portal facilitates citizens in filing complaints, LEAs act on complaints, Banking/Financial Institutions for their actions along with reports/graphs being pulled on daily basis. Presently, the Portal is receiving approximately 8000 complaints on daily basis. The number of complaints has increased manifold during the past months, and this will continue to rise in future. To address the issue of increasing cybercrimes, the proactive approach shall be adopted.\n • Description This framework focuses on the mitigation of cybercrimes by adopting a proactive approach. The framework's output will enable the prediction of likely cash withdrawal locations, which, in turn, will allow law enforcement agencies (LEAs)\n\n at the state and local levels, coordinated by I4C, to implement proactive interventions. These interventions could include deploying special teams or alerting local banks and ATMs in high-risk areas. The intelligence generated would also help banks and financial institutions (FIs) through the Citizen Financial Cyber Fraud Reporting and Management System, enabling faster fund blocking and increasing the chances of recovery. By supporting real-time actionable intelligence sharing across jurisdictions, law enforcement agencies and Banks/FIs will be able to respond faster and more effectively to cyber threats. This approach goes beyond merely reacting to complaints and creates a powerful, data-driven defense against financial cyber frauds, strengthening India's overall cybersecurity posture.\n\n Enhancing coordination between law enforcement and financial entities will ensure better detection and prevention of financial crimes, creating a more unified and efficient approach to combating cybercrime.\n\n • Key Deliverables Component:- Description a. Predictive Analytics Engine :-AI/ML-based system to analyse historical cybercrime and financial data to predict potential withdrawal hotspots. Features include pattern detection, geospatial risk modelling, and real-time alerts.\n\n b. Risk Heatmap Dashboard:-GIS-enabled dashboard visualizing real-time and potential risk zones with drill-down filters by time, location, and crime category etc.\n\n c. Law Enforcement Interface:-Secure interface for investigators to access alerts, intelligence reports, and evidence documentation.\n\n d. Alert & Notification System:-Real-time notifications to law enforcements, banks, and I4C officers via SMS,email, API, or dashboard triggers.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26185",
@@ -3330,7 +3330,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26186",
@@ -3348,7 +3348,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26187",
@@ -3366,7 +3366,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26188",
@@ -3384,7 +3384,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26189",
@@ -3402,7 +3402,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26190",
@@ -3420,7 +3420,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26191",
@@ -3438,7 +3438,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26192",
@@ -3456,7 +3456,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26193",
@@ -3474,7 +3474,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26194",
@@ -3492,7 +3492,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26195",
@@ -3510,7 +3510,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26196",
@@ -3528,7 +3528,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26197",
@@ -3546,7 +3546,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26198",
@@ -3564,7 +3564,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26199",
@@ -3582,7 +3582,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26200",
@@ -3600,7 +3600,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26201",
@@ -3618,7 +3618,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26202",
@@ -3636,7 +3636,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26203",
@@ -3654,7 +3654,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26204",
@@ -3672,7 +3672,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26205",
@@ -3690,7 +3690,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26206",
@@ -3708,7 +3708,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26207",
@@ -3717,16 +3717,16 @@
     "theme": "Smart Education",
     "organization": "AICTE",
     "department": "AICTE, MIC-Student Innovation",
-    "submitted_count": 37,
+    "submitted_count": 38,
     "cap": 500,
-    "remaining_slots": 463,
+    "remaining_slots": 462,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Student Innovation-Smart education,a concept that describes learning in digital age. It enables learners to learn more effectively, efficiently, flexibly and comfortably.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26208",
@@ -3744,7 +3744,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26209",
@@ -3753,16 +3753,16 @@
     "theme": "Space Technology",
     "organization": "AICTE",
     "department": "AICTE, MIC-Student Innovation",
-    "submitted_count": 3,
+    "submitted_count": 4,
     "cap": 500,
-    "remaining_slots": 497,
+    "remaining_slots": 496,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Student Innovation-Space technology refers to the application of engineering principles to the design, development, manufacture, and operation of devices and systems for space travel and exploration.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26210",
@@ -3780,7 +3780,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26211",
@@ -3798,7 +3798,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26212",
@@ -3816,7 +3816,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26213",
@@ -3834,7 +3834,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26214",
@@ -3852,7 +3852,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26215",
@@ -3870,7 +3870,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26216",
@@ -3888,7 +3888,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26217",
@@ -3906,7 +3906,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26218",
@@ -3915,16 +3915,16 @@
     "theme": "Robotics and Drones",
     "organization": "AICTE",
     "department": "AICTE, MIC-Student Innovation",
-    "submitted_count": 7,
+    "submitted_count": 8,
     "cap": 500,
-    "remaining_slots": 493,
+    "remaining_slots": 492,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Student Innovation-There is a need to design drones and robots that can solve some of the pressing challenges of India such as handling medical emergencies, search and rescue operations, etc.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26219",
@@ -3942,7 +3942,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26220",
@@ -3951,16 +3951,16 @@
     "theme": "Smart Vehicles",
     "organization": "AICTE",
     "department": "AICTE, MIC-Student Innovation",
-    "submitted_count": 17,
+    "submitted_count": 18,
     "cap": 500,
-    "remaining_slots": 483,
+    "remaining_slots": 482,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Student Innovation-Creating intelligent devices to improve commutation sector.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26221",
@@ -3978,7 +3978,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26222",
@@ -3996,7 +3996,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26223",
@@ -4005,16 +4005,16 @@
     "theme": "Disaster Management",
     "organization": "AICTE",
     "department": "AICTE, MIC-Student Innovation",
-    "submitted_count": 20,
+    "submitted_count": 21,
     "cap": 500,
-    "remaining_slots": 480,
+    "remaining_slots": 479,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Student Innovation-Disaster management includes ideas related to risk mitigation, Planning and management before, after or during a disaster.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26224",
@@ -4032,7 +4032,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26225",
@@ -4050,7 +4050,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26226",
@@ -4068,7 +4068,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26227",
@@ -4086,7 +4086,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26228",
@@ -4104,7 +4104,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26229",
@@ -4122,7 +4122,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26230",
@@ -4140,7 +4140,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26231",
@@ -4158,7 +4158,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26232",
@@ -4176,7 +4176,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-03T11:36:59.813Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26233",
@@ -4194,7 +4194,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-03T11:36:59.813Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26234",
@@ -4212,7 +4212,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-07T12:39:41.087Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26235",
@@ -4230,7 +4230,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-07T12:39:41.087Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26236",
@@ -4248,7 +4248,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-07T12:39:41.087Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26237",
@@ -4266,7 +4266,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-09T11:13:58.235Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26238",
@@ -4284,7 +4284,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-10T12:00:00.421Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26239",
@@ -4302,7 +4302,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-10T12:00:00.421Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   },
   {
     "ps_id": "SIH26240",
@@ -4320,6 +4320,6 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-10T12:00:00.421Z",
-    "last_scraped_at": "2026-09-12T14:30:00.592Z"
+    "last_scraped_at": "2026-09-12T15:00:00.598Z"
   }
 ]
