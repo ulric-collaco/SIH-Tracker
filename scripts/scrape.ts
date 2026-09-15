@@ -109,7 +109,9 @@ async function fetchPageWithRetry(url: string, retries = 4): Promise<string> {
       if (scraperApiKey) {
         console.log(`Fetching via ScraperAPI residential proxy (attempt ${attempt}/${retries})...`);
         const scraperUrl = `https://api.scraperapi.com?api_key=${scraperApiKey}&url=${encodeURIComponent(url)}&country_code=in`;
-        const res = await fetch(scraperUrl);
+        const res = await fetch(scraperUrl, {
+          signal: AbortSignal.timeout(60000)
+        });
 
         if (!res.ok) {
           const errBody = await res.text();

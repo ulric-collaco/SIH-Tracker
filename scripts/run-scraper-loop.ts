@@ -32,9 +32,20 @@ function runSingleCycle(cycleNum: number) {
   console.log(`==================================================`);
 
   try {
-    // 1. Scrape SIH portal
+    // Ensure clean git state on branch main before scraping
+    try {
+      execSync('git rebase --abort 2>/dev/null');
+    } catch {}
+    try {
+      execSync('git checkout main || git checkout -B main origin/main', { stdio: 'inherit' });
+      execSync('git pull origin main --ff-only', { stdio: 'inherit' });
+    } catch (gitErr: any) {
+      console.warn('Initial git sync warning:', gitErr.message || gitErr);
+    }
+
+    // 1. Scrape SIH portal (5 min hard timeout)
     console.log('\n[1/3] Running scraper...');
-    execSync('npm run scrape', { stdio: 'inherit' });
+    execSync('npm run scrape', { stdio: 'inherit', timeout: 5 * 60 * 1000 });
 
     // 2. Sync to public data directory
     console.log('\n[2/3] Syncing public data...');
@@ -52,10 +63,23 @@ function runSingleCycle(cycleNum: number) {
       execSync('git commit -m "chore(data): auto-update SIH 2026 problem statements"', {
         stdio: 'inherit'
       });
-      // Pull rebase to handle any potential concurrent commits cleanly
-      execSync('git pull --rebase origin main', { stdio: 'inherit' });
-      execSync('git push origin main', { stdio: 'inherit' });
-      console.log('Push complete. Data updated successfully.');
+      try {
+        execSync('git push origin main', { stdio: 'inherit' });
+        console.log('Push complete. Data updated successfully.');
+      } catch (pushErr: any) {
+        console.log('Push rejected. Pulling with rebase and retrying push...');
+        try {
+          execSync('git pull --rebase origin main', { stdio: 'inherit' });
+          execSync('git push origin main', { stdio: 'inherit' });
+          console.log('Rebase push complete. Data updated successfully.');
+        } catch (rebaseErr: any) {
+          console.error('Rebase retry failed, aborting rebase:', rebaseErr.message || rebaseErr);
+          try {
+            execSync('git rebase --abort 2>/dev/null');
+          } catch {}
+          throw rebaseErr;
+        }
+      }
     } else {
       console.log('No data changes detected in this cycle. Skipping commit.');
     }
