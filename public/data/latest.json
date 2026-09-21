@@ -15,7 +15,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26002",
@@ -33,7 +33,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26003",
@@ -51,7 +51,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26004",
@@ -60,16 +60,16 @@
     "theme": "MedTech / BioTech / HealthTech",
     "organization": "Ministry of Development of North Eastern Region (MDoNER)",
     "department": "Ministry of Development of North Eastern Region (MDoNER)",
-    "submitted_count": 18,
+    "submitted_count": 19,
     "cap": 500,
-    "remaining_slots": 482,
+    "remaining_slots": 481,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Background:\n\n Osteoarthritis (OA) is one of the most common musculoskeletal disorders affecting elderly individuals and physically active populations, leading to chronic pain, joint stiffness, mobility issues, and reduced quality of life.\n\n In the North Eastern Region (NER), difficult terrain, physically demanding livelihoods, aging population, and limited access to specialized orthopaedic care further increase the burden of undiagnosed and untreated osteoarthritis cases. Early identification of OA risk markers is critical for timely intervention and preventive healthcare management.\n\n However, healthcare facilities in many remote and rural areas of NER lack affordable screening tools, specialist support, and diagnostic infrastructure for early-stage detection of osteoarthritis. There is a need for a technology-driven solution that can assist healthcare workers in identifying early OA indicators and supporting preventive screening in low-resource settings across the North Eastern Region.\n\n Description:\n\n This problem statement seeks to develop an AI-assisted screening and detection system for identifying early risk markers and symptoms associated with Osteoarthritis (OA) in the North Eastern Region. The solution should:\n\n a. Assist in early detection of OA-related risk markers through\n\n • Joint movement analysis\n • Gait and posture assessment\n • Pain and mobility screening inputs\n • Medical imaging or sensor-based assessment (if applicable)\n\n b. Use AI/ML techniques to analyse patient data and identify high-risk cases for early intervention c. Support screening in primary healthcare centres, rural health camps, and community outreach programs d. Provide preliminary OA risk assessment and severity indication e. Enable healthcare workers to digitally record patient symptoms and screening reports f. Include multilingual and easy-to-use interfaces suitable for rural healthcare settings in NER g. Work in low-connectivity environments with offline data collection capability h. Provide awareness and preventive guidance related to joint care, physical activity, nutrition, and lifestyle management The solution should be portable, affordable, and suitable for deployment in remote and underserved areas.\n\n Expected Solution:\n\n A scalable Al-enabled healthcare screening solution with:\n\n • Al-based OA risk analysis and screening module\n • Portable assessment interface or sensor-assisted screening mechanism\n • Digital patient record and report generation system\n • Mobile/web-based healthcare worker interface\n • Offline synchronization capability for remote areas\n • Multilingual support and simplified workflow for field deployment\n • Secure patient data management and analytics dashboard The solution should support early diagnosis, preventive healthcare intervention, and improved accessibility to musculoskeletal healthcare services in the North Eastern Region.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26005",
@@ -87,7 +87,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26006",
@@ -105,7 +105,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26007",
@@ -123,7 +123,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26008",
@@ -141,7 +141,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26009",
@@ -150,16 +150,16 @@
     "theme": "Space Technology",
     "organization": "Ministry of Steel",
     "department": "MOIL Ltd.",
-    "submitted_count": 28,
+    "submitted_count": 29,
     "cap": 500,
-    "remaining_slots": 472,
+    "remaining_slots": 471,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Background: MOIL Limited is the largest producer of Manganese Ore in India. To meet future demand, it is important to accurately identify available reserves and avoid production shortfalls. At present, reserve estimation and production planning are mainly based on manual surveys, drilling results, and production records. These methods are time-consuming and sometimes lead to a mismatch between expected and actual ore production. Detailed Description: The challenge is to develop an AI/ML-based solution that uses geological data,historical production, equipment performance, and satellite/space technology inputs (such as rainfall, soil moisture, vegetation index, and land temperature) to:\n\n • Identify and map manganese reserves more accurately using surface and sub-surface indicators.\n • Predict shortfalls in production by analysing constraints like equipment downtime, weather conditions, or blasting delays.\n • Suggest corrective actions such as adjusting mine schedules, optimizing blasting, or re-deploying equipment to ensure continuous ore availability. Expected Solution: The expected solution is a user-friendly dashboard that shows predicted reserves, production trends, possible risks of shortfall, and recommended corrective steps.\n\n This will help MOIL improve planning, reduce losses, and ensure steady ore supply to customers.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26010",
@@ -177,7 +177,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26011",
@@ -195,7 +195,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26012",
@@ -213,7 +213,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26013",
@@ -231,7 +231,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26014",
@@ -249,7 +249,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26015",
@@ -267,7 +267,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26016",
@@ -285,7 +285,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26017",
@@ -303,7 +303,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26018",
@@ -321,7 +321,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26019",
@@ -339,7 +339,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26020",
@@ -357,7 +357,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26021",
@@ -375,7 +375,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26022",
@@ -393,7 +393,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26023",
@@ -411,7 +411,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26024",
@@ -429,7 +429,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26025",
@@ -447,7 +447,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26026",
@@ -465,7 +465,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26027",
@@ -483,7 +483,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26028",
@@ -501,7 +501,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26029",
@@ -519,7 +519,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26030",
@@ -537,7 +537,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26031",
@@ -555,7 +555,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26032",
@@ -573,7 +573,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26033",
@@ -591,7 +591,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26034",
@@ -609,7 +609,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26035",
@@ -627,7 +627,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26036",
@@ -645,7 +645,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26037",
@@ -663,7 +663,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26038",
@@ -681,7 +681,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26039",
@@ -699,7 +699,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26040",
@@ -717,7 +717,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26041",
@@ -735,7 +735,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26042",
@@ -753,7 +753,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26043",
@@ -771,7 +771,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26044",
@@ -789,7 +789,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26045",
@@ -807,7 +807,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26046",
@@ -825,7 +825,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26047",
@@ -843,7 +843,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26048",
@@ -861,7 +861,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26049",
@@ -879,7 +879,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26050",
@@ -897,7 +897,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26051",
@@ -915,7 +915,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26052",
@@ -933,7 +933,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26053",
@@ -951,7 +951,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26054",
@@ -969,7 +969,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26055",
@@ -987,7 +987,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26056",
@@ -1005,7 +1005,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26057",
@@ -1023,7 +1023,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26058",
@@ -1041,7 +1041,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26059",
@@ -1059,7 +1059,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26060",
@@ -1077,7 +1077,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26061",
@@ -1095,7 +1095,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26062",
@@ -1113,7 +1113,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26063",
@@ -1131,7 +1131,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26064",
@@ -1149,7 +1149,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26065",
@@ -1167,7 +1167,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26066",
@@ -1185,7 +1185,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26067",
@@ -1203,7 +1203,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26068",
@@ -1221,7 +1221,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26069",
@@ -1239,7 +1239,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26070",
@@ -1257,7 +1257,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26071",
@@ -1275,7 +1275,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26072",
@@ -1293,7 +1293,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26073",
@@ -1311,7 +1311,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26074",
@@ -1329,7 +1329,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26075",
@@ -1347,7 +1347,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26076",
@@ -1365,7 +1365,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26077",
@@ -1383,7 +1383,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26078",
@@ -1401,7 +1401,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26079",
@@ -1419,7 +1419,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26080",
@@ -1437,7 +1437,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26081",
@@ -1455,7 +1455,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26082",
@@ -1473,7 +1473,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26083",
@@ -1491,7 +1491,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26084",
@@ -1509,7 +1509,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26085",
@@ -1527,7 +1527,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26086",
@@ -1545,7 +1545,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26087",
@@ -1563,7 +1563,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26088",
@@ -1581,7 +1581,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26089",
@@ -1599,7 +1599,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26090",
@@ -1617,7 +1617,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26091",
@@ -1635,7 +1635,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26092",
@@ -1653,7 +1653,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26093",
@@ -1671,7 +1671,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26094",
@@ -1689,7 +1689,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26095",
@@ -1707,7 +1707,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26096",
@@ -1725,7 +1725,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26097",
@@ -1743,7 +1743,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26098",
@@ -1761,7 +1761,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26099",
@@ -1779,7 +1779,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26100",
@@ -1797,7 +1797,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26101",
@@ -1815,7 +1815,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26102",
@@ -1824,16 +1824,16 @@
     "theme": "Smart Automation",
     "organization": "MoSPI",
     "department": "Data Informatics & Innovation Division (DIID)",
-    "submitted_count": 80,
+    "submitted_count": 81,
     "cap": 500,
-    "remaining_slots": 420,
+    "remaining_slots": 419,
     "is_frozen": false,
     "dataset_link": "https://mplads.mospi.gov.in/digigov/dashboard.html",
     "description": "• Background The Members of Parliament Local Area Development Scheme (MPLADS) is a Central Sector Scheme under which Hon'ble Members of Parliament recommend developmental works for creation of durable community assets and provision of basic civic amenities. The Scheme involves large-scale fund utilization and execution of thousands of works across the country through multiple implementing agencies and administrative authorities. Given the volume and complexity of financial and project-related data generated under the Scheme, there is a need for an AI-powered solution that can leverage machine learning and advanced analytics to detect trends and anomalies in expenditure patterns, fund utilization, cost estimates, and work execution, thereby enabling early identification of potential fraud, inefficiencies, and non-compliance while enhancing transparency, accountability, and effective monitoring of MPLADS works.\n • Description Develop an AI-powered monitoring and analytics platform for MPLADS that leverages Machine Learning (ML), Artificial Intelligence (AI), and advanced data analytics to identify trend, anomalies, irregularities, and potential fraud in fund utilization and project execution. The solution should analyze data relating to sanctions,expenditures, cost estimates, work progress, payments, and asset creation to detect unusual patterns, cost overruns, duplicate works, delayed projects, and deviations from established norms. The system should generate risk-based alerts, predictive insights, and decision-support dashboards for Members of Parliament, State Nodal Authorities, District Authorities, and the Ministry. The platform should also facilitate automated compliance monitoring, trend analysis, and early warning mechanisms to improve transparency, accountability, and efficiency in the implementation of MPLADS works across the country.\n • Expected Solution The proposed solution should be an AI-powered platform that helps monitor MPLADS works and fund utilization in a smarter and more efficient manner. By analyzing data related to project approvals, expenditures, payments, work progress, and completion status, the system should be able to identify unusual patterns, delays, cost overruns, duplicate works, and potential cases of misuse of funds. It should automatically generate alerts and highlight high-risk cases that require attention from the concerned authorities. The platform should provide easy-to-understand dashboards and insights to Members of Parliament, State Nodal Authorities, District Authorities, and the Ministry, enabling them to make informed decisions and take timely corrective action. By leveraging artificial intelligence and data analytics, the solution should enhance transparency, strengthen accountability, reduce manual monitoring efforts, and support more effective implementation of MPLADS works across the country.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26103",
@@ -1851,7 +1851,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26104",
@@ -1869,7 +1869,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26105",
@@ -1887,7 +1887,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26106",
@@ -1905,7 +1905,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26107",
@@ -1923,7 +1923,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26108",
@@ -1941,7 +1941,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26109",
@@ -1959,7 +1959,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26110",
@@ -1977,7 +1977,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26111",
@@ -1995,7 +1995,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26112",
@@ -2013,7 +2013,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26113",
@@ -2031,7 +2031,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26114",
@@ -2049,7 +2049,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26115",
@@ -2067,7 +2067,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26116",
@@ -2085,7 +2085,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26117",
@@ -2103,7 +2103,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26118",
@@ -2121,7 +2121,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26119",
@@ -2139,7 +2139,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26120",
@@ -2157,7 +2157,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26121",
@@ -2175,7 +2175,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26122",
@@ -2193,7 +2193,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26123",
@@ -2211,7 +2211,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26124",
@@ -2229,7 +2229,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26125",
@@ -2247,7 +2247,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26126",
@@ -2265,7 +2265,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26127",
@@ -2283,7 +2283,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26128",
@@ -2301,7 +2301,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26129",
@@ -2319,7 +2319,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26130",
@@ -2337,7 +2337,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26131",
@@ -2355,7 +2355,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26132",
@@ -2373,7 +2373,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26133",
@@ -2391,7 +2391,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26134",
@@ -2409,7 +2409,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26135",
@@ -2418,16 +2418,16 @@
     "theme": "Miscellaneous",
     "organization": "Government Of Maharashtra",
     "department": "Maharashtra State Innovation Society, Department of Skills, Employment, Entrepreneurship and Innovation",
-    "submitted_count": 36,
+    "submitted_count": 37,
     "cap": 500,
-    "remaining_slots": 464,
+    "remaining_slots": 463,
     "is_frozen": false,
     "dataset_link": null,
     "description": "• Problem Description Training systems frequently capture enrolment, attendance, assessment and certification, but reliable information on employment, self-employment, job retention, wage progression, relevance of training and longer-term livelihood outcomes may remain incomplete.Trainees may change phone numbers or locations, employers may not report consistently, and multiple programmes may use different identifiers and definitions. Without longitudinal outcomes, it is difficult to compare providers, improve courses, target future investments or demonstrate public value. The challenge is to establish credible, low-burden and privacy conscious outcome tracking.\n • Expected Solution / Outcome A longitudinal skilling-outcomes and impact-measurement system that creates consent-based trainee records,links training with placement and employment signals, conducts automated and assisted follow-ups,captures self-employment and apprenticeship outcomes, validates employer information, measures wage and retention progression, and provides cohort, course, provider, district and demographic analytics. It should identify skill gaps and reasons for non-placement or attrition. Expected outcomes include higher-quality outcome data, better programme and provider accountability,targeted remedial actions, improved resource allocation and evidence-based policy design.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26136",
@@ -2445,7 +2445,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26137",
@@ -2463,7 +2463,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26138",
@@ -2481,7 +2481,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26139",
@@ -2499,7 +2499,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26140",
@@ -2517,7 +2517,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26141",
@@ -2535,7 +2535,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26142",
@@ -2554,7 +2554,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26143",
@@ -2573,7 +2573,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26144",
@@ -2591,7 +2591,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26145",
@@ -2609,7 +2609,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26146",
@@ -2627,7 +2627,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26147",
@@ -2645,7 +2645,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26148",
@@ -2663,7 +2663,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26149",
@@ -2681,7 +2681,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26150",
@@ -2699,7 +2699,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26151",
@@ -2717,7 +2717,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26152",
@@ -2735,7 +2735,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26153",
@@ -2753,7 +2753,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26154",
@@ -2771,7 +2771,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26155",
@@ -2789,7 +2789,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26156",
@@ -2807,7 +2807,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26157",
@@ -2825,7 +2825,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26158",
@@ -2843,7 +2843,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26159",
@@ -2861,7 +2861,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26160",
@@ -2879,7 +2879,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26161",
@@ -2897,7 +2897,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26162",
@@ -2915,7 +2915,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26163",
@@ -2934,7 +2934,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26164",
@@ -2952,7 +2952,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26165",
@@ -2970,7 +2970,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26166",
@@ -2988,7 +2988,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26167",
@@ -3006,7 +3006,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26168",
@@ -3024,7 +3024,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26169",
@@ -3042,7 +3042,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26170",
@@ -3060,7 +3060,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26171",
@@ -3078,7 +3078,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26172",
@@ -3096,7 +3096,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26173",
@@ -3114,7 +3114,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26174",
@@ -3132,7 +3132,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26175",
@@ -3150,7 +3150,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26176",
@@ -3168,7 +3168,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26177",
@@ -3186,7 +3186,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26178",
@@ -3204,7 +3204,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26179",
@@ -3222,7 +3222,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26180",
@@ -3231,16 +3231,16 @@
     "theme": "Agriculture, FoodTech & Rural Development",
     "organization": "Qualcomm Inc",
     "department": "Qualcomm Inc",
-    "submitted_count": 81,
+    "submitted_count": 82,
     "cap": 500,
-    "remaining_slots": 419,
+    "remaining_slots": 418,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Background Agriculture remains a primary livelihood for millions of people in India, but farmers face recurring challenges from droughts, erratic rainfall, floods, pest infestations, crop diseases, heat stress, and soil degradation. Climate variability is increasing the frequency of these risks, affecting crop productivity and farm incomes. Many small and marginal farmers lack access to timely diagnostics and expert advice, particularly in regions with limited internet connectivity.\n\n Environmental monitoring, edge AI, and local sensing technologies can help deliver real-time insights directly at the farm level without relying on continuous cloud access.Early detection of crop stress, pest outbreaks, irrigation issues, and adverse environmental conditions can significantly reduce crop losses and improve resilience against agricultural disasters such as droughts, floods, and disease outbreaks.\n\n Description Develop a Smart Farming Assistant, an edge AI-powered solution that continuously monitors crop health and environmental conditions directly in the field. Using a combination of cameras, environmental sensors, and on-device AI,the system should identify crop diseases, pest infestations, nutrient deficiencies,water stress, and irrigation requirements in real time.The solution should operate locally on edge devices deployed in farms, enabling rapid analysis and recommendations even in areas with poor connectivity. The system should help farmers make informed decisions about irrigation, pesticide application, fertilizer usage, and crop protection while minimizing water consumption and input costs.The platform should provide actionable alerts and recommendations through a simple mobile or field display interface, enabling farmers to respond quickly to emerging risks before they become large-scale crop failures. Edge AI enables realtime decision-making while reducing dependence on cloud infrastructure.\n\n Expected Solution The proposed solution should implement some or all of the following:\n\n 1. Crop Health Monitoring\n\n • Detect visible signs of crop diseases from leaf and plant images.\n • Identify nutrient deficiencies through color, texture, and growth analysis.\n • Monitor crop growth stages and overall field health.\n\n 2. Pest Detection and Early Warning\n\n • Detect common insect pests and infestation patterns using camera-based AI.\n • Generate early alerts before infestations spread across fields.\n • Support targeted intervention rather than blanket pesticide application.\n\n 3. Smart Irrigation Management\n\n • Monitor soil moisture, temperature, humidity, and weather conditions.\n • Detect water stress and over-irrigation scenarios.\n • Recommend optimal irrigation schedules to conserve water.\n\n 4. Environmental Risk Monitoring\n\n • Track conditions associated with drought, excessive rainfall, flooding, heat stress, and disease outbreaks.\n • Identify abnormal environmental patterns affecting crop productivity.\n • Provide localized field-level alerts.\n\n 5. Edge AI Processing\n\n • Perform image analysis and sensor data processing directly on the device.\n • Operate in remote areas with limited or intermittent connectivity.\n • Deliver low-latency recommendations and alerts.\n\n 6. Farmer Advisory System\n\n • Provide simple recommendations such as:\n\n o Irrigate now / delay irrigation o Possible disease detected o Pest activity increasing o Heat-stress warning o Flood-risk alert\n\n • Deliver advice through a mobile app, local display, or SMS notifications.\n\n 7. Farm Analytics Dashboard\n\n • Historical trends in crop health and environmental conditions.\n • Field-level performance monitoring.\n • Yield-risk forecasting and decision-support insights.\n\n 8. Scalable Deployment\n\n • Suitable for smallholder farms, cooperatives, and large agricultural enterprises.\n • Support integration with weather data, farm equipment, and irrigation systems.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26181",
@@ -3258,7 +3258,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26182",
@@ -3276,7 +3276,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26183",
@@ -3294,7 +3294,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26184",
@@ -3312,7 +3312,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26185",
@@ -3330,7 +3330,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26186",
@@ -3348,7 +3348,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26187",
@@ -3366,7 +3366,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26188",
@@ -3384,7 +3384,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26189",
@@ -3402,7 +3402,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26190",
@@ -3420,7 +3420,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26191",
@@ -3438,7 +3438,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26192",
@@ -3456,7 +3456,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26193",
@@ -3465,16 +3465,16 @@
     "theme": "Agriculture, FoodTech & Rural Development",
     "organization": "AICTE",
     "department": "AICTE, MIC-Student Innovation",
-    "submitted_count": 90,
+    "submitted_count": 91,
     "cap": 500,
-    "remaining_slots": 410,
+    "remaining_slots": 409,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Student Innovation-Developing solutions, keeping in mind the need to enhance the primary sector of India - Agriculture and to manage and process our agriculture produce.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26194",
@@ -3492,7 +3492,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26195",
@@ -3510,7 +3510,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26196",
@@ -3528,7 +3528,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26197",
@@ -3546,7 +3546,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26198",
@@ -3564,7 +3564,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26199",
@@ -3582,7 +3582,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26200",
@@ -3600,7 +3600,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26201",
@@ -3618,7 +3618,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26202",
@@ -3636,7 +3636,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26203",
@@ -3654,7 +3654,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26204",
@@ -3672,7 +3672,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26205",
@@ -3690,7 +3690,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26206",
@@ -3708,7 +3708,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26207",
@@ -3726,7 +3726,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26208",
@@ -3744,7 +3744,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26209",
@@ -3762,7 +3762,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26210",
@@ -3780,7 +3780,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26211",
@@ -3798,7 +3798,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26212",
@@ -3816,7 +3816,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26213",
@@ -3834,7 +3834,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26214",
@@ -3852,7 +3852,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26215",
@@ -3870,7 +3870,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26216",
@@ -3888,7 +3888,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26217",
@@ -3906,7 +3906,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26218",
@@ -3924,7 +3924,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26219",
@@ -3933,16 +3933,16 @@
     "theme": "Smart Automation",
     "organization": "AICTE",
     "department": "AICTE, MIC-Student Innovation",
-    "submitted_count": 60,
+    "submitted_count": 61,
     "cap": 500,
-    "remaining_slots": 440,
+    "remaining_slots": 439,
     "is_frozen": false,
     "dataset_link": null,
     "description": "Student Innovation-Ideas focused on the intelligent use of resources for transforming and advancements of technology with combining the artificial intelligence to explore more various sources and get valuable insights.",
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26220",
@@ -3960,7 +3960,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26221",
@@ -3978,7 +3978,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26222",
@@ -3996,7 +3996,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26223",
@@ -4014,7 +4014,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26224",
@@ -4032,7 +4032,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26225",
@@ -4050,7 +4050,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26226",
@@ -4068,7 +4068,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26227",
@@ -4086,7 +4086,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26228",
@@ -4104,7 +4104,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26229",
@@ -4122,7 +4122,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26230",
@@ -4140,7 +4140,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26231",
@@ -4158,7 +4158,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-02T20:39:30.347Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26232",
@@ -4176,7 +4176,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-03T11:36:59.813Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26233",
@@ -4194,7 +4194,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-03T11:36:59.813Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26234",
@@ -4212,7 +4212,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-07T12:39:41.087Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26235",
@@ -4230,7 +4230,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-07T12:39:41.087Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26236",
@@ -4248,7 +4248,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-07T12:39:41.087Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26237",
@@ -4266,7 +4266,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-09T11:13:58.235Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26238",
@@ -4284,7 +4284,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-10T12:00:00.421Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26239",
@@ -4302,7 +4302,7 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-10T12:00:00.421Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   },
   {
     "ps_id": "SIH26240",
@@ -4320,6 +4320,6 @@
     "deadline": "30 September 2026",
     "status": "active",
     "first_seen_at": "2026-09-10T12:00:00.421Z",
-    "last_scraped_at": "2026-09-21T01:30:00.865Z"
+    "last_scraped_at": "2026-09-21T02:00:00.846Z"
   }
 ]
