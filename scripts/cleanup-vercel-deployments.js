@@ -3,12 +3,10 @@
 /**
  * Vercel Deployment Cleanup Script
  *
- * Purges old non-production deployments to immediately free storage under the 10GB limit.
+ * Purges old deployments to immediately free storage under the 10GB limit.
  *
  * Usage:
- *   node scripts/cleanup-vercel-deployments.js <your_token>
- *   Or:
- *   $env:VERCEL_TOKEN="your_token"; npm run vercel:cleanup
+ *   node scripts/cleanup-vercel-deployments.js <your_token> [projectName]
  */
 
 import fs from 'node:fs';
@@ -23,9 +21,8 @@ try {
   }
 } catch {}
 
-// Token can be passed as 1st argument (e.g. starting with vc) or via VERCEL_TOKEN env var
 let token = process.env.VERCEL_TOKEN;
-let targetProject = process.env.VERCEL_PROJECT_NAME || 'sih-2026-tracker';
+let targetProject = process.env.VERCEL_PROJECT_NAME || 'sih-tracker';
 
 const arg1 = process.argv[2];
 const arg2 = process.argv[3];
@@ -43,7 +40,8 @@ if (arg1) {
 }
 
 const teamId = detectedTeamId;
-const KEEP_RECENT = 3; // Keep the N most recent deployments for safety
+const KEEP_RECENT = 2; // Keep active prod + 2 latest deployments for rollback safety
+const CONCURRENCY = 3;
 
 async function cleanupViaApi(apiToken) {
   console.log(`\n[Vercel Cleanup] Querying deployments via Vercel REST API...`);
@@ -57,6 +55,22 @@ async function cleanupViaApi(apiToken) {
     'Content-Type': 'application/json'
   };
 
+  // 1. Identify active live production deployment ID
+  let liveProdDeploymentId = null;
+  try {
+    let projUrl = `https://api.vercel.com/v9/projects/${targetProject}`;
+    if (teamId) projUrl += `?teamId=${teamId}`;
+    const projRes = await fetch(projUrl, { headers });
+    if (projRes.ok) {
+      const projData = await projRes.json();
+      liveProdDeploymentId = projData.targets?.production?.id || null;
+      console.log(`[Vercel Cleanup] Protected live production deployment: ${liveProdDeploymentId}`);
+    }
+  } catch (e) {
+    console.warn(`[Vercel Cleanup] Could not fetch project target details:`, e.message);
+  }
+
+  // 2. Fetch all deployments
   let allDeployments = [];
   let nextTimestamp = null;
 
@@ -75,7 +89,6 @@ async function cleanupViaApi(apiToken) {
     const deps = data.deployments || [];
     if (deps.length === 0) break;
 
-    // Filter for the specific project if specified
     const matched = targetProject
       ? deps.filter((d) => d.name === targetProject || d.url?.includes(targetProject))
       : deps;
@@ -88,64 +101,84 @@ async function cleanupViaApi(apiToken) {
 
   console.log(`[Vercel Cleanup] Found ${allDeployments.length} total deployments for project "${targetProject}".`);
 
-  // Keep the active production deployment and the N latest deployments
-  const nonProductionOrOld = [];
+  // 3. Filter candidates to purge
+  const candidates = [];
   let kept = 0;
 
   for (let i = 0; i < allDeployments.length; i++) {
     const dep = allDeployments[i];
-    const isTargetProd = dep.target === 'production';
 
-    // Keep the top KEEP_RECENT deployments unconditionally
+    // Never delete the live production deployment
+    if (dep.uid === liveProdDeploymentId) {
+      kept++;
+      continue;
+    }
+
+    // Keep top KEEP_RECENT deployments unconditionally
     if (kept < KEEP_RECENT) {
       kept++;
       continue;
     }
 
-    // Never delete an active production deployment
-    if (isTargetProd && dep.state === 'READY') {
-      continue;
-    }
-
-    nonProductionOrOld.push(dep);
+    candidates.push(dep);
   }
 
   console.log(
-    `[Vercel Cleanup] Found ${nonProductionOrOld.length} candidate deployments to purge (keeping ${kept} latest).`
+    `[Vercel Cleanup] Found ${candidates.length} candidate deployments to purge (keeping ${kept} protected).`
   );
 
-  if (nonProductionOrOld.length === 0) {
+  if (candidates.length === 0) {
     console.log('[Vercel Cleanup] No deployments need deletion. Storage footprint is already minimal.');
     return;
   }
 
+  // 4. Concurrently delete deployments in batches with rate-limit retry
   let deletedCount = 0;
-  for (const dep of nonProductionOrOld) {
-    try {
-      let deleteUrl = `https://api.vercel.com/v13/deployments/${dep.uid}`;
-      if (teamId) deleteUrl += `?teamId=${teamId}`;
+  for (let i = 0; i < candidates.length; i += CONCURRENCY) {
+    const batch = candidates.slice(i, i + CONCURRENCY);
+    await Promise.all(
+      batch.map(async (dep) => {
+        let retries = 3;
+        while (retries > 0) {
+          try {
+            let deleteUrl = `https://api.vercel.com/v13/deployments/${dep.uid}`;
+            if (teamId) deleteUrl += `?teamId=${teamId}`;
 
-      const delRes = await fetch(deleteUrl, {
-        method: 'DELETE',
-        headers
-      });
+            const delRes = await fetch(deleteUrl, {
+              method: 'DELETE',
+              headers
+            });
 
-      if (delRes.ok) {
-        deletedCount++;
-        if (deletedCount % 10 === 0 || deletedCount === nonProductionOrOld.length) {
-          console.log(`[Vercel Cleanup] Deleted ${deletedCount}/${nonProductionOrOld.length} deployments...`);
+            if (delRes.ok) {
+              deletedCount++;
+              break;
+            } else if (delRes.status === 429) {
+              // Rate limited - wait 3 seconds and retry
+              await new Promise((res) => setTimeout(res, 3000));
+              retries--;
+            } else {
+              console.warn(`[Vercel Cleanup] Could not delete ${dep.uid}: HTTP ${delRes.status}`);
+              break;
+            }
+          } catch (err) {
+            console.error(`[Vercel Cleanup] Error deleting deployment ${dep.uid}:`, err.message);
+            break;
+          }
         }
-      } else {
-        console.warn(`[Vercel Cleanup] Could not delete ${dep.uid} (${dep.url}): HTTP ${delRes.status}`);
-      }
-    } catch (err) {
-      console.error(`[Vercel Cleanup] Error deleting deployment ${dep.uid}:`, err.message);
+      })
+    );
+
+    // Minor throttle between batches to stay within rate limit
+    await new Promise((res) => setTimeout(res, 250));
+
+    if (deletedCount % 20 === 0 || deletedCount >= candidates.length) {
+      console.log(`[Vercel Cleanup] Deleted ${deletedCount}/${candidates.length} deployments...`);
     }
   }
 
   console.log(`\n==================================================`);
-  console.log(`[Vercel Cleanup Success] Purged ${deletedCount} deployments.`);
-  console.log(`Check your Vercel dashboard: Usage -> Deployment Storage should drop dramatically!`);
+  console.log(`[Vercel Cleanup Success] Purged ${deletedCount} deployments!`);
+  console.log(`Vercel 10GB Deployment Storage quota has been successfully recovered.`);
   console.log(`==================================================\n`);
 }
 
@@ -153,16 +186,8 @@ function printInstructions() {
   console.log('\n================================================================================');
   console.log(' VERCEL 10GB STORAGE LIMIT: QUICK DEPLOYMENT PURGE GUIDE');
   console.log('================================================================================\n');
-  console.log('To clean up old deployments and immediately recover your 10GB storage quota:\n');
-  console.log('Option 1 (Automated 1-Command Purge via API Token):');
-  console.log('  1. Create a personal token at: https://vercel.com/account/tokens');
-  console.log('  2. Run in terminal:');
-  console.log('     node scripts/cleanup-vercel-deployments.js <your_token>\n');
-  console.log('Option 2 (Set Retention Policy in Vercel Dashboard):');
-  console.log('  1. Go to https://vercel.com -> Your Project -> Settings -> General');
-  console.log('  2. Scroll to "Deployment Retention"');
-  console.log('  3. Change "Preview Deployments" and "Canceled Deployments" to 1 day.');
-  console.log('  4. Vercel automatically cleans up older deployments.\n');
+  console.log('Run in terminal:');
+  console.log('  node scripts/cleanup-vercel-deployments.js <your_token>\n');
   console.log('================================================================================\n');
 }
 
