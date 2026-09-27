@@ -53,13 +53,13 @@ function runSingleCycle(cycleNum: number) {
 
     // 3. Commit and push if changes detected
     console.log('\n[3/3] Checking for git changes...');
-    const status = execSync('git status --porcelain data/ public/data/', {
+    const status = execSync('git status --porcelain data/', {
       encoding: 'utf-8'
     }).trim();
 
     if (status) {
       console.log('Data changes detected. Committing and pushing...');
-      execSync('git add data/ public/data/', { stdio: 'inherit' });
+      execSync('git add data/', { stdio: 'inherit' });
       execSync('git commit -m "chore(data): auto-update SIH 2026 problem statements"', {
         stdio: 'inherit'
       });

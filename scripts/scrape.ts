@@ -53,6 +53,7 @@ const HEADERS = {
 };
 
 import { execFileSync } from 'node:child_process';
+import { compactHistory } from './compact-history';
 
 const BROWSER_USER_AGENT =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36';
@@ -292,6 +293,7 @@ export async function scrapeSIH(): Promise<{
     day: '2-digit'
   }).format(now);
   const historyFile = path.resolve(HISTORY_DIR, `${dateKey}.jsonl`);
+  const isFirstScrapeOfDay = !fs.existsSync(historyFile) || fs.statSync(historyFile).size === 0;
 
   const records: PSRecord[] = [];
   const snapshotEvents: SnapshotEvent[] = [];
@@ -439,12 +441,19 @@ export async function scrapeSIH(): Promise<{
 
     records.push(record);
 
-    snapshotEvents.push({
-      ps_id: finalPsId,
-      timestamp: nowISO,
-      submitted_count: submittedCount,
-      remaining_slots: remainingSlots
-    });
+    const countOrSlotsChanged =
+      !existing ||
+      existing.submitted_count !== submittedCount ||
+      existing.remaining_slots !== remainingSlots;
+
+    if (isFirstScrapeOfDay || countOrSlotsChanged) {
+      snapshotEvents.push({
+        ps_id: finalPsId,
+        timestamp: nowISO,
+        submitted_count: submittedCount,
+        remaining_slots: remainingSlots
+      });
+    }
   });
 
   // Resilience check: Sanity check record count (permits new batches of PS up to 1200)
@@ -492,10 +501,21 @@ export async function scrapeSIH(): Promise<{
   fs.writeFileSync(CHANGELOG_PATH, JSON.stringify(changelog, null, 2), 'utf-8');
   console.log(`Updated ${CHANGELOG_PATH} with ${changelog.length} entries`);
 
-  // Append snapshots to daily JSONL
-  const jsonlLines = snapshotEvents.map((ev) => JSON.stringify(ev)).join('\n') + '\n';
-  fs.appendFileSync(historyFile, jsonlLines, 'utf-8');
-  console.log(`Appended ${snapshotEvents.length} events to ${historyFile}`);
+  // Append snapshots to daily JSONL only if we have events to record
+  if (snapshotEvents.length > 0) {
+    const jsonlLines = snapshotEvents.map((ev) => JSON.stringify(ev)).join('\n') + '\n';
+    fs.appendFileSync(historyFile, jsonlLines, 'utf-8');
+    console.log(`Appended ${snapshotEvents.length} events to ${historyFile}`);
+  } else {
+    console.log('No new snapshot events to append (all counts unchanged).');
+  }
+
+  // Refresh compacted snapshots.json
+  try {
+    compactHistory();
+  } catch (compactErr: any) {
+    console.warn('Failed to compact history during scrape:', compactErr.message);
+  }
 
   return {
     scrapedCount: records.length,

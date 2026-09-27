@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "compact": "tsx scripts/compact-history.ts",
     "build": "node scripts/sync-public-data.js && tsc && vite build",
     "preview": "vite preview",
     "scrape": "tsx scripts/scrape.ts",
-    "scrape:loop": "tsx scripts/run-scraper-loop.ts"
+    "scrape:loop": "tsx scripts/run-scraper-loop.ts",
+    "vercel:cleanup": "node scripts/cleanup-vercel-deployments.js"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
