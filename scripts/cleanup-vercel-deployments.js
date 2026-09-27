@@ -6,18 +6,52 @@
  * Purges old non-production deployments to immediately free storage under the 10GB limit.
  *
  * Usage:
- *   $env:VERCEL_TOKEN="your_token_here"; npm run vercel:cleanup
- *   Or (Linux / macOS):
- *   VERCEL_TOKEN="your_token_here" npm run vercel:cleanup
+ *   node scripts/cleanup-vercel-deployments.js <your_token>
+ *   Or:
+ *   $env:VERCEL_TOKEN="your_token"; npm run vercel:cleanup
  */
 
-const token = process.env.VERCEL_TOKEN;
-const teamId = process.env.VERCEL_TEAM_ID;
-const targetProject = process.argv[2] || process.env.VERCEL_PROJECT_NAME || 'sih-2026-tracker';
+import fs from 'node:fs';
+import path from 'node:path';
+
+let detectedTeamId = process.env.VERCEL_TEAM_ID;
+try {
+  const configPath = path.join(process.env.APPDATA || '', 'com.vercel.cli', 'Data', 'config.json');
+  if (!detectedTeamId && fs.existsSync(configPath)) {
+    const cfg = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
+    if (cfg.currentTeam) detectedTeamId = cfg.currentTeam;
+  }
+} catch {}
+
+// Token can be passed as 1st argument (e.g. starting with vc) or via VERCEL_TOKEN env var
+let token = process.env.VERCEL_TOKEN;
+let targetProject = process.env.VERCEL_PROJECT_NAME || 'sih-2026-tracker';
+
+const arg1 = process.argv[2];
+const arg2 = process.argv[3];
+
+if (arg1) {
+  if (arg1.startsWith('vc') || arg1.length > 20) {
+    token = arg1;
+    if (arg2) targetProject = arg2;
+  } else {
+    targetProject = arg1;
+    if (arg2 && (arg2.startsWith('vc') || arg2.length > 20)) {
+      token = arg2;
+    }
+  }
+}
+
+const teamId = detectedTeamId;
 const KEEP_RECENT = 3; // Keep the N most recent deployments for safety
 
 async function cleanupViaApi(apiToken) {
   console.log(`\n[Vercel Cleanup] Querying deployments via Vercel REST API...`);
+  if (teamId) {
+    console.log(`[Vercel Cleanup] Using Team ID: ${teamId}`);
+  }
+  console.log(`[Vercel Cleanup] Target Project: ${targetProject}`);
+
   const headers = {
     Authorization: `Bearer ${apiToken}`,
     'Content-Type': 'application/json'
@@ -122,16 +156,13 @@ function printInstructions() {
   console.log('To clean up old deployments and immediately recover your 10GB storage quota:\n');
   console.log('Option 1 (Automated 1-Command Purge via API Token):');
   console.log('  1. Create a personal token at: https://vercel.com/account/tokens');
-  console.log('  2. Run in PowerShell:');
-  console.log('     $env:VERCEL_TOKEN="your_token_here"; npm run vercel:cleanup\n');
+  console.log('  2. Run in terminal:');
+  console.log('     node scripts/cleanup-vercel-deployments.js <your_token>\n');
   console.log('Option 2 (Set Retention Policy in Vercel Dashboard):');
   console.log('  1. Go to https://vercel.com -> Your Project -> Settings -> General');
   console.log('  2. Scroll to "Deployment Retention"');
   console.log('  3. Change "Preview Deployments" and "Canceled Deployments" to 1 day.');
   console.log('  4. Vercel automatically cleans up older deployments.\n');
-  console.log('Option 3 (Delete from Vercel Web Dashboard):');
-  console.log('  1. Go to your Project -> Deployments tab');
-  console.log('  2. Filter by status or branch and delete older deployments via the three-dots menu (...).\n');
   console.log('================================================================================\n');
 }
 
