@@ -39,10 +39,11 @@ jobs:
           git config user.name "${{ github.repository_owner }}"
           git config user.email "${{ github.repository_owner }}@users.noreply.github.com"
 
-      - name: Run 30-Minute Continuous Scraper Loop
+      - name: Run 15-Minute Continuous Scraper Loop
         env:
           SCRAPERAPI_KEY: ${{ secrets.SCRAPERAPI_KEY }}
           SCRAPE_CUTOFF_DATE: ${{ vars.SCRAPE_CUTOFF_DATE || '2026-10-31T23:59:59+05:30' }}
+          SCRAPER_INTERVAL_MINUTES: '15'
         run: npm run scrape:loop
 
       - name: Trigger Vercel Deploy Hook (if configured)

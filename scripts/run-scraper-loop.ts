@@ -1,6 +1,7 @@
 import { execSync } from 'node:child_process';
 
-const INTERVAL_MS = 30 * 60 * 1000; // 30 minutes
+const INTERVAL_MINUTES = Number(process.env.SCRAPER_INTERVAL_MINUTES) || 15;
+const INTERVAL_MS = INTERVAL_MINUTES * 60 * 1000; // 15 minutes
 const MAX_TOTAL_RUNTIME_MS = 4 * 60 * 60 * 1000; // 4 hours per runner job
 const startTime = Date.now();
 
@@ -115,7 +116,7 @@ async function startLoop() {
     const waitMin = (waitMs / 60000).toFixed(1);
 
     console.log(`\nNext scrape scheduled at: ${nextIST} IST`);
-    console.log(`Sleeping for ${waitSec}s (${waitMin} min) to align precisely with 30m boundary...`);
+    console.log(`Sleeping for ${waitSec}s (${waitMin} min) to align precisely with ${INTERVAL_MINUTES}m boundary...`);
 
     await new Promise((resolve) => setTimeout(resolve, waitMs));
     cycle++;
