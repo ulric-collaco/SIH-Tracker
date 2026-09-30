@@ -221,7 +221,8 @@ export async function scrapeSIH(): Promise<{
     process.env.GITHUB_EVENT_NAME === 'workflow_dispatch' ||
     process.env.FORCE_SCRAPE === 'true';
 
-  const configuredCutoff = process.env.SCRAPE_CUTOFF_DATE || '2026-09-20T23:59:59+05:30';
+  // Generous safety backstop: late October 2026 so scraping never halts prematurely
+  const configuredCutoff = process.env.SCRAPE_CUTOFF_DATE || '2026-10-31T23:59:59+05:30';
   let cutoffDate = new Date(configuredCutoff);
 
   // Auto-detect official deadline extensions from existing PS records if available
@@ -230,9 +231,15 @@ export async function scrapeSIH(): Promise<{
       const prevData: PSRecord[] = JSON.parse(fs.readFileSync(LATEST_PATH, 'utf-8'));
       for (const item of prevData) {
         if (item.deadline) {
-          const parsed = new Date(item.deadline);
-          if (!isNaN(parsed.getTime()) && parsed > cutoffDate) {
-            cutoffDate = parsed;
+          const raw = item.deadline.trim();
+          // Dates like '5 October 2026' must parse to end-of-day IST with 48h grace period
+          const dateStr = raw.includes(':') ? raw : `${raw} 23:59:59 +05:30`;
+          const parsed = new Date(dateStr);
+          if (!isNaN(parsed.getTime())) {
+            const withGracePeriod = new Date(parsed.getTime() + 48 * 60 * 60 * 1000);
+            if (withGracePeriod > cutoffDate) {
+              cutoffDate = withGracePeriod;
+            }
           }
         }
       }

@@ -42,7 +42,7 @@ jobs:
       - name: Run 30-Minute Continuous Scraper Loop
         env:
           SCRAPERAPI_KEY: ${{ secrets.SCRAPERAPI_KEY }}
-          SCRAPE_CUTOFF_DATE: ${{ vars.SCRAPE_CUTOFF_DATE || '2026-09-20T23:59:59+05:30' }}
+          SCRAPE_CUTOFF_DATE: ${{ vars.SCRAPE_CUTOFF_DATE || '2026-10-31T23:59:59+05:30' }}
         run: npm run scrape:loop
 
       - name: Trigger Vercel Deploy Hook (if configured)
