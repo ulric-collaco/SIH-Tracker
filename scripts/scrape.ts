@@ -106,33 +106,40 @@ async function fetchPageWithRetry(url: string, retries = 4): Promise<string> {
 
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
-      // 1. If ScraperAPI key is present, route through ScraperAPI rotating residential proxy
+      // 1. If ScraperAPI key is present, attempt route through ScraperAPI residential proxy
       if (scraperApiKey) {
-        console.log(`Fetching via ScraperAPI residential proxy (attempt ${attempt}/${retries})...`);
-        const scraperUrl = `https://api.scraperapi.com?api_key=${scraperApiKey}&url=${encodeURIComponent(url)}&country_code=in`;
-        const res = await fetch(scraperUrl, {
-          signal: AbortSignal.timeout(60000)
-        });
+        try {
+          console.log(`Fetching via ScraperAPI residential proxy (attempt ${attempt}/${retries})...`);
+          const scraperUrl = `https://api.scraperapi.com?api_key=${scraperApiKey}&url=${encodeURIComponent(url)}&country_code=in`;
+          const res = await fetch(scraperUrl, {
+            signal: AbortSignal.timeout(60000)
+          });
 
-        if (!res.ok) {
-          const errBody = await res.text();
-          throw new Error(`ScraperAPI returned HTTP ${res.status}: ${errBody.slice(0, 300)}`);
+          if (!res.ok) {
+            const errBody = await res.text();
+            console.warn(
+              `ScraperAPI returned HTTP ${res.status}: ${errBody.slice(0, 150)}. Falling back to direct browser TLS curl...`
+            );
+          } else {
+            const output = await res.text();
+            const preview = output.substring(0, 250).replace(/\s+/g, ' ');
+            console.log(`Received ${output.length} characters via ScraperAPI. Preview: "${preview}"`);
+
+            const hasTable =
+              output.toLowerCase().includes('<table') ||
+              output.includes('dataTablePS') ||
+              output.includes('colomn_border');
+
+            if (hasTable) {
+              return output;
+            }
+            console.warn(`ScraperAPI response missing problem statement table. Falling back to direct curl...`);
+          }
+        } catch (scraperErr: any) {
+          console.warn(
+            `ScraperAPI request error: ${scraperErr.message}. Falling back to direct browser TLS curl...`
+          );
         }
-
-        const output = await res.text();
-        const preview = output.substring(0, 250).replace(/\s+/g, ' ');
-        console.log(`Received ${output.length} characters via ScraperAPI. Preview: "${preview}"`);
-
-        const hasTable =
-          output.toLowerCase().includes('<table') ||
-          output.includes('dataTablePS') ||
-          output.includes('colomn_border');
-
-        if (!hasTable) {
-          throw new Error(`ScraperAPI response missing problem statement table`);
-        }
-
-        return output;
       }
 
       // 2. Fallback: Direct curl execution (works locally on residential IPs)
